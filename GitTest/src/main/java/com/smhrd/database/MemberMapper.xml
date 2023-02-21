@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.database.MemberMapper">
+	<!-- 회원가입 쿼리문 -->
+	<insert id="JoinService" parameterType="com.smhrd.model.CustomersVO">
+		INSERT INTO customers (cust_id, CUST_PW, CUST_NAME, CUST_EMAIL, CUST_PHONE, cust_point, cust_joindate , cust_type)
+		VALUES (#{cust_id}, #{cust_pw}, #{cust_name}, #{cust_email}, #{cust_phone}, #{cust_point} , #{cust_joindate} ,#{cust_type})
+	</insert>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
