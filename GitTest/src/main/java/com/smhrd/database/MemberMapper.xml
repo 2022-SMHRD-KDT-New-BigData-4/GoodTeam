@@ -3,12 +3,66 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.smhrd.database.MemberMapper">
+<mapper namespace="com.smhrd.database.MemberMapper">	
 	<!-- 회원가입 쿼리문 -->
 	<insert id="JoinService" parameterType="com.smhrd.model.CustomersVO">
 		INSERT INTO customers (cust_id, CUST_PW, CUST_NAME, CUST_EMAIL, CUST_PHONE, cust_point, cust_joindate , cust_type)
 		VALUES (#{cust_id}, #{cust_pw}, #{cust_name}, #{cust_email}, #{cust_phone}, #{cust_point} , #{cust_joindate} ,#{cust_type})
 	</insert>
+	<!-- 로그인 쿼리문 -->
+	<select id="login" parameterType="com.smhrd.model.CustomersVO" resultType="com.smhrd.model.CustomersVO">
+		select * from customers
+		<!-- #{}=Parameter로 받아온 getter메서드를 사용하겠다는 의미 -->
+		where   cust_id =  #{cust_id}
+		and 	cust_pw  =  #{cust_pw}	
+	</select>
+	<!-- 아이디 체크 쿼리문 -->
+	<select id="idCheck" parameterType="com.smhrd.model.CustomersVO" resultType="com.smhrd.model.CustomersVO">
+  		SELECT cust_id FROM customers WHERE cust_id = #{cust_id}
+	</select>
+	<!-- 내 정보 수정 쿼리문 -->
+	<update id="cust_update" parameterType="com.smhrd.model.CustomersVO">
+		update customers 
+		   set cust_pw = #{cust_pw}
+		     , cust_name = #{cust_name}
+		     , cust_email = #{cust_email}
+		     , cust_phone = #{cust_phone}
+		 where cust_id = #{cust_id} 	
+	</update>
+	<!-- 내 정보 조회 쿼리문 -->
+	<select id="cust_select" parameterType="com.smhrd.model.CustomersVO" resultType="com.smhrd.model.CustomersVO">
+		select * from customers where cust_id = #{cust_id}
+	</select>
+	
+	
+	
+	
+	<!-- QNA 작성 -->
+	<insert id="qnas_q" parameterType="com.smhrd.model.QnasVO">
+		insert into qnas(q_content, cust_id) VALUES (#{q_content}, #{cust_id})
+	</insert>
+	<!-- QNA 조회 -->
+	<select id="qnas_select" parameterType="com.smhrd.model.QnasVO" resultType="com.smhrd.model.QnasVO">
+		select * from qnas where cust_id = #{cust_id}
+	</select>
+	<!-- QNA 전체 조회 -->
+	<select id="qnas_selectAll" resultType="com.smhrd.model.QnasVO">
+		select * from qnas
+	</select>
+	<!-- QNA 답변 -->
+	<update id="qnas_a" parameterType="com.smhrd.model.QnasVO">
+		update qnas set a_dt = #{a_dt}, a_content = #{a_content} where q_seq = #{q_seq}
+	</update>
+	
+
+
+
+
+
+	<!-- 방 정보 -->
+	<select id="room_select" parameterType="com.smhrd.model.RoomsVO" resultType="com.smhrd.model.RoomsVO">
+		
+	</select>
 
 </mapper>
 
