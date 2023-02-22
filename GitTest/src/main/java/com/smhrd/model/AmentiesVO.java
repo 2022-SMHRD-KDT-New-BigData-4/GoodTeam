@@ -16,14 +16,12 @@ public class AmentiesVO {
 	// 기타
 	private char etc;
 	// 내가 사용할 생성자 만들어 사용
+	// 내가 고른방 들어갈 때 필요한 메서드
+	public AmentiesVO(int ac_seq) {
+		this.ac_seq = ac_seq;
 
-	
-	
-	
-	
-	
-	
-	
+	}
+
 	public int getAc_seq() {
 		return ac_seq;
 	}

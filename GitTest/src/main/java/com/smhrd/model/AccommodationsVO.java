@@ -20,8 +20,10 @@ public class AccommodationsVO {
 	
 	
 	// 내가 데이터 베이스에서 필요한 생성자 만들어 쓰세요.
-	
-	
+	// 숙소 1개에 들어가는 생성자메서드(ChoiceRoom)
+	public AccommodationsVO(int ac_seq ){
+		this.ac_seq = ac_seq;	
+	}
 	
 	
 	

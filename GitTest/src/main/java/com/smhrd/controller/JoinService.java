@@ -25,10 +25,10 @@ public class JoinService implements Command {
 		 String cust_email= request.getParameter("email");
 		 String cust_phone = request.getParameter("phone");
 		 int cust_point = 0;
-		 LocalDate cust_joindate = LocalDate.of(2055,3,20);
+		 LocalDate cust_joindate = LocalDate.of(2055,03,20);
 		 char cust_type = 'M';
 		 // 현재 오늘 날자 불러옴
-	
+
 		
 		// 보낼 데이터 하나로 묶기 위한 객체 생성
 		CustomersVO vo = new CustomersVO(cust_id , cust_pw , cust_name , cust_email , cust_phone ,cust_point , cust_joindate , cust_type);
