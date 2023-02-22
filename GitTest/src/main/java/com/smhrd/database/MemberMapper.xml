@@ -63,6 +63,22 @@
 	<select id="room_select" parameterType="com.smhrd.model.RoomsVO" resultType="com.smhrd.model.RoomsVO">
 		
 	</select>
+	<!-- 모든 방을 볼 수 있는 쿼리분 -->
+	<select id="SelectAllRooms" resultType="com.smhrd.model.AccommodationsVO">
+	select *from accommodations
+	</select>
+	
+	<!-- 내가 선택한 방 들어가는 쿼리문(ChoiceRoom) -->
+	<select id="SelectChoiceRoomInfo" parameterType="com.smhrd.model.AccommodationsVO" resultType="com.smhrd.model.AccommodationsVO">
+	select * from accommodations where ac_seq = #{ac_seq}
+	</select>
+	<select id="SelectChoiceRoomAmen" parameterType="com.smhrd.model.AmentiesVO" resultType="com.smhrd.model.AmentiesVO">
+	select * from AMENTIES where ac_seq = #{ac_seq}
+	</select>
+	
+	
+	
+	
 
 </mapper>
 
