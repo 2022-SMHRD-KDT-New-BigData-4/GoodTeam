@@ -58,11 +58,6 @@
 
 
 
-
-	<!-- 방 정보 -->
-	<select id="room_select" parameterType="com.smhrd.model.RoomsVO" resultType="com.smhrd.model.RoomsVO">
-		
-	</select>
 	<!-- 모든 방을 볼 수 있는 쿼리분 -->
 	<select id="SelectAllRooms" resultType="com.smhrd.model.AccommodationsVO">
 	select *from accommodations
@@ -75,6 +70,25 @@
 	<select id="SelectChoiceRoomAmen" parameterType="com.smhrd.model.AmentiesVO" resultType="com.smhrd.model.AmentiesVO">
 	select * from AMENTIES where ac_seq = #{ac_seq}
 	</select>
+	
+	
+	
+	
+	
+	
+	<!-- 예약 하기 -->
+	<insert id="reservation" parameterType="com.smhrd.model.ReservationsVO">
+		insert into reservations(cust_id, check_in, check_out, room_seq, total_amount)
+		VALUES (#{cust_id}, #{check_in}, #{check_out}, #{room_seq}, #{total_amount})
+	</insert>
+	<!-- 예약 정보 조회 -->
+	<select id="reserv_select" parameterType="com.smhrd.model.ReservationsVO" resultType="com.smhrd.model.ReservationsVO">
+		select * from reservations where cust_id = #{cust_id}
+	</select>
+	<!-- 예약 취소 -->
+	<delete id="reserv_cancel" parameterType="com.smhrd.model.ReservationsVO">
+		delete from reservations where cust_id = #{cust_id}
+	</delete>
 	
 	
 	
