@@ -15,7 +15,7 @@
 <configuration>
 	<!-- mapper 파일에서 사용하는 자료형의 별칭을 설정 -->
 	<typeAliases>
-		
+
 
 	</typeAliases>
 	<!-- 2) environments : 내가 이 프로젝트에서 사용할 데이터베이스들을 기술하는 공간 -->

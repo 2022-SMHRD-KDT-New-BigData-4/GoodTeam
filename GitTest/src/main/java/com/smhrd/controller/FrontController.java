@@ -27,17 +27,15 @@ public class FrontController extends HttpServlet {
 
 	// 제공하고자 하는 서비스에 대하여 기본 설정이 필요할 때 사용한다.
 	public void init(ServletConfig config) throws ServletException {
-		// 서블릿 실행시 최초 1번만 실행되는 메서드이다.
+		// 서블릿 실행시 최초 1번만 실행되는 메서드
 		System.out.println("초기화 메서드 생성");
 		// FrontController 가 생성될 때 객체 생성을 최초 1번만
 		// 어떤 요청이 들어왔을 때 해당하는 요청을 수행할 수 있는 클래스의 객체를 생성!!
 		map = new HashMap<>();
-		
+		// 로그인을 할 때 필요해서 만듬
 		map.put("JoinService.do", new JoinService());
-		// 데이터를 추가(키,벨류를 한 쌍으로 넣는다)
-		// 내가 이동할 페이지를 적는다
-		// 예시
-		// map.put("*.do", new GoMainCommand());
+		// 객실정보(리뷰,객실명,편의시설 등)를 가져오려고 만듬
+		map.put("", new RoomInfo());
 
 	}
 

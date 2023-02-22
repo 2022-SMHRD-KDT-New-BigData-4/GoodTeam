@@ -7,6 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.command.Command;
 
-public class AccommmodationsDAO {
+public class AccommodationsDAO {
 
 }
