@@ -55,12 +55,10 @@
 
 	<!-- QNA 작성 -->
 	<insert id="qnas_q" parameterType="com.smhrd.model.QnasVO">
-		insert into qnas(q_content,
-		cust_id) VALUES (#{q_content}, #{cust_id})
+		insert into qnas(q_content, cust_id) VALUES (#{q_content}, #{cust_id})
 	</insert>
 	<!-- QNA 조회 -->
-	<select id="qnas_select" parameterType="com.smhrd.model.QnasVO"
-		resultType="com.smhrd.model.QnasVO">
+	<select id="qnas_select" parameterType="java.lang.String" resultType="com.smhrd.model.QnasVO">
 		select * from qnas where cust_id = #{cust_id}
 	</select>
 	<!-- QNA 전체 조회 -->
@@ -69,10 +67,8 @@
 	</select>
 	<!-- QNA 답변 -->
 	<update id="qnas_a" parameterType="com.smhrd.model.QnasVO">
-		update qnas set a_dt =
-		#{a_dt}, a_content = #{a_content} where q_seq = #{q_seq}
+		update qnas set a_dt = #{a_dt}, a_content = #{a_content} where q_seq = #{q_seq}
 	</update>
-
 
 
 
