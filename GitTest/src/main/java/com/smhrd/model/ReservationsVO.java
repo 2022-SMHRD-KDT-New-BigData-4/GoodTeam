@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import org.apache.catalina.startup.Tomcat.ExistingStandardWrapper;
+
 public class ReservationsVO {
 	// 예약 순번
 	private String reserv_seq;
@@ -18,8 +20,31 @@ public class ReservationsVO {
 	
 	
 	// 사용할 생성자 만들어 쓰기
+	// 1 예약하기
+	public ReservationsVO(String cust_id, String check_in, String check_out, int room_seq, int total_amount) {
+		this.cust_id = cust_id;
+		this.check_in = check_in;
+		this.check_out = check_out;
+		this.room_seq = room_seq;
+		this.total_amount = total_amount;
+	}
+	
+	// 2 예약 정보 조회
+	public ReservationsVO(String cust_id, String reserv_seq) {
+		this.cust_id = cust_id;
+		this.reserv_seq = reserv_seq;
+	}
+	
+	// 3 예약 취소 - 2 함수와 같음
 
+	// 4 전체 예약 정보 조회
+	public String getCust_id() {
+		return cust_id;
+	}
 
+	
+	
+	
 	public String getReserv_seq() {
 		return reserv_seq;
 	}
@@ -28,9 +53,6 @@ public class ReservationsVO {
 		this.reserv_seq = reserv_seq;
 	}
 
-	public String getCust_id() {
-		return cust_id;
-	}
 
 	public void setCust_id(String cust_id) {
 		this.cust_id = cust_id;

@@ -21,8 +21,14 @@ public class RoomsVO {
 	private String room_img3;
 	// 예약가능 여부
 	private char reserv_yn;
-	// 사용할 생성자
 
+	// 사용할 생성자 끝!
+	public int getAc_seq() {
+		return ac_seq;
+	}	
+	
+	
+	
 	public int getRoom_seq() {
 		return room_seq;
 	}
@@ -31,9 +37,7 @@ public class RoomsVO {
 		this.room_seq = room_seq;
 	}
 
-	public int getAc_seq() {
-		return ac_seq;
-	}
+
 
 	public void setAc_seq(int ac_seq) {
 		this.ac_seq = ac_seq;

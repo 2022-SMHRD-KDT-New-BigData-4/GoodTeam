@@ -57,10 +57,10 @@
 
 
 
-
+	<!-- Accommodations -->
 	<!-- 모든 숙박업소를 볼 수 있는 쿼리분 -->
 	<select id="SelectAllRooms" resultType="com.smhrd.model.AccommodationsVO">
-	select *from accommodations
+	select * from accommodations
 	</select>
 	
 	
@@ -100,7 +100,7 @@
 	
 	
 	
-	
+	<!-- Reviews -->
 	<!-- 리뷰 작성 -->
 	<insert id="reviewInsert" parameterType="com.smhrd.model.ReviewsVO">
 		insert into reviews(ac_seq, review_content, review_ratings, cust_id)
