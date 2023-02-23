@@ -11,7 +11,7 @@ import com.smhrd.model.CustomersDAO;
 import com.smhrd.model.CustomersVO;
 
 public class JoinService implements Command {
-
+	// 회원가입
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws UnsupportedEncodingException {

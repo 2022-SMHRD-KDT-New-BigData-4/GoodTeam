@@ -35,6 +35,11 @@ public class CustomersVO {
 		this.cust_joindate=cust_joindate;
 		this.cust_type = cust_type;
 	}
+	// 로그인을 할 수 있는 생성자
+		public CustomersVO(String cust_id, String cust_pw) {
+			this.cust_id = cust_id;
+			this.cust_pw = cust_pw;
+		}
 
 	public LocalDate getCust_joindate() {
 		return cust_joindate;

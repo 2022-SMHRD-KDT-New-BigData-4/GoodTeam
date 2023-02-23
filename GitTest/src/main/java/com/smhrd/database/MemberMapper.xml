@@ -3,46 +3,57 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.smhrd.database.MemberMapper">	
+<mapper namespace="com.smhrd.database.MemberMapper">
 	<!-- 회원가입 쿼리문 -->
-	<insert id="JoinService" parameterType="com.smhrd.model.CustomersVO">
-		INSERT INTO customers (cust_id, CUST_PW, CUST_NAME, CUST_EMAIL, CUST_PHONE, cust_point, cust_joindate , cust_type)
-		VALUES (#{cust_id}, #{cust_pw}, #{cust_name}, #{cust_email}, #{cust_phone}, #{cust_point} , #{cust_joindate} ,#{cust_type})
+	<insert id="JoinService"
+		parameterType="com.smhrd.model.CustomersVO">
+		INSERT INTO customers (cust_id, CUST_PW, CUST_NAME,
+		CUST_EMAIL, CUST_PHONE, cust_point, cust_joindate , cust_type)
+		VALUES
+		(#{cust_id}, #{cust_pw}, #{cust_name}, #{cust_email}, #{cust_phone},
+		#{cust_point} , #{cust_joindate} ,#{cust_type})
 	</insert>
 	<!-- 로그인 쿼리문 -->
-	<select id="login" parameterType="com.smhrd.model.CustomersVO" resultType="com.smhrd.model.CustomersVO">
+	<select id="login" parameterType="com.smhrd.model.CustomersVO"
+		resultType="com.smhrd.model.CustomersVO">
 		select * from customers
 		<!-- #{}=Parameter로 받아온 getter메서드를 사용하겠다는 의미 -->
-		where   cust_id =  #{cust_id}
-		and 	cust_pw  =  #{cust_pw}	
+		where cust_id = #{cust_id}
+		and cust_pw = #{cust_pw}
 	</select>
 	<!-- 아이디 체크 쿼리문 -->
-	<select id="idCheck" parameterType="com.smhrd.model.CustomersVO" resultType="com.smhrd.model.CustomersVO">
-  		SELECT cust_id FROM customers WHERE cust_id = #{cust_id}
+	<select id="idCheck" parameterType="com.smhrd.model.CustomersVO"
+		resultType="com.smhrd.model.CustomersVO">
+		SELECT cust_id FROM customers WHERE cust_id = #{cust_id}
 	</select>
 	<!-- 내 정보 수정 쿼리문 -->
-	<update id="cust_update" parameterType="com.smhrd.model.CustomersVO">
-		update customers 
-		   set cust_pw = #{cust_pw}
-		     , cust_name = #{cust_name}
-		     , cust_email = #{cust_email}
-		     , cust_phone = #{cust_phone}
-		 where cust_id = #{cust_id} 	
+	<update id="cust_update"
+		parameterType="com.smhrd.model.CustomersVO">
+		update customers
+		set cust_pw = #{cust_pw}
+		, cust_name = #{cust_name}
+		, cust_email = #{cust_email}
+		, cust_phone = #{cust_phone}
+		where cust_id = #{cust_id}
 	</update>
 	<!-- 내 정보 조회 쿼리문 -->
-	<select id="cust_select" parameterType="com.smhrd.model.CustomersVO" resultType="com.smhrd.model.CustomersVO">
+	<select id="cust_select"
+		parameterType="com.smhrd.model.CustomersVO"
+		resultType="com.smhrd.model.CustomersVO">
 		select * from customers where cust_id = #{cust_id}
 	</select>
-	
-	
-	
-	
+
+
+
+
 	<!-- QNA 작성 -->
 	<insert id="qnas_q" parameterType="com.smhrd.model.QnasVO">
-		insert into qnas(q_content, cust_id) VALUES (#{q_content}, #{cust_id})
+		insert into qnas(q_content,
+		cust_id) VALUES (#{q_content}, #{cust_id})
 	</insert>
 	<!-- QNA 조회 -->
-	<select id="qnas_select" parameterType="com.smhrd.model.QnasVO" resultType="com.smhrd.model.QnasVO">
+	<select id="qnas_select" parameterType="com.smhrd.model.QnasVO"
+		resultType="com.smhrd.model.QnasVO">
 		select * from qnas where cust_id = #{cust_id}
 	</select>
 	<!-- QNA 전체 조회 -->
@@ -51,114 +62,165 @@
 	</select>
 	<!-- QNA 답변 -->
 	<update id="qnas_a" parameterType="com.smhrd.model.QnasVO">
-		update qnas set a_dt = #{a_dt}, a_content = #{a_content} where q_seq = #{q_seq}
+		update qnas set a_dt =
+		#{a_dt}, a_content = #{a_content} where q_seq = #{q_seq}
 	</update>
-	
+
 
 
 
 	<!-- Accommodations -->
 	<!-- 모든 숙박업소를 볼 수 있는 쿼리분 -->
-	<select id="SelectAllRooms" resultType="com.smhrd.model.AccommodationsVO">
-	select * from accommodations
+	<select id="SelectAllRooms"
+		resultType="com.smhrd.model.AccommodationsVO">
+		select * from accommodations
 	</select>
-	
-	
+
+
 	<!-- 내가 선택한 숙박업소 들어가는 쿼리문(ChoiceRoom) -->
-	<select id="SelectChoiceRoomInfo" parameterType="com.smhrd.model.AccommodationsVO" resultType="com.smhrd.model.AccommodationsVO">
-	select * from accommodations where ac_seq = #{ac_seq}
+	<select id="SelectChoiceRoomInfo"
+		parameterType="com.smhrd.model.AccommodationsVO"
+		resultType="com.smhrd.model.AccommodationsVO">
+		select * from accommodations where ac_seq = #{ac_seq}
 	</select>
-	
-	
+
+
 	<!-- 편의시설을 조회하는 쿼리문 -->
-	<select id="SelectChoiceRoomAmen" parameterType="com.smhrd.model.AmentiesVO" resultType="com.smhrd.model.AmentiesVO">
-	select * from AMENTIES where ac_seq = #{ac_seq}
+	<select id="SelectChoiceRoomAmen"
+		parameterType="com.smhrd.model.AmentiesVO"
+		resultType="com.smhrd.model.AmentiesVO">
+		select * from AMENTIES where ac_seq = #{ac_seq}
 	</select>
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	<!-- 예약 하기 -->
-	<insert id="reservation" parameterType="com.smhrd.model.ReservationsVO">
-		insert into reservations(cust_id, check_in, check_out, room_seq, total_amount)
-		VALUES (#{cust_id}, #{check_in}, #{check_out}, #{room_seq}, #{total_amount})
+	<insert id="reservation"
+		parameterType="com.smhrd.model.ReservationsVO">
+		insert into reservations(cust_id, check_in, check_out,
+		room_seq, total_amount)
+		VALUES (#{cust_id}, #{check_in}, #{check_out},
+		#{room_seq}, #{total_amount})
 	</insert>
 	<!-- 예약 정보 조회 -->
-	<select id="reserv_select" parameterType="com.smhrd.model.ReservationsVO" resultType="com.smhrd.model.ReservationsVO">
-		select * from reservations where cust_id = #{cust_id} and reserv_seq=#{reserv_seq}
+	<select id="reserv_select"
+		parameterType="com.smhrd.model.ReservationsVO"
+		resultType="com.smhrd.model.ReservationsVO">
+		select * from reservations where cust_id = #{cust_id} and
+		reserv_seq=#{reserv_seq}
 	</select>
 	<!-- 예약 취소 -->
-	<delete id="reserv_cancel" parameterType="com.smhrd.model.ReservationsVO">
-		delete from reservations where cust_id = #{cust_id} and reserv_seq=#{reserv_seq}
+	<delete id="reserv_cancel"
+		parameterType="com.smhrd.model.ReservationsVO">
+		delete from reservations where cust_id = #{cust_id} and
+		reserv_seq=#{reserv_seq}
 	</delete>
 	<!-- 전체 예약 정보 조회 -->
-	<select id="reserv_selectAll" parameterType="java.lang.String" resultType="com.smhrd.model.ReservationsVO">
+	<select id="reserv_selectAll" parameterType="java.lang.String"
+		resultType="com.smhrd.model.ReservationsVO">
 		select * from reservations where cust_id = #{cust_id}
 	</select>
-	
-	
-	
+	<!-- 지역별 숙소 모두 가져오기 -->
+	<select id="LocalAreaRooms" parameterType="java.lang.String"
+		resultType="com.smhrd.model.AccommodationsVO">
+		SELECT * FROM ACCOMMODATIONS WHERE ac_addr LIKE
+		'%${ac_addr}%'
+	</select>
+	<!-- 호텔 가격을 가져오는 쿼리문 -->
+	<select id="SelectRoomPrice"
+		parameterType="com.smhrd.model.RoomsVO"
+		resultType="com.smhrd.model.RoomsVO">
+		select * from rooms where ac_seq = #{ac_seq}
+	</select>
+
+
+
 	<!-- Reviews -->
 	<!-- 리뷰 작성 -->
-	<insert id="reviewInsert" parameterType="com.smhrd.model.ReviewsVO">
-		insert into reviews(ac_seq, review_content, review_ratings, cust_id)
-		values (#{ac_seq}, #{review_content}, #{review_ratings}, #{cust_id})
+	<insert id="reviewInsert"
+		parameterType="com.smhrd.model.ReviewsVO">
+		insert into reviews(ac_seq, review_content,
+		review_ratings, cust_id)
+		values (#{ac_seq}, #{review_content},
+		#{review_ratings}, #{cust_id})
 	</insert>
 	<!-- 리뷰 수정 -->
-	<update id="reviewUpdate" parameterType="com.smhrd.model.ReviewsVO">
-		update reviews set review_ratings=#{review_ratings}, review_content=#{review_content} where review_seq = #{review_seq} 
+	<update id="reviewUpdate"
+		parameterType="com.smhrd.model.ReviewsVO">
+		update reviews set review_ratings=#{review_ratings},
+		review_content=#{review_content} where review_seq = #{review_seq}
 	</update>
 	<!-- 리뷰 삭제 -->
-	<delete id="reviewDelete" parameterType="com.smhrd.model.ReviewsVO">
+	<delete id="reviewDelete"
+		parameterType="com.smhrd.model.ReviewsVO">
 		delete from reviews where review_seq = #{review_seq}
 	</delete>
 	<!-- 내 리뷰 조회 -->
-	<select id="reviewCustSelect" parameterType="java.lang.String" resultType="com.smhrd.model.ReviewsVO">
+	<select id="reviewCustSelect" parameterType="java.lang.String"
+		resultType="com.smhrd.model.ReviewsVO">
 		select * from reviews where cust_id = #{cust_id}
 	</select>
 	<!-- 호텔 리뷰 조회 -->
-	<select id="reviewAcSelect" parameterType="com.smhrd.model.ReviewsVO" resultType="com.smhrd.model.ReviewsVO">
+	<select id="reviewAcSelect"
+		parameterType="com.smhrd.model.ReviewsVO"
+		resultType="com.smhrd.model.ReviewsVO">
 		select * from reviews where ac_seq=#{ac_seq}
 	</select>
-	
-	
+
+
 	<!-- 전체 객실 조회 -->
-	<select id="RoomSelectAll" parameterType="com.smhrd.model.RoomsVO" resultType="com.smhrd.model.RoomsVO">
+	<select id="RoomSelectAll"
+		parameterType="com.smhrd.model.RoomsVO"
+		resultType="com.smhrd.model.RoomsVO">
 		select * from rooms where ac_seq=#{ac_seq}
 	</select>
 	<!-- 객실 1개 조회 -->
-	<select id="RoomSelect" parameterType="com.smhrd.model.RoomsVO" resultType="com.smhrd.model.RoomsVO">
+	<select id="RoomSelect" parameterType="com.smhrd.model.RoomsVO"
+		resultType="com.smhrd.model.RoomsVO">
 		select * from rooms where room_seq=#{room_seq}
 	</select>
 	<!-- 객실 업로드1 -->
 	<insert id="RoomUpload" parameterType="com.smhrd.model.RoomsVO">
-		insert into Rooms(ac_seq, room_nm, ROOM_PRICE_H, ROOM_PRICE_L, ROOM_CNT, ROOM_IMG1, room_img2, room_img3)
-		values (#{ac_seq}, #{room_nm}, #{room_price_h}, #{room_price_l}, #{room_cnt}, #{room_img1}, #{room_img2}, #{room_img3})
+		insert into Rooms(ac_seq,
+		room_nm, ROOM_PRICE_H, ROOM_PRICE_L, ROOM_CNT, ROOM_IMG1, room_img2,
+		room_img3)
+		values (#{ac_seq}, #{room_nm}, #{room_price_h},
+		#{room_price_l}, #{room_cnt}, #{room_img1}, #{room_img2},
+		#{room_img3})
 	</insert>
 	<!-- 객실 변경 -->
 	<update id="RoomUpdate" parameterType="com.smhrd.model.RoomsVO">
-		update rooms set room_nm=#{room_nm}, ROOM_PRICE_H=#{room_price_h}, ROOM_PRICE_L=#{room_price_l}, ROOM_CNT=#{room_cnt}, ROOM_IMG1=#{room_img1}, room_img2=#{room_img2}, room_img3=#{room_img3} where room_seq=#{room_seq}
+		update rooms set
+		room_nm=#{room_nm}, ROOM_PRICE_H=#{room_price_h},
+		ROOM_PRICE_L=#{room_price_l}, ROOM_CNT=#{room_cnt},
+		ROOM_IMG1=#{room_img1}, room_img2=#{room_img2}, room_img3=#{room_img3}
+		where room_seq=#{room_seq}
 	</update>
-	
-	
+
+
 	<!-- 위시리스트 전체조회 -->
-	<select id="wishSelectAll" parameterType="com.smhrd.model.WishlistVO" resultType="com.smhrd.model.WishlistVO">
+	<select id="wishSelectAll"
+		parameterType="com.smhrd.model.WishlistVO"
+		resultType="com.smhrd.model.WishlistVO">
 		select * from WISHIISTS where cust_id = #{cust_id}
 	</select>
 	<!-- 위시리스트 추가 -->
 	<insert id="wishAdd" parameterType="com.smhrd.model.WishlistVO">
-		insert into Rooms(room_seq, cust_id)
+		insert into Rooms(room_seq,
+		cust_id)
 		values (#{room_seq}, #{cust_id})
 	</insert>
 	<!-- 위시리스트 제거 -->
-	<delete id="wishDelete" parameterType="com.smhrd.model.WishlistVO">
+	<delete id="wishDelete"
+		parameterType="com.smhrd.model.WishlistVO">
 		delete from Rooms where wish_seq = #{wish_seq}
 	</delete>
-	
-	
-	
+
+
+
 </mapper>
 
 

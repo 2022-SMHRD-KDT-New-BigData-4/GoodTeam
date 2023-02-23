@@ -23,6 +23,9 @@ public class RoomsVO {
 	private char reserv_yn;
 
 	// 사용할 생성자 끝!
+	public RoomsVO(int ac_seq) {
+		this.ac_seq = ac_seq;
+	}
 	public int getAc_seq() {
 		return ac_seq;
 	}	

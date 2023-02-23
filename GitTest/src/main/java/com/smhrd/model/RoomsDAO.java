@@ -16,7 +16,7 @@ public class RoomsDAO {
 
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getFactory();
 	int result = 0;
-	
+
 	// 전체 객실 조회
 	public List<RoomsVO> selectAll(RoomsVO vo) {
 		// 자동커밋
@@ -28,35 +28,32 @@ public class RoomsDAO {
 			e.printStackTrace();
 		}
 		sqlSession.close();
-		
+
 		return roomlist;
 
-
 	}
-	
 
 	// 객실 1개 조회
 	public RoomsVO select(RoomsVO vo) {
-		
+
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		// VO타입의 result 선언
 		RoomsVO result = null;
-		
+
 		try {
 			result = sqlSession.selectOne("RoomSelect", vo);
 		} finally {
 			sqlSession.close();
 		}
 
-		
 		return result;
 	}
-	
+
 	// 객실 업로드
 	public int upload(RoomsVO vo) {
 
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		
+
 		try {
 			// sql 문장 실행하기
 			System.out.println("여기까진 옴");
@@ -69,9 +66,9 @@ public class RoomsDAO {
 		return result;
 
 	}
-	
+
 	// 객실 수정
-	
+
 	public int update(RoomsVO vo) {
 
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
@@ -86,5 +83,19 @@ public class RoomsDAO {
 		System.out.println("여기까진 옮");
 		return result;
 
+	}
+
+	public List<RoomsVO> RoomPrice(RoomsVO vo) {
+		List<RoomsVO> RoomPrice = null;
+		// 자동커밋
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		try {
+			RoomPrice = sqlSession.selectList("SelectRoomPrice", vo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		sqlSession.close();
+
+		return RoomPrice;
 	}
 }

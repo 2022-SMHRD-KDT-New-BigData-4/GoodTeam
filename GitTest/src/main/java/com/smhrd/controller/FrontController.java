@@ -38,6 +38,10 @@ public class FrontController extends HttpServlet {
 		map.put("SearchAllRoom.do", new SearchAllRoom());
 		// 내가 선택한 숙소 들어가는 서비스
 		map.put("ChoiceRoom.do", new ChoiceRoom());
+		// 지역별로 내가 들어갈 숙소 선택
+		map.put("LocalMap.do", new LocalArea());
+		// 로그인을 할 수 있는 기능
+		map.put("LonginService.do", new LoginService());
 
 	}
 
