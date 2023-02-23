@@ -40,7 +40,17 @@ public class CustomersVO {
 			this.cust_id = cust_id;
 			this.cust_pw = cust_pw;
 		}
-
+	// 2) id 찾기-폰
+		public String getCust_phone() {
+			return cust_phone;
+		}
+		
+	// 3) pw 찾기
+		public CustomersVO(String cust_id, String cust_email, String cust_name) {
+			this.cust_id = cust_id;
+			this.cust_email = cust_email;
+			this.cust_name = cust_name;
+		}
 	public LocalDate getCust_joindate() {
 		return cust_joindate;
 	}
@@ -81,9 +91,7 @@ public class CustomersVO {
 		this.cust_email = cust_email;
 	}
 
-	public String getCust_phone() {
-		return cust_phone;
-	}
+
 
 	public void setCust_phone(String cust_phone) {
 		this.cust_phone = cust_phone;

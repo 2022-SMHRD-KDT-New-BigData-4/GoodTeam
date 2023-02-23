@@ -42,7 +42,14 @@
 		resultType="com.smhrd.model.CustomersVO">
 		select * from customers where cust_id = #{cust_id}
 	</select>
-
+	<!-- ID 찾기 -->
+	<select id="findID" parameterType="com.smhrd.model.CustomersVO" resultType="com.smhrd.model.CustomersVO">
+		select cust_id from customers where cust_name = #{cust_name} and cust_email = #{cust_email}
+	</select>
+	<!-- PW 찾기 -->
+	<select id="findPW" parameterType="com.smhrd.model.CustomersVO" resultType="com.smhrd.model.CustomersVO">
+		select cust_pw from customers where cust_id = #{cust_id} and cust_name=#{cust_name} and cust_email = #{cust_email}
+	</select>
 
 
 
