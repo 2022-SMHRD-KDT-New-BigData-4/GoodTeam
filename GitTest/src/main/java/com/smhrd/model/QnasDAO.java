@@ -52,7 +52,7 @@ public class QnasDAO {
 
 	}
 	
-	// QnA 내역 조회
+	// QnA 조회
 	public QnasVO select(QnasVO vo) {
 			
 			SqlSession sqlSession = sqlSessionFactory.openSession(true);
@@ -72,9 +72,10 @@ public class QnasDAO {
 	// QnA 전체 조회
 	public List<QnasVO> selectAll() {
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		List<QnasVO> qnaList = null;
+		
 		try {
-			List<QnasVO> qnaList = sqlSession.selectList("selectAll");
-
+			qnaList = sqlSession.selectList("selectAll");
 			// <> 제너릭 기법 :
 			// 클래스 내부에서 사용 가능한 자료형을 욍부에서 지정할 수 있는 기법
 //			List<MemberVO> memberList = new ArrayList<MemberVO>();
@@ -82,10 +83,11 @@ public class QnasDAO {
 //			for (Object obj : result) {
 //				memberList.add((MemberVO) obj);
 //			}
-			return qnaList;
 		} finally {
 			sqlSession.close();
 		}
+		
+		return qnaList;
 	}
 	
 	

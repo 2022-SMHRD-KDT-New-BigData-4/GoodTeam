@@ -1,6 +1,7 @@
 package com.smhrd.model;
 
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +17,7 @@ public class ReservationsDAO {
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getFactory();
 	int result = 0;
 	
-	// 예약 정보 조회
+	// 예약 1개 정보 조회
 	public ReservationsVO select(ReservationsVO vo) {
 			
 			SqlSession sqlSession = sqlSessionFactory.openSession(true);
@@ -33,6 +34,28 @@ public class ReservationsDAO {
 			
 			return result;
 		}
+	
+	
+	// 예약 정보들 조회
+	public List<ReservationsVO> selectAll(String id) {
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		List<ReservationsVO> result = null;
+		
+		try {
+			result = sqlSession.selectList("reserv_selectAll",id);
+			// <> 제너릭 기법 :
+			// 클래스 내부에서 사용 가능한 자료형을 욍부에서 지정할 수 있는 기법
+//			List<MemberVO> memberList = new ArrayList<MemberVO>();
+//    읽는법     (Object 타입의 obj : 배열의 이름)
+//			for (Object obj : result) {
+//				memberList.add((MemberVO) obj);
+//			}
+		} finally {
+			sqlSession.close();
+		}
+		
+		return result;
+	}
 	
 	// 예약 하기
 	public int reservation(ReservationsVO vo) {
@@ -52,7 +75,7 @@ public class ReservationsDAO {
 	}
 	
 	// 예약 취소
-	public int reserv_cancel(ReservationsVO vo) {
+	public int cancel(ReservationsVO vo) {
 
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
