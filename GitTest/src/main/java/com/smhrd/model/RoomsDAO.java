@@ -98,4 +98,5 @@ public class RoomsDAO {
 
 		return RoomPrice;
 	}
+
 }
