@@ -42,6 +42,9 @@ public class FrontController extends HttpServlet {
 		map.put("LocalMap.do", new LocalArea());
 		// 로그인을 할 수 있는 기능
 		map.put("LonginService.do", new LoginService());
+		// 내정보 수정 할 수 있는 기능
+		map.put("CustSelect.do", new CustSelect());
+		// 회원 정보를 수정 할 수 있는 서비스
 
 	}
 

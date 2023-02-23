@@ -18,7 +18,7 @@ public class LoginService implements Command {
 			throws UnsupportedEncodingException {
 		// post 방식으로 가져왔을 때 한글이 깨지지 않게 하기
 		request.setCharacterEncoding("UTF-8");
-		// 받아오 id, pw 저장
+		// 받아온 id, pw 저장
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 
@@ -31,9 +31,9 @@ public class LoginService implements Command {
 		if (memberinfo != null) {
 
 			// 아이디 정보를 집어넣을 세션 생성
-			HttpSession httpSession = request.getSession();
-			httpSession.setAttribute("memberinfo", memberinfo);
-			return "LoginSuccess";
+			HttpSession Session = request.getSession();
+			Session.setAttribute("memberinfo", memberinfo);
+			return "AllroomsSelect";
 
 		}
 
