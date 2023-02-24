@@ -38,7 +38,7 @@ form{
    margin-top:10%;
    margin-bottom:10%;
 }   
-input[type="text"], input[type="password"] {
+#id, #email, input[type="password"] {
         width: 100%;
         padding: 10px;
         margin-bottom: 10px;

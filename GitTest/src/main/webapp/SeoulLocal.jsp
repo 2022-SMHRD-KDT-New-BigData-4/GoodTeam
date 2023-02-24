@@ -18,7 +18,7 @@
 	text-overflow: ellipsis;
 	/* background-color: gray;
         border: 1px solid black; */
-	height: 1000px;
+	height: 650px;
 	/* flex선언*/
 	display: flex;
 	/* 아이템을 가운데로 옮김 */
@@ -123,6 +123,7 @@ a {
 </head>
 
 <body>
+<%@include file="bar.jsp" %>
 	<div class="main">
 		<!-- 서울 지도 부분 -->
 		<div class="Seoul">
