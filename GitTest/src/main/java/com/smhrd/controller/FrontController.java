@@ -44,29 +44,34 @@ public class FrontController extends HttpServlet {
 		map.put("LonginService.do", new LoginService());
 		// 내정보 수정 할 수 있는 기능
 		map.put("CustSelect.do", new CustSelect());
-		// 회원 정보를 수정 할 수 있는 서비스
 		// QNA 전체 조회 기능
-			map.put("Qna_select_all.do", new Qna_select_all());
-			// QNA 질문 기능
-			map.put("Qna_insert.do", new Qna_insert());
-			// 내가 쓴 QNA 조회 기능
-			map.put("Qna_select.do", new Qna_select());
-			// QNA 답변 기능
-			map.put("Qna_a.do", new Qna_a());
-			// 예약 취소 기능
-			map.put("ReservationCancel.do", new ReservationCancel());
-			// 예약 전체 정보 조회 기능
-			map.put("ReservationSelectAll.do", new ReservationSelectAll());
-			// 리뷰 작성 기능
-			map.put("ReviewWrite.do", new ReviewWrite());
-			// 리뷰 수정 기능
-			map.put("ReviewUpdate.do", new ReviewUpdate());
-			// 리뷰 삭제 기능
-			map.put("ReviewDelete.do", new ReviewDelete());
-			// 내가 쓴 리뷰 조회기능
-			map.put("ReviewCustSelect.do", new ReviewCustSelect());
-			// 숙박업소의 리뷰 조회기능
-			map.put("ReviewAcSelect.do", new ReviewAcSelect());
+		map.put("Qna_select_all.do", new Qna_select_all());
+		// QNA 질문 기능
+		map.put("Qna_insert.do", new Qna_insert());
+		// 내가 쓴 QNA 조회 기능
+		map.put("Qna_select.do", new Qna_select());
+		// QNA 답변 기능
+		map.put("Qna_a.do", new Qna_a());
+		// 예약 취소 기능
+		map.put("ReservationCancel.do", new ReservationCancel());
+		// 예약 전체 정보 조회 기능
+		map.put("ReservationSelectAll.do", new ReservationSelectAll());
+		// 리뷰 작성 기능
+		map.put("ReviewWrite.do", new ReviewWrite());
+		// 리뷰 수정 기능
+		map.put("ReviewUpdate.do", new ReviewUpdate());
+		// 리뷰 삭제 기능
+		map.put("ReviewDelete.do", new ReviewDelete());
+		// 내가 쓴 리뷰 조회기능
+		map.put("ReviewCustSelect.do", new ReviewCustSelect());
+		// 숙박업소의 리뷰 조회기능
+		map.put("ReviewAcSelect.do", new ReviewAcSelect());
+		// 위시리스트를 추가할 수 있는 기능
+		map.put("WishlistAdd.do", new WishlistAdd());
+		// 내 위시리스트 전체조회
+		map.put("WishSelectAll.do", new WishSelectAll());
+		// 내 위시리스트 삭제
+		map.put("WishlistDel.do", new WishlistDel());
 
 	}
 

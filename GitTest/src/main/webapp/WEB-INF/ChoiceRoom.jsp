@@ -47,14 +47,22 @@
 	<p><%=roopri.getRoom_cnt()%></p>
 	<p><%=roopri.getRoom_price_h()%></p>
 	<p><%=roopri.getRoom_price_l()%></p>
+	<%
+	session.setAttribute("room_seq", roopri.getRoom_seq());
+	%>
 
 
+	<h3>위시리스트 추가</h3>
 
-	<h3>리뷰 작성하기</h3>
+	<form action="WishlistAdd.do" method="get">
+		<input type="submit" value="위시리스트 추가">
+	</form>
 
-	<form action="review"></form>
+	<h3>위시리스트 제거</h3>
 
-
+	<form action="WishlistDel.do" method="get">
+		<input type="submit" value="위시리스트 제거">
+	</form>
 
 
 

@@ -202,22 +202,30 @@
 	</update>
 
 
-	<!-- 위시리스트 전체조회 -->
-	<select id="wishSelectAll"
-		parameterType="com.smhrd.model.WishlistVO"
-		resultType="com.smhrd.model.WishlistVO">
-		select * from WISHIISTS where cust_id = #{cust_id}
+	<!-- 위시리스트 전체조회 (WISHIISTS) -->
+	<select id="wishSelectAll" parameterType="java.lang.String"
+		resultType="com.smhrd.model.JoinVO">
+		select *
+		from wishiists a,
+		rooms b , ACCOMMODATIONS c
+		where
+		a.room_seq=b.room_seq
+		and b.ac_seq =
+		c.ac_seq
+		and a.cust_id = #{cust_id}
 	</select>
+
 	<!-- 위시리스트 추가 -->
 	<insert id="wishAdd" parameterType="com.smhrd.model.WishlistVO">
-		insert into Rooms(room_seq,
+		insert into WISHIISTS
+		(room_seq,
 		cust_id)
 		values (#{room_seq}, #{cust_id})
 	</insert>
 	<!-- 위시리스트 제거 -->
 	<delete id="wishDelete"
-		parameterType="com.smhrd.model.WishlistVO">
-		delete from Rooms where wish_seq = #{wish_seq}
+		parameterType="java.lang.Integer">
+		delete from WISHIISTS where wish_seq = #{wish_seq}
 	</delete>
 
 
