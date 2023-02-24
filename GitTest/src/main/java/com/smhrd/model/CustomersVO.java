@@ -51,6 +51,17 @@ public class CustomersVO {
 			this.cust_email = cust_email;
 			this.cust_name = cust_name;
 		}
+	// 회원정보를 수정할 수 있는 생성자
+		public CustomersVO(String cust_id, String cust_pw, String cust_name, String cust_email, String cust_phone) {
+			this.cust_id = cust_id;
+			this.cust_pw = cust_pw;
+			this.cust_name = cust_name;
+			this.cust_email = cust_email;
+			this.cust_phone = cust_phone;
+
+		}	
+		
+		
 	public LocalDate getCust_joindate() {
 		return cust_joindate;
 	}

@@ -53,14 +53,14 @@ public class QnasDAO {
 	}
 	
 	// QnA 조회
-	public QnasVO select(QnasVO vo) {
+	public List<QnasVO> select(String vo) {
 			
 			SqlSession sqlSession = sqlSessionFactory.openSession(true);
 			// VO타입의 result 선언
-			QnasVO result = null;
+			List<QnasVO> result = null;
 			
 			try {
-				result = sqlSession.selectOne("qnas_select", vo);
+				result = sqlSession.selectList("qnas_select", vo);
 			} finally {
 				sqlSession.close();
 			}
@@ -75,7 +75,7 @@ public class QnasDAO {
 		List<QnasVO> qnaList = null;
 		
 		try {
-			qnaList = sqlSession.selectList("selectAll");
+			qnaList = sqlSession.selectList("qnas_selectAll");
 			// <> 제너릭 기법 :
 			// 클래스 내부에서 사용 가능한 자료형을 욍부에서 지정할 수 있는 기법
 //			List<MemberVO> memberList = new ArrayList<MemberVO>();
