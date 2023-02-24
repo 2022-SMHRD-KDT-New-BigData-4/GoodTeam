@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="bar.jsp" %>
 		<form action="SearchAllRoom.do">
 			
 			<input type="submit" value="모든숙소 검색">

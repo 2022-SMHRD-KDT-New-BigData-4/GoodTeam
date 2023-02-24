@@ -41,9 +41,10 @@ public class CustomersVO {
 			this.cust_pw = cust_pw;
 		}
 	// 2) id 찾기-폰
-		public String getCust_phone() {
-			return cust_phone;
+		public String getCust_email() {
+			return cust_email;
 		}
+
 		
 	// 3) pw 찾기
 		public CustomersVO(String cust_id, String cust_email, String cust_name) {
@@ -83,15 +84,14 @@ public class CustomersVO {
 		this.cust_name = cust_name;
 	}
 
-	public String getCust_email() {
-		return cust_email;
-	}
 
 	public void setCust_email(String cust_email) {
 		this.cust_email = cust_email;
 	}
 
-
+	public String getCust_phone() {
+		return cust_phone;
+	}
 
 	public void setCust_phone(String cust_phone) {
 		this.cust_phone = cust_phone;
