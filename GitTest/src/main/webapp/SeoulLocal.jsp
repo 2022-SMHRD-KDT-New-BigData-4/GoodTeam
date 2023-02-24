@@ -9,7 +9,6 @@
 /*  --------------------------------------------전체 구도 잡아놓은 곳--------------------------------------------------- */
 /* Seoul의 컨테이더 부분 */
 .main {
-	
 	/* 글자가 깨지는 것을 방지하는 코드 */
 	/* 텍스트가 한줄에 표시되어야 하는 코드 */
 	white-space: nowrap;
@@ -19,7 +18,7 @@
 	text-overflow: ellipsis;
 	/* background-color: gray;
         border: 1px solid black; */
-	height: 650px;
+	height: 1000px;
 	/* flex선언*/
 	display: flex;
 	/* 아이템을 가운데로 옮김 */
@@ -124,7 +123,6 @@ a {
 </head>
 
 <body>
-<%@ include file="bar.jsp" %>
 	<div class="main">
 		<!-- 서울 지도 부분 -->
 		<div class="Seoul">

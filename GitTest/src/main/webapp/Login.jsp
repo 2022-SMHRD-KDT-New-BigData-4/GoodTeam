@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="bar.jsp" %>
+
 	<form action="LonginService.do" method="post">
 		ID : <input type="text" name="id"> <br>
 		pw : <input type="password" name="pw"> <br> 

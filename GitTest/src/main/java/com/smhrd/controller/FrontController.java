@@ -85,13 +85,11 @@ public class FrontController extends HttpServlet {
 			// ajax 통신인 경우 아무것도 안한다.
 		} else if (finalpath.contains("redirect:/")) {
 			// redirect 방식
-			//정보가 없는 경우 jsp->jsp
 			response.sendRedirect(finalpath.substring(10));
 
 		} else {
 
 			// 페이지 결과 응답 진행(forward 방식)
-			// 정보(session 정보) 를 가지고 넘어오는 방식
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/" + finalpath + ".jsp");
 			rd.forward(request, response);
 
