@@ -11,6 +11,7 @@ public class WishlistVO {
 	private String reg_date;
 
 	// 생성자 만들어 쓰기
+
 	public WishlistVO(String cust_id, int room_seq) {
 		this.cust_id = cust_id;
 		this.room_seq = room_seq;
@@ -49,3 +50,4 @@ public class WishlistVO {
 	}
 
 }
+
