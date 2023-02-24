@@ -4,7 +4,7 @@ import org.apache.catalina.startup.Tomcat.ExistingStandardWrapper;
 
 public class ReservationsVO {
 	// 예약 순번
-	private String reserv_seq;
+	private int reserv_seq;
 	// 예약자 아이디
 	private String cust_id;
 	// 숙소 순번
@@ -15,6 +15,20 @@ public class ReservationsVO {
 	private String check_out;
 	// 등록일자
 	private String reg_date;
+	
+	// 기본 생성자
+	public ReservationsVO(int reserv_seq, String cust_id, int room_seq, String check_in, String check_out,
+			String reg_date, int total_amount) {
+		super();
+		this.reserv_seq = reserv_seq;
+		this.cust_id = cust_id;
+		this.room_seq = room_seq;
+		this.check_in = check_in;
+		this.check_out = check_out;
+		this.reg_date = reg_date;
+		this.total_amount = total_amount;
+	}
+
 	// 총 금액
 	private int total_amount;
 	
@@ -30,26 +44,23 @@ public class ReservationsVO {
 	}
 	
 	// 2 예약 정보 조회
-	public ReservationsVO(String cust_id, String reserv_seq) {
+	public ReservationsVO(String cust_id, int reserv_seq) {
 		this.cust_id = cust_id;
 		this.reserv_seq = reserv_seq;
 	}
 	
 	// 3 예약 취소 - 2 함수와 같음
 
-	// 4 전체 예약 정보 조회
+	
 	public String getCust_id() {
 		return cust_id;
 	}
-
 	
-	
-	
-	public String getReserv_seq() {
+	public int getReserv_seq() {
 		return reserv_seq;
 	}
 
-	public void setReserv_seq(String reserv_seq) {
+	public void setReserv_seq(int reserv_seq) {
 		this.reserv_seq = reserv_seq;
 	}
 

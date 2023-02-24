@@ -19,7 +19,7 @@ public class ReviewsDAO {
 	int result = 0;
 	
 	// 숙박업소 리뷰 조회
-	public List<ReviewsVO> reviewAcSelect(ReviewsVO vo) {
+	public List<ReviewsVO> reviewAcSelect(int vo) {
 		// 자동커밋
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		
@@ -38,14 +38,14 @@ public class ReviewsDAO {
 	}
 	
 	// 내 리뷰 조회
-		public List<ReviewsVO> reviewCustSelect(ReviewsVO vo) {
+		public List<ReviewsVO> reviewCustSelect(String cust_id) {
 			// 자동커밋
 			SqlSession sqlSession = sqlSessionFactory.openSession(true);
 			
 			List<ReviewsVO> reviewCustSelect = null;
 			
 			try {
-				reviewCustSelect =  sqlSession.selectList("reviewCustSelect",vo);
+				reviewCustSelect =  sqlSession.selectList("reviewCustSelect",cust_id);
 				
 				
 			} catch (Exception e) {
@@ -79,7 +79,7 @@ public class ReviewsDAO {
 		}
 		
 		// 리뷰 삭제
-		public int delete(ReviewsVO vo) {
+		public int delete(int vo) {
 			int result = 0;
 			// 통로 빌려오기
 			SqlSession sqlSession = sqlSessionFactory.openSession(true);
@@ -100,7 +100,7 @@ public class ReviewsDAO {
 		}
 		
 		// 리뷰 작성
-				public int insert(ReviewsVO vo) {
+				public int Write(ReviewsVO vo) {
 					int result = 0;
 					// 통로 빌려오기
 					SqlSession sqlSession = sqlSessionFactory.openSession(true);
@@ -108,7 +108,7 @@ public class ReviewsDAO {
 					// sql 문장 실행
 					try {
 
-						result = sqlSession.update("reviewInsert", vo);
+						result = sqlSession.update("reviewWrite", vo);
 
 					} finally {
 

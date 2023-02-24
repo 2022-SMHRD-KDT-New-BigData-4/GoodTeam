@@ -8,7 +8,7 @@ public class ReviewsVO {
 	// 리뷰 내용
 	private String review_content;
 	// 리뷰 별점
-	private int review_ratings;
+	private Integer review_ratings;
 	// 리뷰 작성일자
 	private String review_dt;
 	// 고객 아이디
@@ -16,42 +16,51 @@ public class ReviewsVO {
 	//
 	
 	
-	// 1 리뷰 작성
-			public ReviewsVO(int ac_seq, String review_content, int review_ratings, String cust_id) {
-				this.ac_seq = ac_seq; //숙소 순번
+	public ReviewsVO(int review_seq, int ac_seq, String review_content, Integer review_ratings, String review_dt,
+			String cust_id) {
+		super();
+		this.review_seq = review_seq;
+		this.ac_seq = ac_seq;
+		this.review_content = review_content;
+		this.review_ratings = review_ratings;
+		this.review_dt = review_dt;
+		this.cust_id = cust_id;
+	}
+	
+	
+	
+		// 1 리뷰 작성
+			public ReviewsVO(String review_content, Integer review_ratings, int review_seq, String review_dt) {
 				this.review_content = review_content; //리뷰 내용
 				this.review_ratings = review_ratings; //리뷰 작성일자
-				this.cust_id = cust_id; //숙소 순번
+				this.review_seq = review_seq; //숙소 순번
+				this.review_dt = review_dt;
 			}
-	// 2 리뷰 수정
-			public ReviewsVO(int review_ratings, String review_content, int review_seq) {
-				this.review_ratings = review_ratings; //리뷰 작성일자
+			
+	
+
+			// 2 리뷰 수정
+			public ReviewsVO(Integer review_ratings, String review_content, int review_seq) {
 				this.review_content = review_content; //리뷰 내용
-				this.review_seq = review_seq; //리뷰 순번
+				this.review_ratings = review_ratings; //리뷰 작성일자
+				this.review_seq = review_seq; //숙소 순번
 			}
-	// 3 리뷰 삭제
+
+			
+			
+			
+			
 			public int getReview_seq() {
 				return review_seq;
 			}
-	
-	// 4 내 리뷰 조회
+
 			public String getCust_id() {
 				return cust_id;
 			}
-	// 5 호텔 리뷰 조회
 			public int getAc_seq() {
 				return ac_seq;
 			}
-	
-	
-	
-		
-	
-	
 
-	
-		
-	
 	
 	// 생성자 만들어 쓰기
 
@@ -77,7 +86,7 @@ public class ReviewsVO {
 		return review_ratings;
 	}
 
-	public void setReview_ratings(int review_ratings) {
+	public void setReview_ratings(Integer review_ratings) {
 		this.review_ratings = review_ratings;
 	}
 
