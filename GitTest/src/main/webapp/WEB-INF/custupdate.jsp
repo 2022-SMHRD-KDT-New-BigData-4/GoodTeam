@@ -21,6 +21,7 @@
 		사용자 가입일자 : <input type="text" readonly value='<%=memberinfo.getCust_joindate()%>' name="joindate"><br>
 		 사용자 포인트 번호 : <input type="text" readonly value='<%=memberinfo.getCust_point()%>' name="point"><br> 
 		<input type="submit" value="개인정보 수정">
+		
 	</form>
 
 

@@ -1,5 +1,7 @@
 package com.smhrd.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
 import javax.servlet.http.HttpServletRequest;
@@ -35,8 +37,19 @@ public class CustSelect implements Command {
 		int result = dao.update(vo);
 		String url = null;
 		if (result == 1) {
-
+			/* 회원정보 수정 성공 시, my page 창으로 이동 */
 			url = "SelectSuccess";
+			response.setContentType("text/html;charset=UTF-8");
+			PrintWriter out = null;
+			try {
+				out = response.getWriter();
+			} catch (IOException e) {
+				e.printStackTrace();
+				out.printf("<script>alert('회원정보 수정이 완료되었습니다.')</script>");
+			}
+			
+			
+			
 
 		} else {
 

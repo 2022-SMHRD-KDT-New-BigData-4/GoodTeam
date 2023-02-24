@@ -9,10 +9,7 @@
 </head>
 <body>
 <%@include file="bar.jsp" %>
-<div class="#" data-include-path="#".html>
-   </div>
 <div class="create">
-   
    
       <div class="container">
          <div class ="create_form">
