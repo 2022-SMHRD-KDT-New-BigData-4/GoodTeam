@@ -25,7 +25,7 @@ public class JoinService implements Command {
 		 String cust_email= request.getParameter("email");
 		 String cust_phone = request.getParameter("phone");
 		 int cust_point = 0;
-		 LocalDate cust_joindate = LocalDate.of(2055,03,20);
+		 LocalDate cust_joindate = LocalDate.now();
 		 char cust_type = 'M';
 		 // 현재 오늘 날자 불러옴
 
