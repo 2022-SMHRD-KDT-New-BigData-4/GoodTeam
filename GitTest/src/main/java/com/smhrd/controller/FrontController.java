@@ -32,6 +32,13 @@ public class FrontController extends HttpServlet {
 		// FrontController 가 생성될 때 객체 생성을 최초 1번만
 		// 어떤 요청이 들어왔을 때 해당하는 요청을 수행할 수 있는 클래스의 객체를 생성!!
 		map = new HashMap<>();
+		
+		// 임시! 실패 페이지
+		map.put("Fail.do", new Fail());
+		// main.jsp->login.jsp창으로 넘어감
+		map.put("Login.do", new Login());
+		// Create_Account.jsp로 넘어감
+		map.put("CreateAccount.do", new CreateAccount());
 		// 회원가입 서비스
 		map.put("JoinService.do", new JoinService());
 		// 모든 숙소 검색 서비스
@@ -42,8 +49,16 @@ public class FrontController extends HttpServlet {
 		map.put("LocalMap.do", new LocalArea());
 		// 로그인을 할 수 있는 기능
 		map.put("LonginService.do", new LoginService());
+		
+		// myinfo 
+		map.put("MyInfo.do", new MyInfo());
+		
 		// 내정보 수정 할 수 있는 기능
 		map.put("CustSelect.do", new CustSelect());
+		
+		// Qna 페이지
+		map.put("QnaTotal.do", new QnaTotal());
+		
 		// QNA 전체 조회 기능
 		map.put("Qna_select_all.do", new Qna_select_all());
 		// QNA 질문 기능
@@ -56,6 +71,8 @@ public class FrontController extends HttpServlet {
 		map.put("ReservationCancel.do", new ReservationCancel());
 		// 예약 전체 정보 조회 기능
 		map.put("ReservationSelectAll.do", new ReservationSelectAll());
+		// 마이 리뷰
+		map.put("MyReview.do", new Reviews());
 		// 리뷰 작성 기능
 		map.put("ReviewWrite.do", new ReviewWrite());
 		// 리뷰 수정 기능

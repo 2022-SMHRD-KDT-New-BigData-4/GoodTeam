@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1>위시리스트 페이지</h1>
 	<%
 	List<JoinVO> wishlist = (List<JoinVO>) request.getAttribute("wishlist");
 	for (JoinVO vo : wishlist) {

@@ -44,9 +44,9 @@ public class JoinService implements Command {
 		String url;
 		if(result == 1) {
 			System.out.println("삽입성공");
-			url = "GoMain.do";
+			url = "Login";
 		} else {
-			url = "fail.do";
+			url = "Fail";
 			System.out.println("삽입실패");
 		}
 		

@@ -32,12 +32,12 @@ public class ReviewUpdate implements Command {
 
 		if (result > 0) {
 			// 리뷰 작성 성공
-			moveURL = "GoMain.do";
+			moveURL = "myReview";
 			System.out.println("갔음");
 
 		} else {
 			// 리뷰 작성 실패
-			moveURL = "redirect:/GoMain.do";
+			moveURL = "redirect:/GoFail.do";
 			System.out.println("안갔음");
 		}
 //		// 공통적으로 실행될 수 있는 영역

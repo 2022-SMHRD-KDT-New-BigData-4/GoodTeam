@@ -33,11 +33,14 @@ public class LoginService implements Command {
 			// 아이디 정보를 집어넣을 세션 생성
 			HttpSession Session = request.getSession();
 			Session.setAttribute("memberinfo", memberinfo);
-			return "AllroomsSelect";
+			return "SeoulLocal";
+//			return "AllroomsSelect";
 
 		}
 
-		return "Loginfail";
+		return "fail";
+//		return "SeoulLocal";
+//		return "AllroomsSelect";
 	}
 
 }

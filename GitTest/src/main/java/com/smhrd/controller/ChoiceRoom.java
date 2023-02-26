@@ -57,7 +57,8 @@ public class ChoiceRoom implements Command {
 
 		request.setAttribute("roomprice", roomprice);
 
-		return "ChoiceRoom";
+		return "hotel_choice";
+//		return "ChoiceRoom";
 	}
 
 }

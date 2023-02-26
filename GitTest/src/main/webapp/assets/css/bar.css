@@ -9,6 +9,7 @@ body {
    background-color:#FFF0F5
    
    }
+
 .bar img{ /*상단바 이미지*/
 	display: inline-flex;
     width: 100vw; 
@@ -18,6 +19,7 @@ body {
     object-fit: cover;
 }
 .bar_home{/*HOW ABOUT SEOUL*/
+	text-decoration: none;
     position: absolute;
     top: -12px;;
     left: 5%;    

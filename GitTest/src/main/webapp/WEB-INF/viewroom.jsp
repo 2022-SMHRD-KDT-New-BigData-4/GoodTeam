@@ -7,10 +7,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>recommand_course</title>
 </head>
 <body>
 <table>
+
+<h1>추천 숙소 recommand_course페이지</h1>
 <%
 	List<AccommodationsVO> roomlist = (List<AccommodationsVO>) request.getAttribute("roomlist");
 	for (AccommodationsVO vo : roomlist) {

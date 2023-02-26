@@ -26,7 +26,7 @@ public class ReservationSelectAll implements Command{
 //			RequestDispatcher dispatcher = request.getRequestDispatcher("/select.jsp");
 //			dispatcher.forward(request, response);
 
-			return "ReservationSelectAll";
+			return "myReservation";
 		}
 	
 }

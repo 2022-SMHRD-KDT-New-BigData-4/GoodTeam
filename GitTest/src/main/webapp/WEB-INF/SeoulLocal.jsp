@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>area_choice</title>
 <style>
 /*  --------------------------------------------전체 구도 잡아놓은 곳--------------------------------------------------- */
 /* Seoul의 컨테이더 부분 */
