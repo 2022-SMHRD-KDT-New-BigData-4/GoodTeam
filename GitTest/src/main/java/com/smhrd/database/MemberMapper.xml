@@ -121,10 +121,14 @@
 		delete from reservations where cust_id = #{cust_id} and
 		reserv_seq=#{reserv_seq}
 	</delete>
-	<!-- 전체 예약 정보 조회 -->
+		<!-- 전체 예약 정보 조회 -->
 	<select id="reserv_selectAll" parameterType="java.lang.String"
-		resultType="com.smhrd.model.ReservationsVO">
-		select * from reservations where cust_id = #{cust_id}
+		resultType="com.smhrd.model.JoinVO">
+		select *
+  		from rooms a , reservations b, ACCOMMODATIONS c
+ 		where a.ac_seq = c.ac_seq
+  		and a.room_seq = b.room_seq
+   		and b.cust_id = #{cust_id}
 	</select>
 	<!-- 지역별 숙소 모두 가져오기 -->
 	<select id="LocalAreaRooms" parameterType="java.lang.String"
