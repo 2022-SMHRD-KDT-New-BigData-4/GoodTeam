@@ -112,15 +112,15 @@ public class CustomersDAO {
 	}
 
 	// id찾기
-		public CustomersVO findID(CustomersVO vo) {
+		public String findID(String email) {
 			//통로 빌려오기
 			SqlSession sqlSession = sqlSessionFactory.openSession(true);
 			
 			//MemverVO타입의 result 선언
-			CustomersVO result = null;
+			String result = null;
 			
 			try {
-				result = sqlSession.selectOne("findID",vo);
+				result = sqlSession.selectOne("findID",email);
 			}finally {
 				sqlSession.close();
 				
@@ -130,10 +130,10 @@ public class CustomersDAO {
 		}
 
 		// pw찾기
-		public CustomersVO findPW(CustomersVO vo) {
+		public String findPW(CustomersVO vo) {
 			SqlSession sqlSession = sqlSessionFactory.openSession(true);
 			
-			CustomersVO result = null;
+			String result = null;
 			
 			try {
 				result = sqlSession.selectOne("findPW", vo);

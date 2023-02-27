@@ -40,16 +40,15 @@ public class CustomersVO {
 			this.cust_id = cust_id;
 			this.cust_pw = cust_pw;
 		}
-	// 2) id 찾기-폰
-		public String getCust_phone() {
-			return cust_phone;
+	// 2) id 찾기-이메일
+		public String getCust_email() {
+			return cust_email;
 		}
-		
 	// 3) pw 찾기
-		public CustomersVO(String cust_id, String cust_email, String cust_name) {
+		public CustomersVO(String cust_id, String cust_name, String cust_email) {
 			this.cust_id = cust_id;
-			this.cust_email = cust_email;
 			this.cust_name = cust_name;
+			this.cust_email = cust_email;
 		}
 	// 회원정보를 수정할 수 있는 생성자
 		public CustomersVO(String cust_id, String cust_pw, String cust_name, String cust_email, String cust_phone) {
@@ -94,15 +93,15 @@ public class CustomersVO {
 		this.cust_name = cust_name;
 	}
 
-	public String getCust_email() {
-		return cust_email;
-	}
+
 
 	public void setCust_email(String cust_email) {
 		this.cust_email = cust_email;
 	}
 
-
+	public String getCust_phone() {
+		return cust_phone;
+	}
 
 	public void setCust_phone(String cust_phone) {
 		this.cust_phone = cust_phone;

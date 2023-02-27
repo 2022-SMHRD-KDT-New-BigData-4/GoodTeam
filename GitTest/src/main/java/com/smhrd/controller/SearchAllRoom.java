@@ -10,6 +10,7 @@ import com.smhrd.command.Command;
 import com.smhrd.model.AccommodationsDAO;
 import com.smhrd.model.AccommodationsVO;
 import com.smhrd.model.CustomersDAO;
+import com.smhrd.model.RoomsDAO;
 
 public class SearchAllRoom implements Command {
 	// 전체 방을 조회하는 기능
@@ -19,7 +20,8 @@ public class SearchAllRoom implements Command {
 
 		// 한글 잡아주기
 		request.setCharacterEncoding("UTF-8");
-
+		
+		String id = request.getParameter("id");
 		// 전체숙소 검색이라 받아올 데이터값이 없다.
 		AccommodationsDAO dao = new AccommodationsDAO();
 		// 들어갈 데이터 값이 없음
@@ -27,10 +29,9 @@ public class SearchAllRoom implements Command {
 
 		// 뽑아오는 로직 수행
 		List<AccommodationsVO> roomlist = dao.SelectAllRooms();
-
 		request.setAttribute("roomlist", roomlist);
 
-		return "viewroom";
+		return "전체숙소";
 	}
 
 }

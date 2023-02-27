@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800'); 
+
+ 
+body{
+/* flex선언*/
+display: flex;
+/* 아이템을 가운데로 옮김 */
+justify-content: center;
+/* 아이템을 정 한가운데로 옮김 */
+align-items: center;
+/* background-color: aqua; */
+flex-direction: column;
+}
+.room_top{
+height: 8px;
+width: 5%;
+}
+.class{
+height: 500px;
+width: 55%;
+background-color: white;    
+/* flex선언*/
+display: flex;
+/* 아이템을 가운데로 옮김 */
+justify-content: center;
+/* 아이템을 정 한가운데로 옮김 */
+align-items: center;
+/* background-color: aqua; */
+flex-direction: column;
+border: 1px solid rgb(0, 0, 0);
+}
+.room_img{
+margin-top: 5px;
+height: 70%;
+width : 98.5%; 
+}
+
+.img{
+height: 100%;
+width : 100%;
+background-color: red; 
+border: 1px solid rgb(0, 0, 0);
+}
+
+.room_info{
+margin-top: 6px;
+height: 30%;
+width : 95%;   
+background-color: rgb(255, 255, 255); 
+border: 1px solid white;
+overflow: hidden; /* 추가 */
+display: flex;
+flex-direction: column;
+margin-bottom: 10px;
+}
+        
+p{
+margin: 0px;
+padding : 5px;
+}
+h3{
+margin-bottom: 0px;
+}
+		.email-link{
+			font-family :'Cafe24아네보네에어',sans-serif;
+			text-decoration: none;
+			color: black;
+			border: thick;
+			font-size: 16px;	
+		}
+		.address{
+			font-family :'Cafe24아네보네에어',sans-serif;
+			text-decoration: none;
+			color: gray;
+			font-size: 14px;
+		}
+		.price{
+			font-family :'Cafe24아네보네에어',sans-serif;
+			text-decoration: none;
+			color: black;
+			font-size: 15px;
+		}
+.reserv{
+font-size: 14px;
+border: 1px black;
+background-color: pink;
+background-size: 5px;
+}
+

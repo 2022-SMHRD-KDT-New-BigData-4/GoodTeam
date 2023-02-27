@@ -33,8 +33,7 @@ public class AccommodationsDAO {
 		return roomlist;
 
 	}
-
-	//
+	
 	public List<AccommodationsVO> ChoiceRoom(AccommodationsVO ac_vo) {
 		// 자동커밋
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);

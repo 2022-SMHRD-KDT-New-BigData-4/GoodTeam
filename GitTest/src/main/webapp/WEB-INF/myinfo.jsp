@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Mypage</title>
 </head>
 <body>
 <h1>my info 페이지</h1>

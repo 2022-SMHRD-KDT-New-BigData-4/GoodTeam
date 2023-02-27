@@ -21,7 +21,7 @@ body {
 .bar_home{/*HOW ABOUT SEOUL*/
 	text-decoration: none;
     position: absolute;
-    top: -12px;;
+    top: -18px;;
     left: 5%;    
     transform: translate(-10%,-5%);
     color: white;
@@ -29,10 +29,17 @@ body {
 .bar_page{/*pick a region*/
     position: absolute;
     top: 28px;
-    left: 4%;
+    left: 3%;
     transform: translate(-10%,-5%);
     color: white;
 }
+ .cust_nm{
+  	position: absolute;
+  	top: 28px;
+    left: 3%;
+    transform: translate(-10%,-5%);
+  	color: white;
+  }
 
 .box{ /*검색바*/
     position: absolute;

@@ -41,6 +41,15 @@ public class FrontController extends HttpServlet {
 		map.put("CreateAccount.do", new CreateAccount());
 		// 회원가입 서비스
 		map.put("JoinService.do", new JoinService());
+		// find확인용
+		map.put("Find.do", new Find());
+		// findID
+		map.put("FindID.do", new FindIDService());
+		// findPW
+		map.put("FindPW.do", new FindPWService());
+		
+		// SeoulTrip 누르면 전체 서비스 보여주는 AllroomSelect.jsp넘어가기
+		
 		// 모든 숙소 검색 서비스
 		map.put("SearchAllRoom.do", new SearchAllRoom());
 		// 내가 선택한 숙소 들어가는 서비스

@@ -48,6 +48,21 @@ public class RoomsDAO {
 
 		return result;
 	}
+	//가격 1개 가져오기
+	public int price(String a) {
+
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		// VO타입의 result 선언
+		int result = 0;
+
+		try {
+			result = sqlSession.selectOne("OnePrice", a);
+		} finally {
+			sqlSession.close();
+		}
+
+		return result;
+	}
 
 	// 객실 업로드
 	public int upload(RoomsVO vo) {
