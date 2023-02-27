@@ -43,14 +43,14 @@
                 </div>
               </div>       
 
-            <a class="heart" href="WishSelectAll">
+            <a class="heart" href="WishSelectAll.do">
             </a>
 
-            <div class="profile">
-            	<a href="MyInfo.do"></a>
+            	<a href="MyInfo.do" class="profile">
+            <div>
                 <div class="head"></div>
                 <div class="p_body"></div>
-            </div>
+            </div></a>
         </div><!--상단바-->
     </header>
     <%  
