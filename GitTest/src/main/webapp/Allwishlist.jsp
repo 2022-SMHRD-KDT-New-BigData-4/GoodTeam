@@ -12,37 +12,20 @@
 
 </head>
 <body>
-<h1>위시리스트 페이지</h1>
-	<%
-	List<JoinVO> wishlist = (List<JoinVO>) request.getAttribute("wishlist");
-	for (JoinVO vo : wishlist) {
-	%>
-	<table>
-		<tr>
-			<td><%=vo.getAc_name()%></td>
-			<td><%=vo.getRoom_nm()%></td>
-			<td><%=vo.getRoom_price_h()%></td>
-			<td><%=vo.getRoom_price_l()%></td>
-			<td><%=vo.getReserv_yn()%></td>
-			<td><%=vo.getReg_date()%></td>
-		</tr>
-	</table>
-	
-	
-	<%
-	}
-	%>
-	
+ <!-- wishlist list 불러와서 for문 돌리기 + import 되어있는지 확인-->
+
 	<div class="total">
       <div class="main">
 		<div class="sub1_main">
 			<div class="img_main">
 				<div class="img_main_head">
-					<h1>Stays You Just Saw</h1>
+					<h1>Wish List</h1>
 				</div>
+				
 				<div class="img_main_img">
+					<img src="assets/images/서울샘플이미지.png" alt="Image" class="" >
 				</div>
-				<div class="img_main_head">
+				<div class="img_main_foot">
 				</div>
 			</div>
 		</div>
@@ -50,7 +33,7 @@
             <div class="room">
 				<div class="room_contents">
 					<div class="room_img">
-						<img src="img/Lara1.png" alt="Image" class="room_imgs">
+						<img src="assets/images/숙소아이콘샘플.png" alt="Image" class="room_imgs">
 					</div>
 				</div>
 			</div> 
