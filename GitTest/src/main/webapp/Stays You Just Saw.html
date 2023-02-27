@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 기본적 틀 완성 오른쪽 스크롤바 내리면서 돌아가는건 로직짜서 만들어야 할 것 같음 -->
+    <style>
+        .total {
+            /* flex선언*/
+            display: flex;
+            /* 아이템을 가운데로 옮김 */
+            justify-content: center;
+            /* 아이템을 정 한가운데로 옮김 */
+            align-items: center;
+            height: 1000px;
+            background-color: aquamarine;
+            border: 1px solid red;
+            
+        }
+        .main {
+            display: flex;
+             /* 아이템을 가운데로 옮김 */
+            justify-content: center;
+            /* 아이템을 정 한가운데로 옮김 */
+            align-items: center;
+            position: relative;
+        }
+        .sub1_main {
+            width: 700px;
+            height: 68vh;
+            background-color: beige;
+            border: 1px solid green;
+            /* img_main을 움직이게 하기 위해  */
+            /* flex선언*/
+            display: flex;
+            /* 아이템을 가운데로 옮김 */
+            justify-content: center;
+            /* 아이템을 정 한가운데로 옮김 */
+            align-items: center;
+         
+           
+        }
+
+        .sub2_main {
+            width: 400px;
+            height: 68vh;
+            background-color: honeydew;
+            border: 1px solid blue;
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           
+           
+        }
+
+        .room {
+            width: 100%;
+            min-height: 33%;
+            max-height: 33%;
+            height: auto;
+            background-color: rgba(141, 189, 102, 0.267);
+            border: 1px solid rgb(0, 255, 128);
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+   
+        }
+
+        .img_main {
+            height: 100%;
+            width: 500px;
+            background-color: rgb(179, 166, 166);
+            border: 1px solid black;
+
+        }
+
+        .img_main_head {
+            /* img_main_head_title을 움직이게 하기 위해  */
+            /* flex선언*/
+            display: flex;
+            /* 아이템을 가운데로 옮김 */
+            justify-content: center;
+            /* 아이템을 정 한가운데로 옮김 */
+            align-items: center;
+
+
+            width: 100%;
+            height: 15%;
+            background-color: rgb(154, 204, 120);
+            border: 1px solid rgb(4, 131, 235);
+
+        }
+
+        .img_main_img {
+            width: 100%;
+            height: 70%;
+            background-color: rgb(130, 224, 224);
+            border: 1px solid rgb(223, 12, 12);
+
+
+        }
+
+        /*-------------------------------------submain2-------------------------------------------------*/
+        .room_contents{
+            height: 100%;
+            width: 100%;
+            background-color: rgba(233, 169, 219, 0.575);
+            border: 1px solid rgb(200, 255, 0);
+           
+          
+
+
+        }
+        .room_img{
+            display: none;
+            position: absolute;
+            top : 15%;
+            left : 9%;
+            
+        }
+        .room_contents:hover .room_img{
+            display : block;
+            
+        }
+        .room_imgs{
+            height: 463px;
+            width: 500px;
+           
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+	<div class="total">
+      <div class="main">
+		<div class="sub1_main">
+			<div class="img_main">
+				<div class="img_main_head">
+					<h1>Stays You Just Saw</h1>
+				</div>
+				<div class="img_main_img">
+				</div>
+				<div class="img_main_head">
+				</div>
+			</div>
+		</div>
+		<div class="sub2_main">
+            <div class="room">
+				<div class="room_contents">
+					<div class="room_img">
+						<img src="img/Lara1.png" alt="Image" class="room_imgs">
+					</div>
+				</div>
+			</div> 
+            <div class="room">
+				<div class="room_contents">
+					<div class="room_img">
+						<img src="img/Lara12.png" alt="Image" class="room_imgs">
+					</div>
+				</div>
+			</div> 
+            <div class="room">
+				<div class="room_contents">
+					<div class="room_img">
+						<img src="img/Lara19.png" alt="Image" class="room_imgs">
+					</div>
+				</div>
+			</div> 
+			<div class="room">
+				<div class="room_contents">
+					<div class="room_img">
+						<img src="img/Artist01.gif" alt="Image" class="room_imgs">
+					</div>
+				</div>
+			</div> 
+		</div>
+      </div>  
+	</div>
+</body>
+</html>
+
+</html>
