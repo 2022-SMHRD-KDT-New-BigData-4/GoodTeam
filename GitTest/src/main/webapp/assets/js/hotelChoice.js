@@ -9,9 +9,8 @@
 	
 	// 주소-좌표 변환 객체를 생성합니다
 	var geocoder = new kakao.maps.services.Geocoder();
-	
 	// 주소로 좌표를 검색합니다
-	geocoder.addressSearch('서울특별시 구로구 구로동로25길 26 (구로동)', function(result, status) {
+	geocoder.addressSearch($('#addr').text(), function(result, status) {
 	
 	    // 정상적으로 검색이 완료됐으면 
 	     if (status === kakao.maps.services.Status.OK) {
@@ -28,4 +27,12 @@
 	        map.setCenter(coords);
 	    } 
 	});    
+	
+	
+	let urlParams = new URLSearchParams(window.location.search);
+	
+	let date1 = new Date(urlParams.get('checkIn'))
+	let date2 = new Date(urlParams.get('checkOut'))
+	console.log((date2 - date1) / (24 * 3600 * 1000)) 
+	$('#price').text(price * (date2 - date1) / (24 * 3600 * 1000))
 		

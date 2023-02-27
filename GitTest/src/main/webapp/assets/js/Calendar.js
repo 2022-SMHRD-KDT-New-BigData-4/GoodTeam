@@ -12,6 +12,9 @@ $('#stay').on('keyup',()=>{
 	})
 		
 	console.log(stays)
+	
+let price = parseInt($('#ppd').text())
+
 
 class Calendar {
 	constructor(year, month) {
@@ -158,14 +161,8 @@ class Calendar {
 			}
 
 			const selectedDay = Number(selectedDayButtons[0].innerText);
-			const today = new Date();
-			if (selectedDay < today.getDate()) {
-				alert("당일 이전의 날짜는 예약할 수 없습니다.");
-				return;
-			}
 			
-			
-			
+		
 			// 년, 월, 일 데이터 입력 받고 입력받은 데이터를 date로 뭉침
 			let reservYear = calendarTitle.innerHTML.split('년')[0]
 			let reservMonth = calendarTitle.innerHTML.split('년')[1].replace('월', '')
@@ -174,15 +171,19 @@ class Calendar {
 			// queryString 형식으로 보내기 위해 데이터를 다시 입력받는작업
 			let dateString = reservDate.toISOString().substring(0, 10);
 			let checkOut = new Date(reservYear, reservMonth - 1, selectedDay + 1 + stays)
+				
 			let checkOutString = checkOut.toISOString().substring(0,10);
 			$.ajax({
-				url: "hotel_choice.jsp",
+				url: "#",
 				method: "POST",
 				data: {
-					date: dateString
+					date: dateString,
+					checkOut : checkOutString
 				},
 				success: function(result) {
-					window.location.href = "hotel_choice.jsp?checkIn=" + dateString + "&" + "checkOut=" + checkOutString;
+					
+					let urlParam = new URLSearchParams(window.location.search);
+					window.location.href = "ChoiceRoom.do?" + "ac_seq=" + urlParam.get('ac_seq') + "&" + "checkIn=" + dateString + "&" + "checkOut=" + checkOutString;
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
 					console.error("There was a problem with the ajax operation:", errorThrown);
@@ -264,7 +265,7 @@ const closeButton = document.getElementById("close");
   });
   closeButton.addEventListener('click', () => {
 	 calendarContainer.classList.add('hide'); 
-	 document.body.style.backgroundColor = 'white';
+	 document.body.style.backgroundColor = '';
 	 $('#re_scroll').css('background-color', '');
   });
 

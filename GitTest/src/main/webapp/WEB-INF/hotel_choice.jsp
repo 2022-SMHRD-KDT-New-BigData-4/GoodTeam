@@ -15,9 +15,7 @@
 <meta charset="UTF-8">
 <title>Hotel Room Choice</title>
 <link rel="stylesheet" href="assets/css/hotelChoice.css">
-<script src="assets/js/jquery-3.6.3.min.js"></script>
-<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>    
+<script src="assets/js/jquery-3.6.3.min.js"></script>  
 </head>
 <body>
 
@@ -50,10 +48,10 @@
 			<td></td> <!-- 룸 타입 -->
 		</tr>
 		<tr>
-			<td><%=roopri.getRoom_price_l()%></td>
+			<td><span id="price"><%=roopri.getRoom_price_l()%></span> won </td>
 		</tr>
 		<tr>
-			<td id="ppd"><%=roopri.getRoom_price_l()%> per day</td>
+			<td>(<span id="ppd"><%=roopri.getRoom_price_l()%></span> won) per day</td>
 		</tr>
 		<tr></tr> 
 		<tr></tr> 
@@ -202,7 +200,7 @@
 	<br>
 	<div id="line1"></div>
 	<br/>
-	<p align="center"><%=room.getAc_addr()%></p>
+	<p align="center" id="addr"><%=room.getAc_addr()%></p>
 	<br/>
 	<div id="map"></div>
 	
