@@ -3,6 +3,7 @@
 <%@page import="com.smhrd.model.WishlistVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,9 +24,12 @@
 				</div>
 				
 				<div class="img_main_img">
-					<img src="assets/images/서울샘플이미지.png" alt="Image" class="" >
+					<img src="#" alt="Image">
 				</div>
 				<div class="img_main_foot">
+				
+				<!-- 호텔명 입력받아 오기 -->
+					<h1>호텔명을 입력해주세요~~</h1>
 				</div>
 			</div>
 		</div>
@@ -35,20 +39,50 @@
 					<div class="room_img">
 						<img src="assets/images/숙소아이콘샘플.png" alt="Image" class="room_imgs">
 					</div>
+					<div class="room_contents_info">
+						<div class="room_contents_infos">
+							<p>객실명</p>
+							<p>성수기 가격</p>
+							<p>비성수기 가격</p>
+							<p>예약가능여부</p>
+							<p>날짜</p>
+						</div>
+					</div> 
+					
 				</div>
 			</div> 
             <div class="room">
 				<div class="room_contents">
 					<div class="room_img">
-						<img src="img/Lara12.png" alt="Image" class="room_imgs">
+						<img src="assets/images/숙소아이콘샘플.png" alt="Image" class="room_imgs">
 					</div>
+					<div class="room_contents_info">
+						<div class="room_contents_infos">
+							<p>객실명</p>
+							<p>성수기 가격</p>
+							<p>비성수기 가격</p>
+							<p>예약가능여부</p>
+							<p>날짜</p>
+						</div>
+						
+					</div> 
 				</div>
 			</div> 
             <div class="room">
 				<div class="room_contents">
 					<div class="room_img">
-						<img src="img/Lara19.png" alt="Image" class="room_imgs">
+						<img src="assets/images/숙소아이콘샘플.png" alt="Image" class="room_imgs">
 					</div>
+					<div class="room_contents_info">
+						<div class="room_contents_infos">
+							<p>객실명</p>
+							<p>성수기 가격</p>
+							<p>비성수기 가격</p>
+							<p>예약가능여부</p>
+							<p>날짜</p>
+						</div>
+						
+					</div> 
 				</div>
 			</div> 
 			<div class="room">
@@ -56,6 +90,16 @@
 					<div class="room_img">
 						<img src="img/Artist01.gif" alt="Image" class="room_imgs">
 					</div>
+					<div class="room_contents_info">
+						<div class="room_contents_infos">
+							<p>객실명</p>
+							<p>성수기 가격</p>
+							<p>비성수기 가격</p>
+							<p>예약가능여부</p>
+							<p>날짜</p>
+						</div>
+						
+					</div> 
 				</div>
 			</div> 
 		</div>

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800'); 
       .total {
             /* flex선언*/
             display: flex;
@@ -19,12 +19,13 @@
             /* 아이템을 정 한가운데로 옮김 */
             align-items: center;
             position: relative;
+            background-color: white;
         }
         .sub1_main {
             width: 700px;
             height: 68vh;
-            background-color: beige;
-            border: 1px solid green;
+            background-color: white;
+            border: 0px ;
             /* img_main을 움직이게 하기 위해  */
             /* flex선언*/
             display: flex;
@@ -39,13 +40,14 @@
         .sub2_main {
             width: 400px;
             height: 68vh;
-            background-color: honeydew;
-            border: 1px solid blue;
+            background-color: white;
+            border: 0;
             overflow-y: auto;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            margin:10px;
            
            
         }
@@ -55,8 +57,8 @@
             min-height: 33%;
             max-height: 33%;
             height: auto;
-            background-color: rgba(141, 189, 102, 0.267);
-            border: 1px solid rgb(0, 255, 128);
+            background-color:white;
+            border: 0px ;
             margin-top: 10px;
             display: flex;
             justify-content: center;
@@ -66,9 +68,10 @@
 
         .img_main {
             height: 100%;
-            width: 500px;
+            width: 100%;
             background-color: rgb(179, 166, 166);
             border: 1px solid black;
+            margin-left:10px;
 
         }
 
@@ -80,41 +83,57 @@
             justify-content: center;
             /* 아이템을 정 한가운데로 옮김 */
             align-items: center;
-
-
             width: 100%;
             height: 15%;
-            background-color: rgb(154, 204, 120);
-            border: 1px solid rgb(4, 131, 235);
-
+            background-color: #F79792;
+            border: 0px solid rgb(4, 131, 235);
         }
 
         .img_main_img {
         	display:flex;
         	justify-content:center;
+        	align-items:center;
             width: 100%;
             height: 70%;
             background-color: rgb(130, 224, 224);
-            border: 1px solid rgb(223, 12, 12);
-
+            border: 0px solid rgb(223, 12, 12);
+            object-fit:contain;
 
         }
         
+        .img_main_foot{
+        	justify-content: center;
+        	align-items:center;
+        	width: 100%;
+        	height: 15%;
+        	background-color: #F79792;
+            border: 0px solid rgb(4, 131, 235);
+        }
         .room_imgs{
         	display:wrap;
         	width: 500px;
         	height: 400px;
         }
-
+        
+	h1{
+	margin:0px;
+	justify-content:center;
+	align-items:center;
+	font-family:'Cafe24아네보네에어', sans-serif;
+	color:black;
+	
+	
+	}
+	
+	
         /*-------------------------------------submain2-------------------------------------------------*/
         .room_contents{
             height: 100%;
             width: 100%;
-            background-color: rgba(233, 169, 219, 0.575);
-            border: 1px solid rgb(200, 255, 0);
-           
-          
-
+            margin:10px;
+            padding:10px;
+            background-color: white;
+            border: 1.5px solid #FFF0F5;
 
         }
         .room_img{
@@ -122,14 +141,24 @@
             position: absolute;
             top : 15%;
             left : 9%;
-            
         }
         .room_contents:hover .room_img{
             display : block;
             
         }
         .room_imgs{
-            height: 463px;
-            width: 500px;
+        	display:flex;
+            max-height: 465px;
+            max-width: 698px;
+            justify-content:center;
+            align-items:center;
+            object-fit:contain;
            
         }
+        
+        .room_contents_info{
+        	display:flex;
+        	position:relative;
+        }
+        
+      
