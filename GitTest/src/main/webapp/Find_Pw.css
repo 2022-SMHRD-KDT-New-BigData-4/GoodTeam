@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+.contain{
+	display:flex;
+	width:100%;
+	height: 100%;
+	min-width: 400px;
+	min-height: 600px;
+}
+.welcom{
+	display:flex;
+	width:100%;
+	height: 100hv;
+	justify-content: center;
+	align-items: center;
+	background-color: pink;
+	flex-direction: column;
+	
+}
+.header{
+	display:flex;
+	width: 100%;
+	height: 40%;
+	justify-content: center;
+	align-items: center;
+	background-color: skyblue;
+	
+}
+
+.find{
+	display:flex;
+	width:100%;
+	height:60%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family:"Cafe24아네보네에어",sans-serif;
+	font-size:16px;
+	flex-direction: column;
+	
+}
+input[type="submit"]{
+	display:flex;
+	margin-top:10px;
+	margin-bottom:10px;	
+	padding:10px 25px;
+	border-radius:12px;
+	background-color:#F79792;
+	font-size: 16px;
+}
