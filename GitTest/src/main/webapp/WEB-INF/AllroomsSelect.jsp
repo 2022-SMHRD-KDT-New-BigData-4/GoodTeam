@@ -68,11 +68,5 @@
 
 </script>
 
-
-
-
-
-
-
 </body>
 </html>

@@ -11,14 +11,18 @@ justify-content: center;
 align-items: center;
 /* background-color: aqua; */
 flex-direction: column;
+background-image:url("seoul.png");
+
 }
 .room_top{
 height: 8px;
-width: 5%;
+width: 30%;
+margin:20px;
 }
 .class{
 height: 500px;
-width: 55%;
+padding:13px;
+width: 50%;
 background-color: white;    
 /* flex선언*/
 display: flex;
@@ -28,23 +32,27 @@ justify-content: center;
 align-items: center;
 /* background-color: aqua; */
 flex-direction: column;
-border: 1px solid rgb(0, 0, 0);
+border: 0px ;
+box-shadow:5px 5px 5px pink;
 }
+
 .room_img{
 margin-top: 5px;
 height: 70%;
-width : 98.5%; 
+width : 98.0%; 
 }
 
 .img{
 height: 100%;
 width : 100%;
 background-color: red; 
-border: 1px solid rgb(0, 0, 0);
+border: 0px ;
+
 }
 
 .room_info{
-margin-top: 12px;
+margin-top: 15px;
+margin-bottom:15px;
 height: 30%;
 width : 95%;   
 background-color: rgb(255, 255, 255); 
@@ -53,11 +61,14 @@ overflow: hidden; /* 추가 */
 display: flex;
 flex-direction: column;
 margin-bottom: 10px;
+font-family: 'Cafe24아네보네에어',sans-serif;
+
 }
 p{
 margin: 0px;
 padding : 5px;
 }
+
 h3{
 margin-bottom: 0px;
 }
@@ -80,13 +91,20 @@ font-size: 14px;
 	color: red;
 }
 .price{
-margin-top: 9px;
+margin-top: 15px;
 font-family :'Cafe24아네보네에어',sans-serif;
 text-decoration: none;
 color: black;
 font-size: 14px;
+
 }
 .reserv{
+width:100px;
+height:80px;
+font-size:center;
+color:pink;
+text-shadow:5px 5px #F7C8E0;
+margin:0;
 position:relative;
 left:90%;
 text-decoration: none;
@@ -96,5 +114,6 @@ border: 1px black;
 margin:5px;
 background-color: 79792;
 background-size: 5px;
+font-weight: bold;
 }
 
