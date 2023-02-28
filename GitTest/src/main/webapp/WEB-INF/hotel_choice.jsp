@@ -188,7 +188,7 @@
 			</td>
 			<td><div class="review_box">
 					<table class="review_table">
-						<tr><td><%= usd %></td></tr>
+						<tr><td></td></tr>
 						<tr><td>456342542512213252313231233132313253132141121212</td></tr>
 					</table>
 				</div>

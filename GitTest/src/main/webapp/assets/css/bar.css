@@ -6,14 +6,17 @@ body {
    display:wrap;
    margin:auto;
    justify-content: center;
-   background-color:#FFF0F5
+   /*background-color:BLACK;*/
    
    }
-
+.bar{
+	
+}
 .bar img{ /*상단바 이미지*/
-	display: inline-flex;
+	display: flex;
     width: 100vw; 
-    height: 80px;
+    /*height: 80px;*/
+    height: 100%;
     margin: 0 auto;
     padding: 0 auto;
     object-fit: cover;

@@ -31,7 +31,7 @@ public class SearchAllRoom implements Command {
 		List<AccommodationsVO> roomlist = dao.SelectAllRooms();
 		request.setAttribute("roomlist", roomlist);
 
-		return "전체숙소";
+		return "AllroomsSelect";
 	}
 
 }

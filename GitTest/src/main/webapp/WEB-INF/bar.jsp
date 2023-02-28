@@ -10,7 +10,7 @@
 	    <header>
         <!--상단바-->
         <div class = "bar">
-            <img src="assets/images/광화문.png" >
+          	<img src="assets/images/광화문.png" >
             <h1 class = "bar_home">HOW ABOUT SEOUL</h1>
             <!-- ★페이지에 맞게 이름 수정 필요 -->
             <h4 class = "bar_page"> > pick a region</h4>
@@ -39,11 +39,13 @@
               </div>       
 
             <div class="heart">
+            <a href="WishSelectAll.do"></a>
             </div>
 
+            <a href="MyInfo.do">
             <div class="profile">
                 <div class="head"></div>
-                <div class="p_body"></div>
+                <div class="p_body"></div></a>
             </div>
         </div><!--상단바-->
     </header>

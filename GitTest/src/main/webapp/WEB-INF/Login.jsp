@@ -18,7 +18,7 @@
 		<input type="submit" value="회원가입">
 	</form>
 	<br/>
-	<form action="Find.do" method="post">
+	<form action="findIDPW확인용.jsp" method="post">
 		<input type="submit" value="아이디/비번찾기">
 	</form>
 
