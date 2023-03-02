@@ -7,12 +7,12 @@
 <title>서울 로컬</title>
 <link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="assets/css/Login.css">
-<link rel="stylesheet" href="assets/css/.css">
+<link rel="stylesheet" href="assets/css/bar2.css">
 <!-- ★★로그인 위치/ 이미지 수정 -->
 </head>
 <body>
 	<div class="c">
-	<img  src="images/seoul2.jpg">
+	<img  src="assets/images/seoul2.jpg">
 		<!-- 상단바 -->
 		<div class="bar_home">
 			<!-- 1. 홈  -->
