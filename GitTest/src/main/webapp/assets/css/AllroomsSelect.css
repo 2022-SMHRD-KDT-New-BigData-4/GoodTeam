@@ -77,7 +77,8 @@ font-family :'Cafe24아네보네에어',sans-serif;
 text-decoration: none;
 color: black;
 border: thick;
-font-size: 16px;	
+font-size: 16px;
+font-weight: bold;	
 }
 .address{
 margin-top: 7px;
