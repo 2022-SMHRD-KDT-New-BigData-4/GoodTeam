@@ -31,8 +31,7 @@ public class FrontController extends HttpServlet {
 		System.out.println("초기화 메서드 생성");
 		// FrontController 가 생성될 때 객체 생성을 최초 1번만
 		// 어떤 요청이 들어왔을 때 해당하는 요청을 수행할 수 있는 클래스의 객체를 생성!!
-		map = new HashMap<>();
-		
+		map = new HashMap<>();		
 		// 임시! 실패 페이지
 		map.put("Fail.do", new Fail());
 		// main.jsp->login.jsp창으로 넘어감
@@ -46,8 +45,7 @@ public class FrontController extends HttpServlet {
 		// findID
 		map.put("FindID.do", new FindIDService());
 		// findPW
-		map.put("FindPW.do", new FindPWService());
-		
+		map.put("FindPW.do", new FindPWService());		
 		// SeoulTrip 누르면 전체 서비스 보여주는 AllroomSelect.jsp넘어가기
 		map.put("SearchAllRoom.do", new SearchAllRoom());
 		// 내가 선택한 숙소 들어가는 서비스
@@ -55,17 +53,13 @@ public class FrontController extends HttpServlet {
 		// 지역별로 내가 들어갈 숙소 선택
 		map.put("LocalMap.do", new LocalArea());
 		// 로그인을 할 수 있는 기능
-		map.put("LonginService.do", new LoginService());
-		
+		map.put("LonginService.do", new LoginService());	
 		// myinfo 
-		map.put("MyInfo.do", new MyInfo());
-		
+		map.put("MyInfo.do", new MyInfo());	
 		// 내정보 수정 할 수 있는 기능
 		map.put("CustSelect.do", new CustSelect());
-		
 		// Qna 페이지
-		map.put("QnaTotal.do", new QnaTotal());
-		
+		map.put("QnaTotal.do", new QnaTotal());		
 		// QNA 전체 조회 기능
 		map.put("Qna_select_all.do", new Qna_select_all());
 		// QNA 질문 기능
