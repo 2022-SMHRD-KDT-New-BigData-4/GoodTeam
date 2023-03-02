@@ -6,13 +6,13 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.ibatis.reflection.SystemMetaObject;
-
 import com.smhrd.command.Command;
 import com.smhrd.model.AccommodationsDAO;
 import com.smhrd.model.AccommodationsVO;
 import com.smhrd.model.AmentiesDAO;
 import com.smhrd.model.AmentiesVO;
+import com.smhrd.model.ReviewsDAO;
+import com.smhrd.model.ReviewsVO;
 import com.smhrd.model.RoomsDAO;
 import com.smhrd.model.RoomsVO;
 
@@ -54,11 +54,13 @@ public class ChoiceRoom implements Command {
 		RoomsDAO roomdao = new RoomsDAO();
 
 		List<RoomsVO> roomprice = roomdao.RoomPrice(roomvo);
-
 		request.setAttribute("roomprice", roomprice);
+		
+		ReviewsDAO rvdao = new ReviewsDAO();
+		List<ReviewsVO> rv = rvdao.reviewAcSelect(ac_seq_int);
+		request.setAttribute("reviews", rv);
 
-//		return "hotel_choice"; 
-		return "ChoiceRoom"; 
+		return "hotel_choice"; 
 	}
 
 }

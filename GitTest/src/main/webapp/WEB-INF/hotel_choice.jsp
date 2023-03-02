@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.ReviewsVO"%>
 <%@page import="javax.security.auth.message.callback.PrivateKeyCallback.Request"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Calendar"%>
@@ -30,6 +31,7 @@
 	AmentiesVO rooma = roomamen.get(0);
 	List<RoomsVO> roomprice = (List<RoomsVO>) request.getAttribute("roomprice");
 	RoomsVO roopri = roomprice.get(0);
+	List<ReviewsVO> rv = (List<ReviewsVO>) request.getAttribute("reviews");
 	%>
 	<%
 	session.setAttribute("room_seq", roopri.getRoom_seq());
@@ -57,10 +59,10 @@
 		<tr></tr> 
 		<tr></tr> 
 		<tr>
-			<td height="40px"><a href="#"><div class="wish btn">Wish</div></a></td>
+			<td height="40px" align="center"><a href="#"><div class="wish btn">Wish</div></a></td>
 		</tr>
 		<tr>
-			<td height="40px"><a href="#"><div class="res btn">Book</div></a></td>
+			<td height="40px" align="center"><a href="#"><div class="res btn">Book</div></a></td>
 		</tr>
 	</table>
 	</div>
@@ -174,22 +176,46 @@
 		<tr>
 			<td><div class="review_box">
 					<table class="review_table">
-						<tr><td>123</td></tr>
-						<tr><td>456342542512213252313231233132313253132141121212</td></tr>
+						<tr><td><% 
+						if(rv.get(0).getReview_ratings() != null){
+							out.print(rv.get(0).getReview_ratings());
+						}
+						 %></td></tr>
+						<tr><td><% 
+						if(rv.get(0).getReview_cont() != null){
+							out.print(rv.get(0).getReview_cont());
+						}
+						 %></td></tr>
 					</table>
 				</div>
 			</td>
 			<td><div class="review_box">
 					<table class="review_table">
-						<tr><td>123</td></tr>
-						<tr><td>456342542512213252313231233132313253132141121212</td></tr>
+						<tr><td><% 
+						if(rv.get(1).getReview_ratings() != null){
+							out.print(rv.get(1).getReview_ratings());
+						}
+						 %></td></tr>
+						<tr><td><% 
+						if(rv.get(1).getReview_cont() != null){
+							out.print(rv.get(1).getReview_cont());
+						}
+						 %></td></tr>
 					</table>
 				</div>
 			</td>
 			<td><div class="review_box">
 					<table class="review_table">
-						<tr><td></td></tr>
-						<tr><td>456342542512213252313231233132313253132141121212</td></tr>
+						<tr><td><% 
+						if(rv.get(2).getReview_ratings() != null){
+							out.print(rv.get(2).getReview_ratings());
+						}
+						 %></td></tr>
+						<tr><td><% 
+						if(rv.get(2).getReview_cont() != null){
+							out.print(rv.get(2).getReview_cont());
+						}
+						 %></td></tr>
 					</table>
 				</div>
 			</td>

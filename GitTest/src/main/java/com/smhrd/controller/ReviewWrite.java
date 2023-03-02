@@ -16,8 +16,11 @@ public class ReviewWrite implements Command{
 		// 1. 요청받은 데이터 꺼내오기
 		int review_seq = Integer.parseInt(request.getParameter("review_seq"));
 		String review_content = request.getParameter("review_content");
-		int review_ratings = Integer.parseInt(request.getParameter("review_ratings"));
+		Integer review_ratings = Integer.parseInt(request.getParameter("review_ratings"));
 		String review_dt = LocalDate.now().toString(); 
+		if(review_content == null) {
+			review_content = " ";
+		}
 		// 2. 요청받은 데이터를 하나로 묶기
 		ReviewsVO vo = new ReviewsVO(review_content, review_ratings, review_seq, review_dt);
 		// 3. DAO 생성
@@ -32,7 +35,7 @@ public class ReviewWrite implements Command{
 
 		if (result > 0) {
 			// 리뷰 작성 성공
-			moveURL = "myReview";
+			moveURL = "redirect:/ReviewCustSelect.do";
 			System.out.println("갔음");
 
 		} else {

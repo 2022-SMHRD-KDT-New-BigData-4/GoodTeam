@@ -82,7 +82,7 @@ public class ReviewsVO {
 		this.review_content = review_content;
 	}
 
-	public int getReview_ratings() {
+	public Integer getReview_ratings() {
 		return review_ratings;
 	}
 
