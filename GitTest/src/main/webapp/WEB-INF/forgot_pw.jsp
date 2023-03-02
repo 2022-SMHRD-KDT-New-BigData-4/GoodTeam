@@ -12,7 +12,7 @@
 
 <%-- 전체 틀 --%>
 <div class="container">
-	<form action ="#" method ="post" name="find_fr">
+	<form action ="FindPw.do" method ="post" name="find_fr">
 	
 		<div class="forgot">
 		<%-- 상단버튼 top --%>

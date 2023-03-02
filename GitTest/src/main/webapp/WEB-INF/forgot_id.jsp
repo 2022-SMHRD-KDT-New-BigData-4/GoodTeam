@@ -11,7 +11,7 @@
 <body>
 <%-- 큰 틀 action 은 "FindPW.do" 로 연결 --%>
 <div class="container">
-	<form action ="#" method ="post" name="find_fr">
+	<form action ="FindId.do" method ="post" name="find_fr">
 	
 		<div class="forgot"> 
 		

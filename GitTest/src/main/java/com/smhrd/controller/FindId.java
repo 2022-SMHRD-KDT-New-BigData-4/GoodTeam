@@ -1,38 +1,40 @@
 package com.smhrd.controller;
 
 import java.io.UnsupportedEncodingException;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.command.Command;
 import com.smhrd.model.CustomersDAO;
-import com.smhrd.model.CustomersVO;
 
-public class FindPWService implements Command {
-	// pw 찾기
+public class FindId implements Command {
+	// main->login페이지로 넘어가는 로직
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws UnsupportedEncodingException {
-		request.setCharacterEncoding("UTF-8");
-
-		String id = request.getParameter("id");
-		String name = request.getParameter("name");
+		
+		// 파라미터 가져오기
 		String email = request.getParameter("email");
-
-		CustomersVO vo = new CustomersVO(id, name, email);
+		
+		// 로직을 실행할 DAO 만들기
 		CustomersDAO dao = new CustomersDAO();
-
-		String findpw = dao.findPW(vo);
-
+		System.out.println("여기 있지롱");
+		// 로직 실행
+		String id = dao.findID(email);
+		
 		String url = null;
-		if (findpw != null) {
-			url = "Find_Pw";
-			request.setAttribute("pw", findpw);
-		} else {
-			url = "forgot_pw";
+		if (id != null) {
+			
+			url = "Find_Id";
+			request.setAttribute("id", id);
+			
+		}else {
+			
+			url ="forgot_id";
+			
 		}
-
+		
+		
 		return url;
 	}
 

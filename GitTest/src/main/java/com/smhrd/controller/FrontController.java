@@ -41,7 +41,7 @@ public class FrontController extends HttpServlet {
 		// 회원가입 서비스
 		map.put("JoinService.do", new JoinService());
 		// find확인용
-		map.put("Find.do", new Find());
+		map.put("Find.do", new FindId());
 		// findID
 		map.put("FindID.do", new FindIDService());
 		// findPW
@@ -94,6 +94,10 @@ public class FrontController extends HttpServlet {
 		map.put("*.do", new GoMainCommand());
 		// 로그아웃을 하는 기능
 		map.put("Logout.do", new LogoutService());
+		// 아이디를 찾는 기능
+		map.put("FindId.do", new FindId());
+		// PW를 찾는 기능
+		map.put("FindPw.do", new FindPWService());
 
 	}
 
