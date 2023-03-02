@@ -96,6 +96,8 @@ public class FrontController extends HttpServlet {
 		map.put("WishSelectAll.do", new WishSelectAll());
 		// 내 위시리스트 삭제
 		map.put("WishlistDel.do", new WishlistDel());
+		// 맨 처음 열 때 front controller로 로 열게하기
+		map.put("*.do", new GoMainCommand());
 
 	}
 
