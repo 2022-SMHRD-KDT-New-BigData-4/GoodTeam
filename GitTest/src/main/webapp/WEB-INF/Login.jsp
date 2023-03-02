@@ -26,11 +26,13 @@
 			<%--login head 는 id, pw 를 input --%>	
 				<div class="login_head">
 					<div class="login" id="id" >
-						<input type="text"  placeholder="ID" requeied>
+						<%-- name 값을 넣어주기 --%>
+						<input type="text"  placeholder="ID" requeied name="id">
 					</div>
 					
 					<div class="login" id="pw">
-						<input type="password"  placeholder="Password" requeied>
+						<%-- name 값을 넣어주기 --%>
+						<input type="password"  placeholder="Password" requeied name="pw">
 					</div>
 				</div>
 					
