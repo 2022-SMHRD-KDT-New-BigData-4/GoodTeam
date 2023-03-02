@@ -5,14 +5,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="Forgot_Pw.css" > 
+<link rel="stylesheet" href="css/Forgot_Pw.css" > 
 
 </head>
 <body>
+
+<%-- 전체 틀 --%>
 <div class="container">
 	<form action ="#" method ="post" name="find_fr">
 	
 		<div class="forgot">
+		<%-- 상단버튼 top --%>
 			<div class="forgot_fr"> 
 				<div class="forgot_btn"> 
 					<a href="Find_Id.jsp" >Find ID</a>
@@ -21,22 +24,27 @@
 					<a href="Find_Pw.jsp" >Find PW</a>
 				</div>
 			</div>
-			<!-- email 입력 시, 회원정보 비교하여 아이디 찾기 -->
 			
-			<div class ="fr" >
+			<%-- 전송할 데이터 입력 middle--%>
+			<div class ="fr" > 
 				<div class="id_fr">
-					<input type ="text" placeholder="ID" id = "id" value="id" required>
+					<input type ="text" placeholder="ID" name = "id" id="id" required>
+				</div>
+				<div class="name_fr">
+					<input type="text" placeholder="Name" name="name" id="name" required>
 				</div>
 				<div class="email_fr">
-					<input type ="email" placeholder="Email" id = "email" value="email" required>
+					<input type ="email" placeholder="Email" id = "email" name="email" required>
 				</div>
-				<div class="submit_fr" >
-					<input type = "submit" value = "Find" id="submit" >
-				</div>
+				
 			</div>
-		</div>	
 			
-		</div>		
+			<%-- 데이터 전송 botton --%>
+				<div class="submit_fr">
+					<input  type = "submit" value = "Find" id="submit" >
+				</div>
+		</div> 
+			
 	</form>		
 </div>
 
