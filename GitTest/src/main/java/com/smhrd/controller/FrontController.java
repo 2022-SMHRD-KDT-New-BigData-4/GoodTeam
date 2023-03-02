@@ -92,6 +92,8 @@ public class FrontController extends HttpServlet {
 		map.put("WishlistDel.do", new WishlistDel());
 		// 맨 처음 열 때 front controller로 로 열게하기
 		map.put("*.do", new GoMainCommand());
+		// 로그아웃을 하는 기능
+		map.put("Logout.do", new LogoutService());
 
 	}
 

@@ -37,7 +37,7 @@
 				<div class="room">
 					<div class="room_contents">
 						<div class="room_img">
-							<img src="assets/images/숙소아이콘샘플.png" alt="Image"
+							<img src="" alt="Image"
 								class="room_imgs">
 						</div>
 						<div class="room_contents_info">
