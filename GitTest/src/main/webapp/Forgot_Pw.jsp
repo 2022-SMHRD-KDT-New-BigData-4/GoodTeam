@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="css/Forgot_Pw.css" > 
+<link rel="stylesheet" href="Forgot_Pw.css" > 
 
 </head>
 <body>
@@ -18,10 +18,10 @@
 		<%-- 상단버튼 top --%>
 			<div class="forgot_fr"> 
 				<div class="forgot_btn"> 
-					<a href="Find_Id.jsp" >Find ID</a>
+					<a href="Forgot_Id.jsp" >Find ID</a>
 				</div>
 				<div class ="forgot_btn">
-					<a href="Find_Pw.jsp" >Find PW</a>
+					<a href="Forgot_Pw.jsp" >Find PW</a>
 				</div>
 			</div>
 			

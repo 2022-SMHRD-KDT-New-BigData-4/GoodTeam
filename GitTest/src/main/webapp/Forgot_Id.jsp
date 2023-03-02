@@ -17,16 +17,16 @@
 		
 			<div class="forgot_fr"> 
 				<div class="forgot_btn" id="id"> 
-					<a href="Find_Id.jsp" >Find ID</a>
+					<a href="Forgot_Id.jsp" >Find ID</a>
 				</div>
 				<div class ="forgot_btn" id="pw">
-					<a href="Find_Pw.jsp" >Find PW</a>
+					<a href="Forgot_Pw.jsp" >Find PW</a>
 				</div>
 			</div>
 			<div class ="fr" >
 			<!-- email 입력 시, 회원정보 비교하여 아이디 찾기 -->
 				<div class="input_fr">
-					<input type ="email" placeholder="Email" id = "email" value="email" required>
+					<input type ="email" placeholder="Email" id = "email" name="email" required>
 				</div> <%-- input_fr 닫는 div --%>
 				<div class="submit_fr" >
 					<input type = "submit" value = "Find" id="submit" >
