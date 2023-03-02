@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="Forgot_Id.css" > 
+<link rel="stylesheet" href="assets/css/Forgot_Id.css" > 
 
 </head>
 <body>
