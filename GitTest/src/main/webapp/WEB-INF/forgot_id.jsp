@@ -17,10 +17,10 @@
 		
 			<div class="forgot_fr"> 
 				<div class="forgot_btn" id="id"> 
-					<a href="Forgot_Id.jsp" >Find ID</a>
+					<a href="#" >Find ID</a>
 				</div>
 				<div class ="forgot_btn" id="pw">
-					<a href="Forgot_Pw.jsp" >Find PW</a>
+					<a href="Goforgot_pw.do" >Find PW</a>
 				</div>
 			</div>
 			<div class ="fr" >
