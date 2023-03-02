@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*  --------------------------------------------전체 구도 잡아놓은 곳--------------------------------------------------- */
 /* Seoul의 컨테이더 부분 */
-.main {
+.main{
 	/* 글자가 깨지는 것을 방지하는 코드 */
 	/* 텍스트가 한줄에 표시되어야 하는 코드 */
 	white-space: nowrap;
@@ -31,7 +31,8 @@
 
 /* 서울지도이미지 관련 */
 .Seoulmap {
-	background-color: red;
+	top : 10%;
+	background-color : red;
 	width: 500px;
 	height: 500px;
 }
@@ -49,6 +50,7 @@
 	/* 500px중 100px을 할당 */
 	height: 100px;
 	/* background-color: yellow; */
+	
 }
 
 /* 삐져 나오는 현상 때문에 마진값을 줌 */
@@ -99,11 +101,12 @@ a {
 }
 
 .localmapimg {
+	
 	width: 500px;
 	height: 500px;
 	display: none;
 	position: absolute;
-	top: 0%;
+	top: 10%;
 	right: 94%;
 }
 
@@ -115,12 +118,12 @@ a {
 	position: relative;
 }
 
-.sub11 {
+.sub11{
 	position: absolute;
 	top: 130px;
 	width: 1000px;
 	height: 600px;
-	left: 17.1%;
+	left:17.1%;
 	background-color: white;
 	justify-items: center;
 	flex-direction: column;
