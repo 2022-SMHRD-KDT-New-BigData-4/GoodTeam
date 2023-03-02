@@ -59,7 +59,7 @@
 		<tr></tr> 
 		<tr></tr> 
 		<tr>
-			<td height="40px" align="center"><a href="#"><div class="wish btn">Wish</div></a></td>
+			<td height="40px" align="center"><a href="WishlistAdd.do"><div class="wish btn">Wish</div></a></td>
 		</tr>
 		<tr>
 			<td height="40px" align="center"><a href="#"><div class="res btn">Book</div></a></td>

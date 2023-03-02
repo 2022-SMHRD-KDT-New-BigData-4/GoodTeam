@@ -35,7 +35,28 @@ public class WishlistAdd implements Command {
 		int result = dao.WistlistAdd(vo);
 
 		session.removeAttribute("room_seq");
-		return "main";
+//---------------------------- 위시 리스트 추가 ----------------------------------//		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		return "myinfo";
 	}
 
 }

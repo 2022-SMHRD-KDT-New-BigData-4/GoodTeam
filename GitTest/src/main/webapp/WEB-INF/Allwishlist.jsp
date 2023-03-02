@@ -80,7 +80,7 @@
 									날짜 :
 									<%=vo.getReg_date()%></p>
 
-								<a href="WishlistDel.do?wish_seq=<%=vo.getWish_seq()%>">Book</a>
+							<a href="WishlistDel.do?wish_seq=<%=vo.getWish_seq()%>&ac_seq=<%= vo.getAc_seq()%>">book</a>
 							</div>
 						</div>
 						<%
