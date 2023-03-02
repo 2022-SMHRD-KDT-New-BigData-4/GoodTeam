@@ -19,6 +19,8 @@ public class CustSelect implements Command {
 			throws UnsupportedEncodingException {
 
 		HttpSession session = request.getSession();
+		CustomersVO memberinfo = (CustomersVO) session.getAttribute("memberinfo");
+		String id = memberinfo.getCust_id();
 
 		// post로 넘긴 데이터 한글 깨지지 않게 잡아주기
 		request.setCharacterEncoding("UTF-8");
