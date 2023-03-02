@@ -11,6 +11,8 @@ import com.smhrd.model.AccommodationsDAO;
 import com.smhrd.model.AccommodationsVO;
 import com.smhrd.model.AmentiesDAO;
 import com.smhrd.model.AmentiesVO;
+import com.smhrd.model.ReviewsDAO;
+import com.smhrd.model.ReviewsVO;
 import com.smhrd.model.RoomsDAO;
 import com.smhrd.model.RoomsVO;
 import com.smhrd.model.WishlistDAO;
@@ -58,6 +60,10 @@ public class WishlistDel implements Command {
 		List<RoomsVO> roomprice = roomdao.RoomPrice(roomvo);
 
 		request.setAttribute("roomprice", roomprice);
+		
+		ReviewsDAO rvdao = new ReviewsDAO();
+		List<ReviewsVO> rv = rvdao.reviewAcSelect(ac_seq_int);
+		request.setAttribute("reviews", rv);
 
 		return "hotel_choice"; 
 	}
