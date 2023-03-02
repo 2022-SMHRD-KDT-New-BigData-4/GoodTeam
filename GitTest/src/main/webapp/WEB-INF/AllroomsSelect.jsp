@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="assets/css/AllroomsSelect.css">
 </head>
 <body>
-<%@include file="bar.jsp" %> 
+
 <%
    
    List<AccommodationsVO> roomlist = (List<AccommodationsVO>) request.getAttribute("roomlist");

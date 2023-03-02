@@ -7,7 +7,7 @@ body{
     align-items: center;*/
     /*justify-content: center;*/
 	font-family :'Cafe24아네보네에어',sans-serif;
-	display: contents;
+	display: content;
 	
 }
 img{
@@ -18,9 +18,9 @@ img{
     overflow:hidden;
     position: relative;
 }
-.container {
+.c{
 	display: flex;
-    justify-content: center;
+	justify-content: center;
 }
 
 
@@ -42,6 +42,16 @@ img{
 	justify-items: center;
 	flex-direction: column;
 }
+.sub11{
+	position: absolute;
+	top: 130px;
+	width: 1000px;
+	height: 600px;
+	left:17.1%;
+	background-color: white;
+	justify-items: center;
+	flex-direction: column;
+}
 .s_left{
 	position: absolute;
 	left: 3%;
@@ -55,13 +65,12 @@ img{
 	right: 3%;
 	width: 47%;
 	height: 90%;
-	background-color: blue;
 	top:5%;
 }
 .home{
 	position: absolute;
 	margin-left: 1%;
-	top: -14%;
+	top: 12%;
 	margin-top: 10px;
 	width: 25%;
 	height: 50px;
@@ -74,7 +83,7 @@ img{
 .page{
 	position: absolute;
 	margin-left: 1%;
-	top: 20%;
+	top: 40%;
 	margin-top: 10px;
 	width: 20%;
 	height: 30px;
