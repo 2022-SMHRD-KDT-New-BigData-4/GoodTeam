@@ -24,7 +24,7 @@ public class LocalArea implements Command {
 
 		
 		request.setAttribute("roomlist", Localrooms);
-		return "viewroom";
+		return "AllroomsSelect";
 	}
 
 }
