@@ -1,164 +1,178 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800'); 
-      .total {
-            /* flex선언*/
-            display: flex;
-            /* 아이템을 가운데로 옮김 */
-            justify-content: center;
-            /* 아이템을 정 한가운데로 옮김 */
-            align-items: center;
-            height: 1000px;
-            background-color: #FFF0F5;
-            border: 0px;
-            
-        }
-        .main {
-            display: flex;
-             /* 아이템을 가운데로 옮김 */
-            justify-content: center;
-            /* 아이템을 정 한가운데로 옮김 */
-            align-items: center;
-            position: relative;
-            background-color: white;
-        }
-        .sub1_main {
-            width: 700px;
-            height: 68vh;
-            background-color: white;
-            border: 0px ;
-            /* img_main을 움직이게 하기 위해  */
-            /* flex선언*/
-            display: flex;
-            /* 아이템을 가운데로 옮김 */
-            justify-content: center;
-            /* 아이템을 정 한가운데로 옮김 */
-            align-items: center;
-         
-           
-        }
 
-        .sub2_main {
-            width: 400px;
-            height: 68vh;
-            background-color: white;
-            border: 0;
-            overflow-y: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin:10px;
-           
-           
-        }
+@import
+	url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-        .room {
-            width: 100%;
-            min-height: 33%;
-            max-height: 33%;
-            height: auto;
-            background-color:white;
-            border: 0px ;
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-   
-        }
+.total {
+	/* flex선언*/
+	display: flex;
+	/* 아이템을 가운데로 옮김 */
+	justify-content: center;
+	/* 아이템을 정 한가운데로 옮김 */
+	align-items: center;
+	height: 1000px;
+	background-color: #FFF0F5;
+	border: 0px;
+}
+.main {
+	display: flex;
+	/* 아이템을 가운데로 옮김 */
+	justify-content: center;
+	/* 아이템을 정 한가운데로 옮김 */
+	align-items: center;
+	position: relative;
+	background-color: white;
+}
 
-        .img_main {
-            height: 100%;
-            width: 100%;
-            background-color: rgb(179, 166, 166);
-            border: 1px solid black;
-            margin-left:10px;
+.sub1_main {
+	width: 700px;
+	height: 68vh;
+	background-color: white;
+	border: 0px;
+	/* img_main을 움직이게 하기 위해  */
+	/* flex선언*/
+	display: flex;
+	/* 아이템을 가운데로 옮김 */
+	justify-content: center;
+	/* 아이템을 정 한가운데로 옮김 */
+	align-items: center;
+}
 
-        }
+.sub2_main {
+	width: 400px;
+	height: 68vh;
+	background-color: white;
+	border: 0;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 10px;
+}
 
-        .img_main_head {
-            /* img_main_head_title을 움직이게 하기 위해  */
-            /* flex선언*/
-            display: flex;
-            /* 아이템을 가운데로 옮김 */
-            justify-content: center;
-            /* 아이템을 정 한가운데로 옮김 */
-            align-items: center;
-            width: 100%;
-            height: 15%;
-            background-color: #F79792;
-            border: 0px solid rgb(4, 131, 235);
-        }
+.room {
+	width: 100%;
+	min-height: 33%;
+	max-height: 33%;
+	height: auto;
+	background-color: white;
+	border: 0px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-        .img_main_img {
-        	display:flex;
-        	justify-content:center;
-        	align-items:center;
-            width: 100%;
-            height: 70%;
-            background-color: rgb(130, 224, 224);
-            border: 0px solid rgb(223, 12, 12);
-            object-fit:contain;
+.img_main {
+	height: 100%;
+	width: 100%;
+	background-color: rgb(179, 166, 166);
+	border: 1px solid black;
+	margin-left: 10px;
+}
 
-        }
-        
-        .img_main_foot{
-        	justify-content: center;
-        	align-items:center;
-        	width: 100%;
-        	height: 15%;
-        	background-color: #F79792;
-            border: 0px solid rgb(4, 131, 235);
-        }
-        .room_imgs{
-        	display:wrap;
-        	width: 500px;
-        	height: 400px;
-        }
-        
-	h1{
-	margin:0px;
-	justify-content:center;
-	align-items:center;
-	font-family:'Cafe24아네보네에어', sans-serif;
-	color:black;
-	
-	
-	}
-	
-	
-        /*-------------------------------------submain2-------------------------------------------------*/
-        .room_contents{
-            height: 100%;
-            width: 100%;
-            margin:10px;
-            padding:10px;
-            background-color: white;
-            border: 1.5px solid #FFF0F5;
+.img_main_head {
+	/* img_main_head_title을 움직이게 하기 위해  */
+	/* flex선언*/
+	display: flex;
+	/* 아이템을 가운데로 옮김 */
+	justify-content: center;
+	/* 아이템을 정 한가운데로 옮김 */
+	align-items: center;
+	width: 100%;
+	height: 15%;
+	background-color: #F79792;
+	border: 0px solid rgb(4, 131, 235);
+}
 
-        }
-        .room_img{
-            display: none;
-            position: absolute;
-            top : 15%;
-            left : 9%;
-        }
-        .room_contents:hover .room_img{
-            display : block;
-            
-        }
-        .room_imgs{
-        	display:flex;
-            max-height: 465px;
-            max-width: 698px;
-            justify-content:center;
-            align-items:center;
-            object-fit:contain;
-           
-        }
-        
-        .room_contents_info{
-        	display:flex;
-        	position:relative;
-        }
-        
-      
+.img_main_img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70%;
+	border: 0px solid rgb(223, 12, 12);
+	object-fit: contain;
+}
+
+.img_main_foot {
+	align-items: center;
+	width: 100%;
+	height: 15%;
+	background-color: #F79792;
+	border: 0px solid rgb(4, 131, 235);
+	display: flex;
+}
+
+#nullimg {
+	width: 50%;
+	height: 60%
+}
+
+.room_imgs {
+	display: wrap;
+	width: 500px;
+	height: 400px;
+}
+
+h1 {
+	margin: 0px;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Cafe24아네보네에어', sans-serif;
+	color: black;
+}
+
+#hotel {
+	margin-left: 20px;
+}
+
+/*-------------------------------------submain2-------------------------------------------------*/
+.room_contents {
+	height: 100%;
+	width: 100%;
+	margin: 10px;
+	padding: 10px;
+	background-color: white;
+	border: 1.5px solid #FFF0F5;
+}
+
+.room_img {
+	display: none;
+	position: absolute;
+	top: 15%;
+	left: 9%;
+}
+
+.room_contents:hover .room_img {
+	display: block;
+}
+
+.room_imgs {
+	display: flex;
+	max-height: 465px;
+	max-width: 698px;
+	justify-content: center;
+	align-items: center;
+	object-fit: contain;
+}
+
+.room_contents_infos a {
+	text-align: right;
+}
+
+.room_contents_info {
+	display: flex;
+	position: relative;
+}
+
+a {
+    position: relative;
+    left: 130%;
+    
+}
+
+p {
+	margin: 10px;
+}
