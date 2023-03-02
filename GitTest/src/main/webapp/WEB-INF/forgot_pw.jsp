@@ -18,10 +18,10 @@
 		<%-- 상단버튼 top --%>
 			<div class="forgot_fr"> 
 				<div class="forgot_btn"> 
-					<a href="Forgot_Id.jsp" >Find ID</a>
+					<a href="Goforgot_id.do" >Find ID</a>
 				</div>
 				<div class ="forgot_btn">
-					<a href="Forgot_Pw.jsp" >Find PW</a>
+					<a href="#" >Find PW</a>
 				</div>
 			</div>
 			
