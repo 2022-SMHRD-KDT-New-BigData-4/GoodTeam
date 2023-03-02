@@ -38,6 +38,7 @@ img {
 .acc {
 	position: relative;
 	display: flex;
+	top:20px;
 }
 
 .room_data {
@@ -51,7 +52,7 @@ img {
 	position: relative;
 	display: flex;
 	left: 100px;
-	top: -0px;
+	top: 0px;
 }
 
 textarea {
@@ -79,23 +80,6 @@ textarea {
 	left: 45%
 }
 
-.review_modify_box {
-	position: absolute;
-	display: flex;
-	left: 30%;
-	width: 40%;
-	border: 1px solid black;
-	padding: 20px;
-}
-
-.Update {
-	visibility: hidden;
-}
-
-.Up {
-	display: inline;
-	position: relative;
-}
 
 #bg_img {
 	display: flex;
@@ -128,6 +112,33 @@ textarea {
 	background-color: pink;
 	color: white;
 }
+
+.myform fieldset{
+    display: inline-block;
+    direction: rtl;
+    border:0;
+}
+.myform fieldset legend{
+    text-align: right;
+}
+.myform input[type=radio]{
+    display: none;
+}
+.myform label{
+    font-size: 2em;
+    color: transparent;
+    text-shadow: 0 0 0 #f0f0f0;
+}
+.myform label:hover{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+.myform label:hover ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+.myform input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+
 </style>
 <body>
 	<%@ include file="bar.jsp"%>
@@ -162,13 +173,15 @@ textarea {
 				<br>
 				<br>
 				<%=room.get(j).get(0).getRoom_price_h()%><br>
+				<br>
+				<br>
 			</div>
 			<%
 			}
 			}
 			%>
 		</div>
-
+	
 		<div class="review_create">
 			<%
 			for (ReviewsVO i : rv) {
@@ -176,10 +189,21 @@ textarea {
 			<%
 			if (i.getReview_cont() == null) {
 			%>
-			<form action="ReviewWrite.do" method="post">
+			<form action="ReviewWrite.do" method="post" class="myform">
 				<input type="hidden" name="review_seq"
-					value="<%=i.getReview_seq()%>"> <input type="text"
-					name="review_ratings"><br>
+					value="<%=i.getReview_seq()%>"> 
+					<fieldset>
+		<input type="radio" name="review_ratings" value="5" id="rate1"><label
+			for="rate1">★</label>
+		<input type="radio" name="review_ratings" value="4" id="rate2"><label
+			for="rate2">★</label>
+		<input type="radio" name="review_ratings" value="3" id="rate3"><label
+			for="rate3">★</label>
+		<input type="radio" name="review_ratings" value="2" id="rate4"><label
+			for="rate4">★</label>
+		<input type="radio" name="review_ratings" value="1" id="rate5"><label
+			for="rate5">★</label>
+	</fieldset><br>
 				<textarea name="review_content"></textarea>
 				<br> <input type="submit" value="작성하기"><br> <br>
 				<br>
