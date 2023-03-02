@@ -4,50 +4,91 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="assets/css/reset.css">
 <link rel="stylesheet" href="assets/css/bar.css">
 </head>
 <body>
-	    <header>
-        <!--상단바-->
-        <div class = "bar">
-          	<img src="assets/images/광화문.png" >
-            <h1 class = "bar_home">HOW ABOUT SEOUL</h1>
-            <!-- ★페이지에 맞게 이름 수정 필요 -->
-            <h4 class = "bar_page"> > pick a region</h4>
+		<div class="bar">
+		<!-- 상단바 -->
+		<div class="bar_home">
+			<img src="assets/images/seoul2.jpg">
+			<!-- 1. 홈  -->
+			<div class="home">
+				<h1 class="has">HOW ABOUT SEOUL ?</h1>
+				</div>
+			<!-- 홈  -->
 
-           
-            
-            <div class="search">
-	            <input type="text" class="box" >
-				<div class="surf" style="cursor:pointer">
-			 		        <div class="s_up"></div>
-			                <div class="s_down"></div>   	
-			    </div>
-            </div>
-            
-            
-            <div class="dropdown">
-                <button class="dropbtn"> 
-                  <span class="dropbtn_icon">USD</span>
-                </button>
-                <div class="dropdown-content">
-                  <a href="#">USD - US Dollar</a>
-                  <a href="#">GBP - British Pound</a>
-                  <a href="#">JPY - Japanese Yen</a>
-                  <a href="#">EUR - Euro</a>
-                </div>
-              </div>       
+			<!-- 2. 페이지 -->
+			<div class="page">
+				<h3 class="pagetext"> > main</h3>
+				</div>
+			<!-- 페이지 -->
 
-            <div class="heart">
-            <a href="WishSelectAll.do"></a>
-            </div>
+			<!-- 3. 검색놈들 -->
+			<div class="searchicon">
+				<!-- 3-1. 검색바 -->
+				<div class="search">
+					<!-- 3-2. 돋보기 -->
+					<div class="icon">
+						<img class="iconimg" src="searchicon.png">
+					</div>
+					<!-- 돋보기 -->
 
-            <a href="MyInfo.do">
-            <div class="profile">
-                <div class="head"></div>
-                <div class="p_body"></div></a>
-            </div>
-        </div><!--상단바-->
-    </header>
+				</div>
+				<!-- 검색바 -->
+			</div>
+			<!-- 검색놈들 -->
+
+				<!-- 4. 오른쪽 박스-->
+				<div class="right1">
+				
+					<!-- 메뉴0 환율-->
+					<div class="dropdown">
+						<button class="dropbtn"> 
+							<a class="dropbtn_icon">USD</a>
+						</button>
+						 <div class="dropdown-content">
+		                  <a href="#">USD - US Dollar</a>
+		                  <a href="#">GBP - British Pound</a>
+		                  <a href="#">JPY - Japanese Yen</a>
+		                  <a href="#">EUR - Euro</a>
+                		</div>
+					</div><!-- login -->
+					
+					<!-- 메뉴1 login-->
+					<div class="log">
+						<a class="a">log in</a>
+					</div><!-- login -->
+				
+
+					<!-- 메뉴2 qna-->
+					<div class="qna">
+						<a class="a">Contact Us</a>
+					</div>
+					<!-- qna -->
+					
+					<!-- 메뉴3 profile-->
+					<div class="profilebox">
+						<a href="#">
+			            </a>
+			            	<div class="head"></div>
+			            	<div class="p_body"></div>
+					</div><!-- profile -->
+					
+				</div><!-- 오른쪽 박스 -->
+		</div>
+		<!-- 상단바 -->
+		<!-- 중앙 -->
+		<!--  <div class="sub1">
+			<!-- 4-1.컨텐츠 담을 박수 -->
+			<!--  <div class="sub2">
+				
+				
+			</div>
+			<!-- 컨텐츠 담을 박스 -->
+		<!--  </div>
+		<!-- 가운데 -->
+
+		</div>
 </body>
 </html>
