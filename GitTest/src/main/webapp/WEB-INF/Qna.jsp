@@ -26,15 +26,23 @@
             </div>
          <!-- 페이지 -->
 
-         <!-- 3. 검색놈들 -->
-         <div class="searchicon">
-            <!-- 3-1. 검색바 -->
-            <div class="search">
-               <!-- 3-2. 돋보기 -->
-               <div class="icon">
-                  <img class="iconimg" src="searchicon.png">
-               </div>
-               <!-- 돋보기 -->
+        <!-- 3. 검색놈들 -->
+			<div class="searchicon">
+				<!-- 3-1. 검색바 -->
+				<form action="Search.do" method="post">
+					<div class="search">
+						<input type="text" class="non" name="ac_addr">
+						<!-- 3-2. 돋보기 -->
+							<div class="icon" style="cursor:pointer" onclick="document.getElementById('searchBox').submit();">
+							<img class="iconimg" src="assets/images/searchicon.png">
+							
+						</div>
+						<!-- 돋보기 -->
+					</div>
+					<!-- 검색바 -->
+				</form>
+			</div>
+			<!-- 검색놈들 -->
 
             </div>
             <!-- 검색바 -->

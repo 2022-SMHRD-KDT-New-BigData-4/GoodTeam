@@ -31,13 +31,13 @@
 			<!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<form action="#" method="post">
+				<form action="Search.do" method="post">
 					<div class="search">
-						<input type="text" class="non" name="where">
+						<input type="text" class="non" name="ac_addr">
 						<!-- 3-2. 돋보기 -->
-							<div class="icon">
-							<input type="submit" class="non1" value="  .">
+							<div class="icon" style="cursor:pointer" onclick="document.getElementById('searchBox').submit();">
 							<img class="iconimg" src="assets/images/searchicon.png">
+							
 						</div>
 						<!-- 돋보기 -->
 					</div>

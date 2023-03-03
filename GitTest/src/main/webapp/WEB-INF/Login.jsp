@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="c">
-	<img  src="assets/images/seoul2.jpg">
+		<img src="assets/images/seoul2.jpg">
 		<!-- 상단바 -->
 		<div class="bar_home">
 			<!-- 1. 홈  -->
@@ -30,13 +30,13 @@
 			<!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<form action="#" method="post">
+				<form action="Search.do" method="post">
 					<div class="search">
-						<input type="text" class="non" name="where">
+						<input type="text" class="non" name="ac_addr">
 						<!-- 3-2. 돋보기 -->
-							<div class="icon">
-							<input type="submit" class="non1" value="  .">
+							<div class="icon" style="cursor:pointer" onclick="document.getElementById('searchBox').submit();">
 							<img class="iconimg" src="assets/images/searchicon.png">
+							
 						</div>
 						<!-- 돋보기 -->
 					</div>
@@ -89,7 +89,7 @@
 			<div class="s_left">
 				<div class="fr">
 					<div class="sign_header">
-					<h1>Sign in</h1>
+					<h1 class="signin">Sign in</h1>
 					<span>or use your account</span>
 					</div><!-- sign_header -->
 					

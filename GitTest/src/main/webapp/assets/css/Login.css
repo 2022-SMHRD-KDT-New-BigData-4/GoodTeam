@@ -26,7 +26,7 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: skyblue;
+	background-color: antiquewhite;
 }
 
 .immg{
@@ -51,7 +51,11 @@ body{
     margin-bottom: 50px;
     font-size: xxx-large;
 }
-
+.bottom{
+	position: relative;
+	left:-2%;
+	top:6%;
+}
 .ab, input[type="password"]{
     border-top: none;
     border-left: none;
@@ -114,6 +118,8 @@ span{
 
 
 .maintain{
+	position: absolute;
+	top: 71%;
 	padding: 3px;
     margin: 3px;
 }
@@ -124,4 +130,4 @@ span{
     margin-bottom: 10px;
     justify-content: center;
     
-}  
+}

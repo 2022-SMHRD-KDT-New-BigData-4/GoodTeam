@@ -4,7 +4,7 @@
  
 body{
 /* flex선언*/
-display: flex;
+display: inline-flex !important;
 /* 아이템을 가운데로 옮김 */
 justify-content: center;
 /* 아이템을 정 한가운데로 옮김 */
@@ -13,6 +13,11 @@ align-items: center;
 flex-direction: column;
 background-image:url("seoul.png");
 
+}
+.yy{
+	height: 10000px !important;
+	width: 10000px !important;
+	display:block;
 }
 .room_top{
 height: 8px;
