@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
@@ -13,75 +13,74 @@
 </head>
 <body>
 	<div class="main">
-		<img src="seoul2.jpg">
+	<img  src="assets/images/seoul2.jpg">
 		<!-- 상단바 -->
 		<div class="bar_home">
 			<!-- 1. 홈  -->
 			<div class="home">
-				<h1 class="has">HOW ABOUT SEOUL ?</h1>
-			</div>
+				<a class="has" href="GoMain.do">HOW ABOUT SEOUL ?</a>
+				</div>
 			<!-- 홈  -->
 
 			<!-- 2. 페이지 -->
 			<div class="page">
-				<h3>> SeoulLocal</h3>
-			</div>
+				<h3> > Login</h3>
+				</div>
 			<!-- 페이지 -->
 
 			<!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<div class="search">
-					<!-- 3-2. 돋보기 -->
-					<div class="icon">
-						<img class="iconimg" src="searchicon.png">
+				<form action="#" method="post">
+					<div class="search">
+						<input type="text" class="non" name="where">
+						<!-- 3-2. 돋보기 -->
+							<div class="icon">
+							<input type="submit" class="non1" value="  .">
+							<img class="iconimg" src="assets/images/searchicon.png">
+						</div>
+						<!-- 돋보기 -->
 					</div>
-					<!-- 돋보기 -->
-
-				</div>
-				<!-- 검색바 -->
+					<!-- 검색바 -->
+				</form>
 			</div>
 			<!-- 검색놈들 -->
 
-			<!-- 4. 오른쪽 박스-->
-			<div class="right1">
+				<!-- 4. 오른쪽 박스-->
+				<div class="right1">
+				
+					<!-- 메뉴0 환율-->
+					<div class="dropdown">
+						<button class="dropbtn"> 
+							<a class="dropbtn_icon">USD</a>
+						</button>
+						 <div class="dropdown-content">
+		                  <a href="#">USD - US Dollar</a>
+		                  <a href="#">GBP - British Pound</a>
+		                  <a href="#">JPY - Japanese Yen</a>
+		                  <a href="#">EUR - Euro</a>
+                		</div>
+					</div><!-- login -->
+					
+					<!-- 메뉴1 login-->
+					<div class="log">
+						<a class="a" href="LonginService.do">log in</a>
+					</div><!-- login -->
+				
 
-				<!-- 메뉴0 환율-->
-				<div class="dropdown">
-					<button class="dropbtn">
-						<a class="dropbtn_icon">USD</a>
-					</button>
-					<div class="dropdown-content">
-						<a href="#">USD - US Dollar</a> <a href="#">GBP - British
-							Pound</a> <a href="#">JPY - Japanese Yen</a> <a href="#">EUR -
-							Euro</a>
+					<!-- 메뉴2 qna-->
+					<div class="qna">
+						<a class="a" href="QnaTotal.do" >Contact Us</a>
 					</div>
-				</div>
-				<!-- login -->
-
-				<!-- 메뉴1 login-->
-				<div class="log">
-					<a class="a">log in</a>
-				</div>
-				<!-- login -->
-
-
-				<!-- 메뉴2 qna-->
-				<div class="qna">
-					<a class="a">Contact Us</a>
-				</div>
-				<!-- qna -->
-
-				<!-- 메뉴3 profile-->
-				<div class="profilebox">
-					<a href="MyInfo.do"> </a>
-					<div class="head"></div>
-					<div class="p_body"></div>
-				</div>
-				<!-- profile -->
-
-			</div>
-			<!-- 오른쪽 박스 -->
+					<!-- qna -->
+					
+					<!-- 메뉴3 profile-->
+					<div class="profilebox">
+						<a href="MyInfo.do" class="non1"></a>
+			            	<div class="head"></div>
+			            	<div class="p_body"></div>
+					</div><!-- profile -->
+				</div><!-- 오른쪽 박스 -->
 		</div>
 		<!-- 상단바 -->
 
@@ -266,8 +265,7 @@
 							<div class="localmap">
 								<a id="gurogu" href="LocalMap.do">구로구</a>
 								<div>
-									<img src="assets/images/서울지도/구로구.png" alt=""
-										class="localmapimg">
+									<img src="./img/Lara7.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
@@ -329,10 +327,366 @@
 		const link = document.getElementById(districts[i]);
 		link.addEventListener('click', function(event) {
 			event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-			const acAddr = this.innerHTML;
+			const acAddr = this.innerText;
 			const url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
 			window.location.href = url; // 새로운 URL로 이동합니다.
 		});
 	}
 </script>
+	var link = document.getElementById('seochogu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	
+	var link = document.getElementById('gangnamgu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	
+	var link = document.getElementById('mapogu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	}); 
+	var link = document.getElementById('seodaemoongu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	}); 
+	var link = document.getElementById('unpyeonggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});jongrogu
+	var link = document.getElementById('jongrogu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('junggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('younsangu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('sungdonggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('dongdaemoon');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('joongranggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gwanjingu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('seongbukgu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gangbukgu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('dobonggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('nowongu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gangdonggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('songpagu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gangseogu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('yangcheongu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gurogu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('yeongdeongpugu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('dongjakgu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gwanakgu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gumcheongu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	</script>
+	var link = document.getElementById('seochogu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	
+	var link = document.getElementById('gangnamgu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	
+	var link = document.getElementById('mapogu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	}); 
+	var link = document.getElementById('seodaemoongu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	}); 
+	var link = document.getElementById('unpyeonggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});jongrogu
+	var link = document.getElementById('jongrogu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('junggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('younsangu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('sungdonggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('dongdaemoon');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('joongranggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gwanjingu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('seongbukgu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gangbukgu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('dobonggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('nowongu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gangdonggu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('songpagu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gangseogu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('yangcheongu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gurogu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('yeongdeongpugu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('dongjakgu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gwanakgu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	var link = document.getElementById('gumcheongu');
+	link.addEventListener('click', function(event) {
+		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
+		var acAddr = this.innerHTML;
+		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
+		window.location.href = url; // 새로운 URL로 이동합니다.
+	});
+	</script>
 </html>
