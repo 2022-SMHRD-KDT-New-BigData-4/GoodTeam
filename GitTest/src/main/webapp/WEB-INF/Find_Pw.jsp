@@ -9,6 +9,11 @@
 
 </head>
 <body>
+ <%
+			String pw = (String) request.getAttribute("pw");
+			// FindIdService페이지의 request Scope에서 가져온 값이 "ID"
+		
+		%>
 	  <div class="c">
       <!-- 상단바 -->
       <div class="bar_home">
@@ -95,7 +100,9 @@
 			<h1>Find PW</h1>
 		</div>
 		<div class="find">
-				<p>YOUR PW IS..</p>
+				<p>YOUR PW IS..<br>
+				<%=pw %>
+				</p>
 				<%-- 주석풀고 여기로 id 가 출력되도록 해주세요~ --%>
             	<%-- <p><%= %></p> --%>
             	
