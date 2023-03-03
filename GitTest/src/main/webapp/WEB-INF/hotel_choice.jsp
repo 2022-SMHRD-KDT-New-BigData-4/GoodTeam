@@ -76,10 +76,10 @@
 							<a class="dropbtn_icon">USD</a>
 						</button>
 						 <div class="dropdown-content">
-		                  <a href="#">USD - US Dollar</a>
-		                  <a href="#">GBP - British Pound</a>
-		                  <a href="#">JPY - Japanese Yen</a>
-		                  <a href="#">EUR - Euro</a>
+		                  <a href="#" id="usd">USD - US Dollar</a>
+		                  <a href="#" id="gbp">GBP - British Pound</a>
+		                  <a href="#" id="jpy">JPY - Japanese Yen</a>
+		                  <a href="#" id="eur">EUR - Euro</a>
                 		</div>
 					</div><!-- login -->
 					
