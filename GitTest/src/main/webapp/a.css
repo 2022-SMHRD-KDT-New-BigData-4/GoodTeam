@@ -1,77 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
-.c{
-	display:flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0;
-}
-.contain{
-	display:flex;
-	width:100%;
-	height: 90%;
-	min-width: 400px;
-	min-height: 540px;
-}
-.welcom{
-	display:flex;
-	width:100%;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
-	background-color: pink;
-	flex-direction: column;
-	
-}
-.header{
-	display:flex;
-	width: 100%;
-	height: 40%;
-	justify-content: center;
-	align-items: center;
-	background-color: skyblue;
-	
-}
-
-.header>h1{
-	font-size: xxx-large;
-    font-weight: bold;
-    font-family: 'Cafe24아네보네에어',sans-serif;
-    text-shadow: 5px 4px 2px slategrey;
-}
-
-.find{
-	display:flex;
-	width:100%;
-	height:55%;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	font-family:"Cafe24아네보네에어",sans-serif;
-	font-size:16px;
-	flex-direction: column;
-	
-}
-
-.bottom{
-	display:flex;
-	width: 100%;
-	height: 25%;
-	justify-content: center;
-	align-items: center;
-	
-}
-input[type="submit"]{
-	display:flex;
-	margin-top:10px;
-	margin-bottom:10px;	
-	padding:10px 25px;
-	border-radius:12px;
-	background-color:#F79792;
-	font-size: 16px;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800'); 
 body{
    /*margin : 0px;
    display: inline-flex;
@@ -91,9 +19,7 @@ img{
     position: relative;
 }
 
-p{
-	
-}
+
 
 .bar_home{/*HOW ABOUT SEOUL*/
    
@@ -398,4 +324,10 @@ div > a{
    font-size: larger;
 
 }
+
+
+
+
+
+
 

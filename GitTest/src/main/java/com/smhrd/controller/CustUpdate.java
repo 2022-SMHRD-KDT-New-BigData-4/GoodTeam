@@ -6,15 +6,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.command.Command;
 
-public class Find implements Command {
-	// main->login페이지로 넘어가는 로직
+public class CustUpdate implements Command {
+	// 개인정보수정 페이지
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws UnsupportedEncodingException {
 		
 
 		
-		return "findIDPW확인용";
+		return "custupdate";
 	}
 
 }

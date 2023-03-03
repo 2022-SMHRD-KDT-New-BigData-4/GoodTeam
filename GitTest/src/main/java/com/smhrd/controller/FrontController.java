@@ -41,7 +41,7 @@ public class FrontController extends HttpServlet {
 		// 회원가입 서비스
 		map.put("JoinService.do", new JoinService());
 		// find확인용
-		map.put("Find.do", new Find());
+		map.put("Find.do", new FindId());
 		// findID
 		map.put("FindID.do", new FindIDService());
 		// findPW
@@ -54,11 +54,13 @@ public class FrontController extends HttpServlet {
 		map.put("LocalMap.do", new LocalArea());
 		// 로그인을 할 수 있는 기능
 		map.put("LonginService.do", new LoginService());	
-		// myinfo 
+		// my info 
 		map.put("MyInfo.do", new MyInfo());	
+		// 내정보 페이지 들어가기
+		map.put("CustUpdate.do", new CustUpdate());
 		// 내정보 수정 할 수 있는 기능
 		map.put("CustSelect.do", new CustSelect());
-		// Qna 페이지
+		// Q&a 페이지
 		map.put("QnaTotal.do", new QnaTotal());		
 		// QNA 전체 조회 기능
 		map.put("Qna_select_all.do", new Qna_select_all());
@@ -94,6 +96,10 @@ public class FrontController extends HttpServlet {
 		map.put("*.do", new GoMainCommand());
 		// 로그아웃을 하는 기능
 		map.put("Logout.do", new LogoutService());
+		// 아이디를 찾는 기능
+		map.put("FindId.do", new FindId());
+		// PW를 찾는 기능
+		map.put("FindPw.do", new FindPWService());
 
 	}
 

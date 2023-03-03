@@ -1,45 +1,48 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@page import="com.smhrd.model.CustomersVO"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Area_choice</title>
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="SeoulLocal.css">
-<link rel="stylesheet" href="bar2.css">
-<!--  -->
+<title>개인정보 수정</title>
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/Login.css">
+<link rel="stylesheet" href="assets/css/bar2.css">
+<!-- ★★a태그 똑바로 달기 & 상단바 수정 후 모든 페이지 복붙  -->
 </head>
 <body>
-	<div class="main">
-	<img  src="seoul2.jpg">
+	<div class="c">
+	<img  src="assets/images/seoul2.jpg">
 		<!-- 상단바 -->
 		<div class="bar_home">
 			<!-- 1. 홈  -->
 			<div class="home">
-				<h1 class="has">HOW ABOUT SEOUL ?</h1>
+				<a class="has" href="GoMain.do">HOW ABOUT SEOUL ?</a>
 				</div>
 			<!-- 홈  -->
 
 			<!-- 2. 페이지 -->
 			<div class="page">
-				<h3> > main</h3>
+				<h3> > Login</h3>
 				</div>
 			<!-- 페이지 -->
 
 			<!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<div class="search">
-					<!-- 3-2. 돋보기 -->
-					<div class="icon">
-						<img class="iconimg" src="searchicon.png">
+				<form action="#" method="post">
+					<div class="search">
+						<input type="text" class="non" name="where">
+						<!-- 3-2. 돋보기 -->
+							<div class="icon">
+							<input type="submit" class="non1" value="  .">
+							<img class="iconimg" src="assets/images/searchicon.png">
+						</div>
+						<!-- 돋보기 -->
 					</div>
-					<!-- 돋보기 -->
-
-				</div>
-				<!-- 검색바 -->
+					<!-- 검색바 -->
+				</form>
 			</div>
 			<!-- 검색놈들 -->
 
@@ -61,410 +64,55 @@
 					
 					<!-- 메뉴1 login-->
 					<div class="log">
-						<a class="a">log in</a>
+						<a class="a" href="LonginService.do">log in</a>
 					</div><!-- login -->
 				
 
 					<!-- 메뉴2 qna-->
 					<div class="qna">
-						<a class="a">Contact Us</a>
+						<a class="a" href="QnaTotal.do" >Contact Us</a>
 					</div>
 					<!-- qna -->
 					
 					<!-- 메뉴3 profile-->
 					<div class="profilebox">
-						<a href="#">
-			            </a>
+						<a href="MyInfo.do" class="non1"></a>
 			            	<div class="head"></div>
 			            	<div class="p_body"></div>
 					</div><!-- profile -->
-					
 				</div><!-- 오른쪽 박스 -->
 		</div>
 		<!-- 상단바 -->
 
 		<!-- 중앙 -->
-		<div class="sub11">
+		<div class="sub1">
 			<!-- 4-1.컨텐츠 담을 박스 -->
-			<div class="s_left">
-            	<!-- 서울 지도 부분 -->
-				<div class="Seoul">
-					<img src="./img/Lara01.gif" alt="" class="Seoulmap">
-				</div><!-- Seoul -->
+			<div class="s_center">
+				
 			</div><!-- s_left -->
-			<!-- 헤드라인 부분 -->
-			<div class="s_right">
-				<div class="Seoul" id="content">
-					<div>
-						<a class="headline" href="SearchAllRoom.do">Seoul Trip</a>
-					</div>
-					<!-- 서울 구 나타내는 코드 -->
-					<div class="contents">
-						<!-- 첫째 줄 -->
-						<div class="local">
-							<div class="localmap">
-								<a id="seochogu" href="LocalMap.do">서초구</a>
-								<div>
-									<img src="./img/Lara2.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="gangnamgu" href="LocalMap.do">강남구</a>
-								<div>
-									<img src="./img/Lara3.png" alt="" class="localmapimg">
-								</div>
-							</div>
-						</div>
-						<!-- 둘째 줄 -->
-						<div class="local">
-							<div class="localmap">
-								<a id="mapogu" href="LocalMap.do">마포구</a>
-								<div>
-									<img src="./img/Lara4.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="seodaemoongu" href="LocalMap.do">서대문구</a>
-								<div>
-									<img src="./img/Lara5.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="unpyeonggu" href="LocalMap.do">은평구</a>
-								<div>
-									<img src="./img/Lara6.png" alt="" class="localmapimg">
-								</div>
-							</div>
-						</div>
-						<!-- 셋째 줄 -->
-						<div class="local">
-							<div class="localmap">
-								<a id="jongrogu" href="LocalMap.do">종로구</a>
-								<div>
-									<img src="./img/Lara7.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="junggu" href="LocalMap.do">중구</a>
-								<div>
-									<img src="./img/Lara8.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="younsangu" href="LocalMap.do">용산구</a>
-								<div>
-									<img src="./img/Lara9.png" alt="" class="localmapimg">
-								</div>
-							</div>
-						</div>
-						<!-- 넷째 줄 -->
-						<div class="local">
-							<div class="localmap">
-								<a id="sungdonggu" href="LocalMap.do">성동구</a>
-								<div>
-									<img src="./img/Lara10.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="dongdaemoon" href="LocalMap.do">동대문구</a>
-								<div>
-									<img src="./img/Lara11.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="joongranggu" href="LocalMap.do">중랑구</a>
-								<div>
-									<img src="./img/Lara12.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="gwanjingu" href="LocalMap.do">광진구</a>
-								<div>
-									<img src="./img/Lara13.png" alt="" class="localmapimg">
-								</div>
-							</div>
-						</div>
-						<!-- 다섯째 줄 -->
-						<div class="local">
-							<div class="localmap">
-								<a id="seongbukgu" href="LocalMap.do">성북구</a>
-								<div>
-									<img src="./img/Lara14.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="gangbukgu" href="LocalMap.do">강북구</a>
-								<div>
-									<img src="./img/Lara15.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="dobonggu" href="LocalMap.do">도봉구</a>
-								<div>
-									<img src="./img/Lara16.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="nowongu" href="LocalMap.do">노원구</a>
-								<div>
-									<img src="./img/Lara17.png" alt="" class="localmapimg">
-								</div>
-							</div>
-						</div>
-						<!-- 여섯째 줄 -->
-						<div class="local">
-							<div class="localmap">
-								<a id="gangdonggu" href="LocalMap.do">강동구</a>
-								<div>
-									<img src="./img/Lara18.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="songpagu" href="LocalMap.do">송파구</a>
-								<div>
-									<img src="./img/Lara19.png" alt="" class="localmapimg">
-								</div>
-							</div>
-						</div>
-						<!-- 일곱째 줄 -->
-						<div class="local">
-							<div class="localmap">
-								<a id="gangseogu" href="LocalMap.do">강서구</a>
-								<div>
-									<img src="./img/Lara17.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="yangcheongu" href="LocalMap.do">양천구</a>
-								<div>
-									<img src="./img/Lara8.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="gurogu" href="LocalMap.do">구로구</a>
-								<div>
-									<img src="./img/Lara7.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="yeongdeongpugu" href="LocalMap.do">영등포구</a>
-								<div>
-									<img src="./img/Lara5.png" alt="" class="localmapimg">
-								</div>
-							</div>
-						</div>
-						<!-- 여덟째 줄 -->
-						<div class="local">
-							<div class="localmap">
-								<a id="dongjakgu" href="LocalMap.do">동작구</a>
-								<div>
-									<img src="./img/Lara10.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="gwanakgu" href="LocalMap.do">관악구</a>
-								<div>
-									<img src="./img/Lara1.png" alt="" class="localmapimg">
-								</div>
-							</div>
-							<div class="localmap">
-								<a id="gumcheongu" href="LocalMap.do">금천구</a>
-								<div>
-									<img src="./img/Artist01.gif" alt="" class="localmapimg">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!-- s_left -->
-		</div>
 		<!-- 컨텐츠 담을 박스 -->
 		</div>
 		<!-- 가운데 -->
 
+		</div>
+<%
+	CustomersVO memberinfo = (CustomersVO) session.getAttribute("memberinfo");
+	%>
 
+	<form action="CustSelect.do" method='post'>
+		<input type="text" readonly value='<%=memberinfo.getCust_id()%>' name="id"><br>
+		사용자 이름 : <input type="text" value='<%=memberinfo.getCust_name()%>' name= "name"><br>
+		사용자 비밀번호 : <input type="password" value='<%=memberinfo.getCust_pw()%>' name="pw"><br>
+		 사용자 전화번호 : <input type="text" value='<%=memberinfo.getCust_phone()%>' name="phone"><br>
+		 사용자 이메일	: <input type="text" value='<%=memberinfo.getCust_email()%>' name="email"><br>
+		사용자 가입일자 : <input type="text" readonly value='<%=memberinfo.getCust_joindate()%>' name="joindate"><br>
+		 사용자 포인트 번호 : <input type="text" readonly value='<%=memberinfo.getCust_point()%>' name="point"><br> 
+		<input type="submit" value="개인정보 수정">
+		
+	</form>
 
 
 
 
 </body>
-<script>
-	var link = document.getElementById('seochogu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	
-	var link = document.getElementById('gangnamgu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	
-	var link = document.getElementById('mapogu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	}); 
-	var link = document.getElementById('seodaemoongu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	}); 
-	var link = document.getElementById('unpyeonggu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});jongrogu
-	var link = document.getElementById('jongrogu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('junggu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('younsangu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('sungdonggu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('dongdaemoon');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('joongranggu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('gwanjingu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('seongbukgu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('gangbukgu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('dobonggu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('nowongu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('gangdonggu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('songpagu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('gangseogu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('yangcheongu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('gurogu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('yeongdeongpugu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('dongjakgu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('gwanakgu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	var link = document.getElementById('gumcheongu');
-	link.addEventListener('click', function(event) {
-		event.preventDefault(); // 기본 동작인 링크 이동을 막습니다.
-		var acAddr = this.innerHTML;
-		var url = this.href + '?ac_addr=' + encodeURIComponent(acAddr);
-		window.location.href = url; // 새로운 URL로 이동합니다.
-	});
-	</script>
 </html>

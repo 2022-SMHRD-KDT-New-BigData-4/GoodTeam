@@ -1,0 +1,12 @@
+@charset "UTF-8";
+.s_center{
+	position: absolute;
+	left: 26%;
+	width: 47%;
+	height: 90%;
+	top:5%;
+	background-color: gray;
+}
+#custID{
+	
+}

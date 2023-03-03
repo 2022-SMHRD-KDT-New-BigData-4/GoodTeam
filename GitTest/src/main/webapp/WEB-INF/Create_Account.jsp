@@ -1,28 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>서울 로컬</title>
+<title>Create Account</title>
 <link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/mypage.css">
+<link rel="stylesheet" href="assets/css/bar2.css">
+<link rel="stylesheet" href="assets/css/Create_Account.css">
+<!-- 예쁘게 수정 & 상단바 & 연결확인하기  -->
 </head>
-<!-- 상단바 a태그연결 & has 위치 & 연결 -->
 <body>
+
    <div class="c">
-   <img src="assets/images/seoul2.jpg">
+   <img  src="seoul2.jpg">
       <!-- 상단바 -->
       <div class="bar_home">
          <!-- 1. 홈  -->
          <div class="home">
-            <h1>HOW ABOUT SEOUL ?</h1>
+            <h1 class="has">HOW ABOUT SEOUL ?</h1>
             </div>
          <!-- 홈  -->
 
          <!-- 2. 페이지 -->
          <div class="page">
-            <h3> > mypage</h3>
+            <h3> > main</h3>
             </div>
          <!-- 페이지 -->
 
@@ -71,7 +74,7 @@
                
                <!-- 메뉴3 profile-->
                <div class="profilebox">
-                  <a href="MyInfo.do">
+                  <a href="#">
                      </a>
                         <div class="head"></div>
                         <div class="p_body"></div>
@@ -83,36 +86,48 @@
 
       <!-- 중앙 -->
       <div class="sub1">
-         <!-- 4-1.컨텐츠 담을 박수 -->
-         <div class="sub2">
-            <div class="profilebox1">
-               <div class="head1"></div>
-                 <div class="p_body1"></div>
-            </div>
-            <div class="nametag">
-               <h4>NAME</h4>
-            </div>
-            <div class="text">
-               <a href="ReservationSelectAll.do">My reservation</a>
-            </div>
-            <div class="text1">
-               <a href="WishSelectAll.do">WishList</a>
-            </div>
-            <div class="text2">
-               <a>Review</a>
-            </div>
-            <div class="text3">
-               <a>Contact Us</a>
-            </div>
-            <div class="text4">
-               <a href="CustUpdate.do">My Info</a>
-            </div>
-            <div class="text5">
-               <a>Logout</a>
-            </div>
+         <!-- 4-1.컨텐츠 담을 박스 -->
+            <div class="container">
+         		<div class="create_form">
+	         		<form action="JoinService.do" method="post">
+	         			<div class="header">
+							<h2>Create Account</h2>
+						</div>
+						
+						<div class="user_id">
+							<label for="id"></label> <input id="id" type="text" name="id"
+								placeholder="ID" required>
+						</div>
+						
+						<div class="user_pw">
+						<label for="pw"></label> <input type="password" name="pw"
+							placeholder="Password" id="password" required>
+						</div>
+	
+						<div class="user_confirm_pw">
+							<label for="confirm_pw"></label> <input type="password"
+								name="confirm_pw" placeholder="Confirm Password"
+								id="confirm_password" required>
+						</div>
+	
+						<div class="user_name">
+							<input id="email" type="text" name="name" placeholder="Name">
+						</div>
+	
+						<div class="user_email">
+							<input id="email" type="text" name="email" placeholder="Email"
+								required>
+						</div>
+	
+						<div class="user_email">
+							<input id="phone" type="text" name="phone" placeholder="phone"
+								required>
+						</div>
+					</form>
+	         	</div><!-- create_form -->
+	         </div><!-- container -->
             
-         </div>
-         <!-- 컨텐츠 담을 박스 -->
+      <!-- 컨텐츠 담을 박스 -->
       </div>
       <!-- 가운데 -->
 

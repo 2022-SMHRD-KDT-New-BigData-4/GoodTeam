@@ -8,7 +8,14 @@ body{
     margin: 0px auto;
     position: relative;
 }
-
+img{
+	height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    margin: 0 auto;
+    padding: 0;
+    overflow:hidden;
+    position: relative;
+}
 .has{/*HOW ABOUT SEOUL?*/
     text-decoration: none;
     position: absolute;
@@ -22,7 +29,7 @@ body{
     text-align: center;
     color: #ffffff;
     top: 0%;
-    font-size: 100px;
+    font-size: 90px;
     
 }
 .data_text{

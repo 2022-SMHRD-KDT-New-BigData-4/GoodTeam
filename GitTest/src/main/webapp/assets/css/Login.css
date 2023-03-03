@@ -52,7 +52,7 @@ body{
     font-size: xxx-large;
 }
 
-input[type="text"], input[type="password"]{
+.ab, input[type="password"]{
     border-top: none;
     border-left: none;
     border-right: none;
@@ -65,7 +65,7 @@ input[type="text"], input[type="password"]{
 	
 }
 
-input[type="submit"]{
+.abc{
 	cursor: pointer;
     border: 0px;
     border-radius: 10px;

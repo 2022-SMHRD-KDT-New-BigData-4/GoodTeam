@@ -5,23 +5,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="css/Forgot_Pw.css" > 
+<link rel="stylesheet" href="assets/css/Forgot_Pw.css" > 
 
 </head>
 <body>
 
 <%-- 전체 틀 --%>
 <div class="container">
-	<form action ="#" method ="post" name="find_fr">
+	<form action ="FindPw.do" method ="post" name="find_fr">
 	
 		<div class="forgot">
 		<%-- 상단버튼 top --%>
 			<div class="forgot_fr"> 
 				<div class="forgot_btn"> 
-					<a href="Find_Id.jsp" >Find ID</a>
+					<a href="Goforgot_id.do" >Find ID</a>
 				</div>
 				<div class ="forgot_btn">
-					<a href="Find_Pw.jsp" >Find PW</a>
+					<a href="#" >Find PW</a>
 				</div>
 			</div>
 			

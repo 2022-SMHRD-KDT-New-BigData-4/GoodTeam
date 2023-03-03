@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.controller.Crawling_Currency"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -48,10 +49,10 @@
 							<a class="dropbtn_icon">USD</a>
 						</button>
 						 <div class="dropdown-content">
-		                  <a href="#">USD - US Dollar</a>
-		                  <a href="#">GBP - British Pound</a>
-		                  <a href="#">JPY - Japanese Yen</a>
-		                  <a href="#">EUR - Euro</a>
+		                  <a href="#" id="usd">USD - US Dollar</a>
+		                  <a href="#" id="gbp">GBP - British Pound</a>
+		                  <a href="#" id="jpy">JPY - Japanese Yen</a>
+		                  <a href="#" id="eur">EUR - Euro</a>
                 		</div>
 					</div><!-- login -->
 					
@@ -90,5 +91,84 @@
 		<!-- 가운데 -->
 
 		</div>
+		
+		    <%  
+		 	Crawling_Currency servlet = new Crawling_Currency();
+	    	servlet.service(request, response);
+    
+			double usd = (double) session.getAttribute("usd"); 
+			double jpy = (double) session.getAttribute("jpy"); 
+			double eur = (double) session.getAttribute("eur"); 
+			double gbp = (double) session.getAttribute("gbp");
+		
+	%>		
+	
+	<script>
+	
+	var initialValues = [];
+	let usdclick = false;
+	let jpyclick = false;
+	let gbpclick = false;
+	let eurclick = false;
+	// 각 요소의 초기값을 배열에 저장
+	$(window).on('load', function() {
+	  $('.price').each(function() {
+	    var currentValue = $(this).text();
+	    initialValues.push(currentValue);
+	  });
+	  console.log(initialValues);
+	});
+
+	
+	$('#usd').on('click',()=>{
+		$('.dropbtn_icon').text('USD');
+		 $('.price').each(function(index, element) {
+		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
+		        var calculatedValue = currentValue / <%=usd%>; // 계산된 값을 저장함
+		        $(this).text("$ " + calculatedValue.toFixed(2)); // 계산된 값을 다시 요소의 값으로 설정
+		    });
+	});
+	$('#jpy').on('click',()=>{
+		$('.dropbtn_icon').text('JPY');
+		 $('.price').each(function(index, element) {
+		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
+			  var calculatedValue = currentValue / <%=jpy%>; // 계산된 값을 저장함
+			
+
+			  
+			  // 계산된 값을 다시 요소의 값으로 설정
+			  $(this).text("￥ " + calculatedValue.toFixed(2));
+			});
+	})
+	$('#eur').on('click',()=>{
+		$('.dropbtn_icon').text('EUR');
+		 $('.price').each(function(index, element) {
+		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
+			  var calculatedValue = currentValue / <%=eur%>; // 계산된 값을 저장함
+			
+
+			  // 계산된 값을 다시 요소의 값으로 설정
+			  $(this).text("€ " + calculatedValue.toFixed(2));
+			});
+		
+	})
+	$('#gbp').on('click',()=>{
+		$('.dropbtn_icon').text('GBP');
+		 $('.price').each(function(index, element) {
+		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
+			  var calculatedValue = currentValue / <%=gbp%>; // 계산된 값을 저장함
+			  // 계산된 값을 다시 요소의 값으로 설정
+			  
+			  	usdclick = false;
+			 	jpyclick = false;
+				gbpclick = true;
+				eurclick = false;
+			  
+			  $(this).text("￡ " + calculatedValue.toFixed(2));
+			});
+
+	})
+
+	</script>
 </body>
 </html>

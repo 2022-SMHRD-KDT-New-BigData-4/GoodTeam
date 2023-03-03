@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="assets/css/reset.css">
 <link rel="stylesheet" href="assets/css/Login.css">
 <link rel="stylesheet" href="assets/css/bar2.css">
-<!-- ★★로그인 위치/ 이미지 수정 -->
+<!-- ★★a태그 똑바로 달기 & 상단바 수정 후 모든 페이지 복붙  -->
 </head>
 <body>
 	<div class="c">
@@ -17,7 +17,7 @@
 		<div class="bar_home">
 			<!-- 1. 홈  -->
 			<div class="home">
-				<h1 class="has">HOW ABOUT SEOUL ?</h1>
+				<a class="has" href="GoMain.do">HOW ABOUT SEOUL ?</a>
 				</div>
 			<!-- 홈  -->
 
@@ -30,15 +30,18 @@
 			<!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<div class="search">
-					<!-- 3-2. 돋보기 -->
-					<div class="icon">
-						<img class="iconimg" src="assets/images/searchicon.png">
+				<form action="#" method="post">
+					<div class="search">
+						<input type="text" class="non" name="where">
+						<!-- 3-2. 돋보기 -->
+							<div class="icon">
+							<input type="submit" class="non1" value="  .">
+							<img class="iconimg" src="assets/images/searchicon.png">
+						</div>
+						<!-- 돋보기 -->
 					</div>
-					<!-- 돋보기 -->
-
-				</div>
-				<!-- 검색바 -->
+					<!-- 검색바 -->
+				</form>
 			</div>
 			<!-- 검색놈들 -->
 
@@ -60,24 +63,22 @@
 					
 					<!-- 메뉴1 login-->
 					<div class="log">
-						<a class="a">log in</a>
+						<a class="a" href="LonginService.do">log in</a>
 					</div><!-- login -->
 				
 
 					<!-- 메뉴2 qna-->
 					<div class="qna">
-						<a class="a">Contact Us</a>
+						<a class="a" href="QnaTotal.do" >Contact Us</a>
 					</div>
 					<!-- qna -->
 					
 					<!-- 메뉴3 profile-->
 					<div class="profilebox">
-						<a href="MyInfo.do">
-			            </a>
+						<a href="MyInfo.do" class="non1"></a>
 			            	<div class="head"></div>
 			            	<div class="p_body"></div>
 					</div><!-- profile -->
-					
 				</div><!-- 오른쪽 박스 -->
 		</div>
 		<!-- 상단바 -->
@@ -98,7 +99,7 @@
 						<!--login head 는 id, pw 를 input -->	
 							<div class="login_head">
 								<div class="login" id="id" >
-									<input type="text"  placeholder="ID" required name="id">
+									<input type="text" class="ab"  placeholder="ID" required name="id">
 								</div><!-- login id -->
 								
 								<div class="login" id="pw">
@@ -108,7 +109,7 @@
 							
 							<div class="login" id="login">
 							<!-- value 값 로그인에서 SING IN 으로 변경어떠신지? -->
-								<input type="submit" value="로그인">
+								<input type="submit" class="abc" value="로그인">
 							</div><!-- login submit -->
 							
 							<p class="maintain">
@@ -121,14 +122,14 @@
 					<div class="bottom">
 						<div class="fr_foot" id="creat" >	
 							<form action="CreateAccount.do" method="post">
-								<input type="submit" value="Create account">
+								<input type="submit" class="abc" value="Create account">
 							</form>
 						</div><!-- fr_foot -->
 						
 						<div class="fr_foot" id="find">
-							<form action="Gofindidpw.do" method="post">
+							<form action="findIDPW확인용.jsp" method="post">
 							<!-- value 값 아이디/비번찾기 에서 SING Forgot your ID/Password? 으로 변경어떠신지? -->
-								<input type="submit" value="아이디/비번찾기">
+								<input type="submit" class="abc" value="아이디/비번찾기">
 							</form>
 						</div><!-- fr_foot -->
 					</div><!-- bottom -->
