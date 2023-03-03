@@ -27,12 +27,3 @@
 	        map.setCenter(coords);
 	    } 
 	});    
-	
-	
-	let urlParams = new URLSearchParams(window.location.search);
-	
-	let date1 = new Date(urlParams.get('checkIn'))
-	let date2 = new Date(urlParams.get('checkOut'))
-	console.log((date2 - date1) / (24 * 3600 * 1000)) 
-	$('#price').text(price * (date2 - date1) / (24 * 3600 * 1000))
-		
