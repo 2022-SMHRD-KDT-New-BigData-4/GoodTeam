@@ -123,6 +123,10 @@
 							<input id="phone" type="text" name="phone" placeholder="phone"
 								required>
 						</div>
+						<div class="user_email">
+							<input id="phone" type="submit" name="phone" placeholder="phone"
+								value="회원가입">
+						</div>
 					</form>
 	         	</div><!-- create_form -->
 	         </div><!-- container -->

@@ -127,7 +127,7 @@
 						</div><!-- fr_foot -->
 						
 						<div class="fr_foot" id="find">
-							<form action="Goforgotid.do" method="post">
+							<form action="Goforgot_id.do">
 							<!-- value 값 아이디/비번찾기 에서 SING Forgot your ID/Password? 으로 변경어떠신지? -->
 								<input type="submit" class="abc" value="아이디/비번찾기">
 							</form>
