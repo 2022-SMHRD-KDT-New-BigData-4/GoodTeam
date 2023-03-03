@@ -54,11 +54,11 @@ public class FrontController extends HttpServlet {
 		map.put("LocalMap.do", new LocalArea());
 		// 로그인을 할 수 있는 기능
 		map.put("LonginService.do", new LoginService());	
-		// myinfo 
+		// my info 
 		map.put("MyInfo.do", new MyInfo());	
 		// 내정보 수정 할 수 있는 기능
 		map.put("CustSelect.do", new CustSelect());
-		// Qna 페이지
+		// Q&a 페이지
 		map.put("QnaTotal.do", new QnaTotal());		
 		// QNA 전체 조회 기능
 		map.put("Qna_select_all.do", new Qna_select_all());

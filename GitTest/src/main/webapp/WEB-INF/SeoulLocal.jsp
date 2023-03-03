@@ -321,7 +321,9 @@
 	const districts = [ 'seochogu', 'gangnamgu', 'mapogu', 'seodaemoongu',
 			'unpyeonggu', 'jongrogu', 'junggu', 'younsangu', 'sungdonggu',
 			'dongdaemoon', 'joongranggu', 'gwanjingu', 'seongbukgu',
-			'gangbukgu' ];
+			'gangbukgu' ,"dobonggu","nowongu","gangdonggu", "songpagu",
+			"gangseogu","yangcheongu","gurogu","yeongdeongpugu","dongjakgu",
+			"dongjakgu","gwanakgu","gumcheongu"];
 
 	for (let i = 0; i < districts.length; i++) {
 		const link = document.getElementById(districts[i]);
