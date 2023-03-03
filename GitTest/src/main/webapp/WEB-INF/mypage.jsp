@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.CustomersVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -84,7 +85,9 @@
             </div><!-- 오른쪽 박스 -->
       </div>
       <!-- 상단바 -->
-
+			<%
+				CustomersVO memberinfo = (CustomersVO) session.getAttribute("memberinfo");
+				%>
       <!-- 중앙 -->
       <div class="sub1">
          <!-- 4-1.컨텐츠 담을 박수 -->
@@ -94,7 +97,7 @@
                  <div class="p_body1"></div>
             </div>
             <div class="nametag">
-               <h4>NAME</h4>
+               <h4><%= memberinfo.getCust_name()%></h4>
             </div>
             <div class="text">
                <a href="ReservationSelectAll.do">My reservation</a>
@@ -103,7 +106,7 @@
                <a href="WishSelectAll.do">WishList</a>
             </div>
             <div class="text2">
-               <a>Review</a>
+               <a href="ReviewCustSelect.do">Review</a>
             </div>
             <div class="text3">
                <a>Contact Us</a>
