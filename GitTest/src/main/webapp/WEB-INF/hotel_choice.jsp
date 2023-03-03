@@ -58,15 +58,18 @@
 			<!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<div class="search">
-					<!-- 3-2. 돋보기 -->
-					<div class="icon2">
-						<img class="iconimg" src="assets/images/searchicon.png">
+				<form action="Search.do" method="post" id="searchBox" >
+					<div class="search">
+						<input type="text" class="non" name="ac_addr">
+						<!-- 3-2. 돋보기 -->
+							<div class="icon" style="cursor:pointer" onclick="document.getElementById('searchBox').submit();">
+							<img class="iconimg" src="assets/images/searchicon.png">
+							
+						</div>
+						<!-- 돋보기 -->
 					</div>
-					<!-- 돋보기 -->
-
-				</div>
-				<!-- 검색바 -->
+					<!-- 검색바 -->
+				</form>
 			</div>
 			<!-- 검색놈들 -->
 
@@ -88,7 +91,7 @@
 
 				<!-- 메뉴1 login-->
 				<div class="log">
-					<a class="a">log in</a>
+					<a class="a" href="Login.do">log in</a>
 				</div>
 				<!-- login -->
 

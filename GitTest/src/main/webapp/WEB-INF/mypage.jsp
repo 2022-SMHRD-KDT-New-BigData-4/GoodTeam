@@ -15,10 +15,10 @@
       <!-- 상단바 -->
       <div class="bar_home">
          <!-- 1. 홈  -->
-         <div class="home">
-            <h1>HOW ABOUT SEOUL ?</h1>
-            </div>
-         <!-- 홈  -->
+			<div class="home">
+				<a class="has" href="GoMain.do">HOW ABOUT SEOUL ?</a>
+				</div>
+			<!-- 홈  -->
 
          <!-- 2. 페이지 -->
          <div class="page">
@@ -29,7 +29,7 @@
         <!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<form action="Search.do" method="post">
+				<form action="Search.do" method="post" id="searchBox">
 					<div class="search">
 						<input type="text" class="non" name="ac_addr">
 						<!-- 3-2. 돋보기 -->
@@ -61,9 +61,10 @@
                </div><!-- login -->
                
                <!-- 메뉴1 login-->
-               <div class="log">
-                  <a class="a">log in</a>
-               </div><!-- login -->
+				<div class="log">
+					<a class="a" href="Login.do">log in</a>
+				</div>
+				<!-- login -->
             
 
                <!-- 메뉴2 qna-->
