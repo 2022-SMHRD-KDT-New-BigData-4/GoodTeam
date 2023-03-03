@@ -22,7 +22,7 @@ margin:20px;
 .class{
 height: 500px;
 padding:13px;
-width: 100%;
+width: 50%;
 background-color: white;    
 /* flex선언*/
 display: flex;
@@ -99,7 +99,6 @@ color: black;
 font-size: 14px;
 
 }
-
 .reserv{
 width:100px;
 height:80px;

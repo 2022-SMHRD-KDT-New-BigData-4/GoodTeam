@@ -8,8 +8,9 @@
 <link rel="stylesheet" href="assets/css/reset.css">
 <link rel="stylesheet" href="assets/css/mypage.css">
 </head>
+<!-- 상단바 a태그연결 & has 위치 & 연결 -->
 <body>
-   <div class="container">
+   <div class="c">
    <img src="assets/images/seoul2.jpg">
       <!-- 상단바 -->
       <div class="bar_home">
@@ -92,10 +93,10 @@
                <h4>NAME</h4>
             </div>
             <div class="text">
-               <a>My reservation</a>
+               <a href="ReservationSelectAll.do">My reservation</a>
             </div>
             <div class="text1">
-               <a>WishList</a>
+               <a href="WishSelectAll.do">WishList</a>
             </div>
             <div class="text2">
                <a>Review</a>
@@ -104,7 +105,7 @@
                <a>Contact Us</a>
             </div>
             <div class="text4">
-               <a>My Info</a>
+               <a href="CustUpdate.do">My Info</a>
             </div>
             <div class="text5">
                <a>Logout</a>

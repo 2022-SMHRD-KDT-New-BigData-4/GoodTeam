@@ -18,10 +18,7 @@ img{
     overflow:hidden;
     position: relative;
 }
-.c {
-   display: flex;
-    justify-content: center;
-}
+
 
 
 .bar_home{/*HOW ABOUT SEOUL*/
@@ -36,27 +33,37 @@ img{
 .sub1{
    position: absolute;
    top: 130px;
-   margin-top: 10px;
-   width: 800px;
-   height: 550px;
+   width: 1000px;
+   height: 600px;
    background-color: white;
    justify-items: center;
+   flex-direction: column;
 }
-.sub2{
+.s_left{
    position: absolute;
    left: 3%;
-   width: 50%;
-   height: 100%;
+   width: 47%;
+   height: 90%;
+   background-color: gray;
+   top:5%;
+}
+.s_right{
+   position: absolute;
+   right: 3%;
+   width: 47%;
+   height: 90%;
+   background-color: blue;
+   top:5%;
 }
 .home{
    position: absolute;
    margin-left: 1%;
-   top: -14%;
+   top: 12%;
    margin-top: 10px;
    width: 25%;
    height: 50px;
 }
-h1{
+.has{
    font-size: 30px;
    color: white;
    font-weight: bold;
@@ -64,7 +71,7 @@ h1{
 .page{
    position: absolute;
    margin-left: 1%;
-   top: 20%;
+   top: 40%;
    margin-top: 10px;
    width: 20%;
    height: 30px;

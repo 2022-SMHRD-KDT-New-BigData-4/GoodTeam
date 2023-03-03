@@ -18,11 +18,11 @@
                 
                 <!-- 배경 동영상 -->
                
-                    <video muted autoplay loop>
+                   <!--   <video muted autoplay loop>
                         <!--<img src="https://cdn.dailyhotel.com/ux/nav-search-ic@2x.png" alt="">-->
-                        <source  src="assets/images/file.mp4"  >
-                    </video>                  
-                    
+                       <!--  <source  src="assets/images/file.mp4"  >
+                    <!-- </video> -->                 
+                  <img  src="assets/images/seoul2.jpg">
                
                 
                 <!-- HOW ABOUT SEOUL? -->

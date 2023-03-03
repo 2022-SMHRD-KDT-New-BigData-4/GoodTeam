@@ -82,6 +82,7 @@ body{
 	color: white;
 	font-weight: bold;
 	margin: 0;
+	text-decoration: none;
 }
 .page{
 	position: absolute;
