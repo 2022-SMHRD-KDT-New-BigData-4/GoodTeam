@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Area_choice</title>
+<title>SeoulLocal</title>
 <link rel="stylesheet" href="assets/css/reset.css">
 <link rel="stylesheet" href="assets/css/SeoulLocal.css">
 <link rel="stylesheet" href="assets/css/bar2.css">
@@ -19,9 +19,8 @@
 			<!-- 1. 홈  -->
 			<div class="home">
 				<a class="has" href="GoMain.do">HOW ABOUT SEOUL ?</a>
-			</div>
+				</div>
 			<!-- 홈  -->
-
 			<!-- 2. 페이지 -->
 			<div class="page">
 				<h3>> Login</h3>
@@ -31,7 +30,7 @@
 			<!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<form action="Search.do" method="post">
+				<form action="Search.do" method="post" id="searchBox" >
 					<div class="search">
 						<input type="text" class="non" name="ac_addr">
 						<!-- 3-2. 돋보기 -->
@@ -64,7 +63,7 @@
 
 				<!-- 메뉴1 login-->
 				<div class="log">
-					<a class="a" href="LonginService.do">log in</a>
+					<a class="a" href="Login.do">log in</a>
 				</div>
 				<!-- login -->
 

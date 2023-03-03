@@ -15,7 +15,7 @@
 			<img src="assets/images/seoul2.jpg">
 			<!-- 1. 홈  -->
 			<div class="home">
-				<h1 class="has">HOW ABOUT SEOUL ?</h1>
+				<a class="has" href="GoMain.do">HOW ABOUT SEOUL ?</a>
 				</div>
 			<!-- 홈  -->
 

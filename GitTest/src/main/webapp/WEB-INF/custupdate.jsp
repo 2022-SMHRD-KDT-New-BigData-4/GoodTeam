@@ -31,7 +31,7 @@
 			<!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<form action="Search.do" method="post">
+				<form action="Search.do" method="post" id="searchBox" >
 					<div class="search">
 						<input type="text" class="non" name="ac_addr">
 						<!-- 3-2. 돋보기 -->
@@ -63,9 +63,10 @@
 					</div><!-- login -->
 					
 					<!-- 메뉴1 login-->
-					<div class="log">
-						<a class="a" href="LonginService.do">log in</a>
-					</div><!-- login -->
+				<div class="log">
+					<a class="a" href="Login.do">log in</a>
+				</div>
+				<!-- login -->
 				
 
 					<!-- 메뉴2 qna-->
