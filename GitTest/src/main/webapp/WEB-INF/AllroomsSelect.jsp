@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.JoinVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.List"%>
@@ -96,8 +97,8 @@
 			<!-- 4-1.컨텐츠 담을 박스 -->
 	          <%
    
-				   List<AccommodationsVO> roomlist = (List<AccommodationsVO>) request.getAttribute("roomlist");
-				   for (AccommodationsVO vo : roomlist) {
+				   List<JoinVO> roomlist = (List<JoinVO>) request.getAttribute("roomlist");
+				   for (JoinVO vo : roomlist) {
 				%>
 				      <!--방 1개-->
 				<div class="room_top"></div>
@@ -114,7 +115,7 @@
 				        </div>
 				       
 				        <div class="price">
-				           <div class="pink">쿠폰적용가><</div><br/>가격은 roomsVO를 불러와야 함 
+				           <div class="pink">쿠폰적용가><</div><br/><%=vo.getRoom_price_l()%>
 				        </div>
 				        <div>
 				         <a class="reserv" href="ChoiceRoom.do?ac_seq=<%=vo.getAc_seq() %>">Book</a>
