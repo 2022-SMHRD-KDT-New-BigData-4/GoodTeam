@@ -72,4 +72,19 @@ public class JoinDAO {
 
 	}
 
+	// 숙소 검색
+	public List<JoinVO> Search(JoinVO vo) {
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		List<JoinVO> roomlist = null;
+		try {
+			roomlist = sqlSession.selectList("Search", vo);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		sqlSession.close();
+		return roomlist;
+
+	}
+
 }

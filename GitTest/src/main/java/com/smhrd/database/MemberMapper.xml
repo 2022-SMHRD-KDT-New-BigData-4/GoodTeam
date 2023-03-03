@@ -143,8 +143,8 @@
 		select * from rooms where ac_seq = #{ac_seq}
 	</select>
 	<!-- 검색기능 -->
-	<select id="Search" parameterType="com.smhrd.model.AccommodationsVO"
-		resultType="com.smhrd.model.AccommodationsVO">
+	<select id="Search" parameterType="com.smhrd.model.JoinVO"
+		resultType="com.smhrd.model.JoinVO">
 		SELECT * FROM ACCOMMODATIONS WHERE ac_addr LIKE '%${ac_addr}%' OR ac_name LIKE '%${ac_name}%'
 	</select>
 	

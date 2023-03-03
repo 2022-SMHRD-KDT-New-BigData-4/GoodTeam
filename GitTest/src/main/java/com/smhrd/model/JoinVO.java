@@ -86,6 +86,11 @@ public class JoinVO {
 	// 예약가능 여부
 	private char reserv_yn;
 
+	public JoinVO(String ac_addr, String ac_name) {
+		this.ac_addr=ac_addr;
+		this.ac_name=ac_name;
+	}
+
 	public int getAc_seq() {
 		return ac_seq;
 	}
