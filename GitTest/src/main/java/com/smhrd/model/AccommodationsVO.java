@@ -14,9 +14,9 @@ public class AccommodationsVO {
 	// 숙소 전화번호
 	private String ac_tel; 
 	// 위도
-	private int lat;
+	private Integer lat;
 	// 경도 
-	private int lng;
+	private Integer lng;
 	
 	
 	// 내가 데이터 베이스에서 필요한 생성자 만들어 쓰세요.
@@ -28,7 +28,42 @@ public class AccommodationsVO {
 	
 	
 	
-	
+
+
+
+
+	public AccommodationsVO(int ac_seq, String ac_name, String ac_addr, String ac_img1, String ac_img2, String ac_img3,
+			String ac_tel, Integer lat, Integer lng) {
+		super();
+		this.ac_seq = ac_seq;
+		this.ac_name = ac_name;
+		this.ac_addr = ac_addr;
+		this.ac_img1 = ac_img1;
+		this.ac_img2 = ac_img2;
+		this.ac_img3 = ac_img3;
+		this.ac_tel = ac_tel;
+		this.lat = lat;
+		this.lng = lng;
+	}
+
+
+
+
+
+
+
+
+	// 숙소 검색에 필요한 생성자
+	public AccommodationsVO(String ac_name, String ac_addr) {
+		super();
+		this.ac_name = ac_name;
+		this.ac_addr = ac_addr;
+	}
+
+
+
+
+
 	public int getAc_seq() {
 		return ac_seq;
 	}
@@ -71,16 +106,16 @@ public class AccommodationsVO {
 	public void setAc_tel(String ac_tel) {
 		this.ac_tel = ac_tel;
 	}
-	public int getLat() {
+	public Integer getLat() {
 		return lat;
 	}
-	public void setLat(int lat) {
+	public void setLat(Integer lat) {
 		this.lat = lat;
 	}
-	public int getLng() {
+	public Integer getLng() {
 		return lng;
 	}
-	public void setLng(int lng) {
+	public void setLng(Integer lng) {
 		this.lng = lng;
 	}
 	

@@ -63,6 +63,21 @@ public class AccommodationsDAO {
 			return roomlist;
 
 		}
+		
+		// 숙소 검색
+				public List<AccommodationsVO> Search(AccommodationsVO vo) {
+					SqlSession sqlSession = sqlSessionFactory.openSession(true);
+					List<AccommodationsVO> roomlist = null;
+					try {
+						roomlist = sqlSession.selectList("Search", vo);
+
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					sqlSession.close();
+					return roomlist;
+
+				}
 
 
 }

@@ -102,6 +102,8 @@ public class FrontController extends HttpServlet {
 		map.put("FindPw.do", new FindPWService());
 		// 예약 기능
 		map.put("Reservation.do", new Reservation());
+		// 검색 기능
+		map.put("Search.do", new Search());
 
 	}
 
