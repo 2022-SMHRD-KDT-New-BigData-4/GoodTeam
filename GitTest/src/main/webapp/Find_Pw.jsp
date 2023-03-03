@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="Find_Id.css" >
+<link rel="stylesheet" href="css/Find_Pw.css" >  
 
 </head>
 <body>
-  <div class="c">
+	  <div class="c">
       <!-- 상단바 -->
       <div class="bar_home">
          <!-- 1. 홈  -->
@@ -84,54 +84,38 @@
       <div class="sub1">
          <!-- 4-1.컨텐츠 담을 박스 -->
          <div class="s_left">
-            <img src="asset/image/sample.jpg">
+           <img src="asset/image/sample.jpg">
          </div><!-- s_left -->
          
          <div class="s_right">
-         
-         <div class="contain">
-   <div class="welcom">
-      <div class="header">
-         <h1>Find ID</h1>
-         <%
-			String id = (String) request.getAttribute("ID");
-			// FindIdService페이지의 request Scope에서 가져온 값이 "ID"
-			
-			String pw = (String) request.getAttribute("findpw");
-		
-		%>
-         
-      </div>
-      <div class="find">
-            <p>YOUR ID IS..</p>
-            <%-- 주석풀고 여기로 id 가 출력되도록 해주세요~ --%>
-             <p><%= id %></p>
-      </div> 
-      <div class="bottom">
-         
-         
-         <%-- botton 기능 --%>
-        
 
+<div class="contain">
+	<div class="welcom">
+		<div class="header">
+			<h1>Find PW</h1>
+		</div>
+		<div class="find">
+				<p>YOUR PW IS..</p>
+				<%-- 주석풀고 여기로 id 가 출력되도록 해주세요~ --%>
+            	<%-- <p><%= %></p> --%>
+            	
+            	 <%-- botton 기능 --%>
+            	 
 <div class="light-button button-wrapper">
   <div class="button">
   
-      <input type="submit" name="ID" value="LOGIN" >
-    
+  	<input type="submit" value="LOGIN" name="findpw">
   </div>  
+</div>           	 
+            	 
+		</div> 
+		<div class="bottom">
+		
+			
+		</div> 
+					
+	</div>
 </div>
-
-
-      </div> 
-               
-   </div>
-
-         </div><!-- s_right -->
-      <!-- 컨텐츠 담을 박스 -->
-      </div>
-      <!-- 가운데 -->
-
-      </div>
 
 </body>
 </html>
