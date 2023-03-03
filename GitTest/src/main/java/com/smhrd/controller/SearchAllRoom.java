@@ -10,6 +10,8 @@ import com.smhrd.command.Command;
 import com.smhrd.model.AccommodationsDAO;
 import com.smhrd.model.AccommodationsVO;
 import com.smhrd.model.CustomersDAO;
+import com.smhrd.model.JoinDAO;
+import com.smhrd.model.JoinVO;
 import com.smhrd.model.RoomsDAO;
 
 public class SearchAllRoom implements Command {
@@ -23,12 +25,12 @@ public class SearchAllRoom implements Command {
 		
 		String id = request.getParameter("id");
 		// 전체숙소 검색이라 받아올 데이터값이 없다.
-		AccommodationsDAO dao = new AccommodationsDAO();
+		JoinDAO dao = new JoinDAO();
 		// 들어갈 데이터 값이 없음
 		// AccommodationsVO vo = new AccommodationsVO();
 
 		// 뽑아오는 로직 수행
-		List<AccommodationsVO> roomlist = dao.SelectAllRooms();
+		List<JoinVO> roomlist = dao.SelectAllRooms();
 		request.setAttribute("roomlist", roomlist);
 
 		return "AllroomsSelect";

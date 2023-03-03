@@ -75,8 +75,8 @@
 	<!-- Accommodations -->
 	<!-- 모든 숙박업소를 볼 수 있는 쿼리분 -->
 	<select id="SelectAllRooms"
-		resultType="com.smhrd.model.AccommodationsVO">
-		select * from accommodations
+		resultType="com.smhrd.model.JoinVO">
+		select * from accommodations a , rooms b  where a.ac_seq = b.ac_seq
 	</select>
 
 
@@ -132,8 +132,8 @@
 	</select>
 	<!-- 지역별 숙소 모두 가져오기 -->
 	<select id="LocalAreaRooms" parameterType="java.lang.String"
-		resultType="com.smhrd.model.AccommodationsVO">
-		SELECT * FROM ACCOMMODATIONS WHERE ac_addr LIKE
+		resultType="com.smhrd.model.JoinVO">
+		SELECT * FROM ACCOMMODATIONS a , rooms b  WHERE a.ac_seq = b.ac_seq and ac_addr LIKE
 		'%${ac_addr}%'
 	</select>
 	<!-- 호텔 가격을 가져오는 쿼리문 -->

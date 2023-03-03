@@ -49,21 +49,7 @@ public class AccommodationsDAO {
 
 
 	}
-	// 지역별 숙소 전체선택
-		public List<AccommodationsVO> LocalAreaRooms(String ac_addr) {
-			SqlSession sqlSession = sqlSessionFactory.openSession(true);
-			List<AccommodationsVO> roomlist = null;
-			try {
-				roomlist = sqlSession.selectList("LocalAreaRooms", ac_addr);
-
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			sqlSession.close();
-			return roomlist;
-
-		}
-		
+	
 		// 숙소 검색
 				public List<AccommodationsVO> Search(AccommodationsVO vo) {
 					SqlSession sqlSession = sqlSessionFactory.openSession(true);
