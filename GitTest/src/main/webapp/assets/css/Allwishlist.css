@@ -9,7 +9,7 @@
 	/* 아이템을 가운데로 옮김 */
 	justify-content: center;
 	/* 아이템을 정 한가운데로 옮김 */
-	align-items: baseline;
+	align-items: center;
 	height: 1000px;
 	background-color: #FFF0F5;
 	border: 0px;
@@ -21,7 +21,6 @@
 	/* 아이템을 정 한가운데로 옮김 */
 	align-items: center;
 	position: relative;
-	width:100%;
 	background-color: white;
 }
 
@@ -112,9 +111,9 @@
 }
 
 .room_imgs {
-	display: wrap;
 	width: 500px;
-	height: 400px;
+    height: 400px;
+    position: relative;
 }
 
 h1 {
@@ -168,12 +167,12 @@ h1 {
 	position: relative;
 }
 
-#aa a {
+a {
     position: relative;
     left: 130%;
     
 }
 
-.room_contents_infos p {
+p {
 	margin: 10px;
 }
