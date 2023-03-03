@@ -108,7 +108,7 @@
                <a href="CustUpdate.do">My Info</a>
             </div>
             <div class="text5">
-               <a>Logout</a>
+               <a href="Logout.do">Logout</a>
             </div>
             
          </div>
