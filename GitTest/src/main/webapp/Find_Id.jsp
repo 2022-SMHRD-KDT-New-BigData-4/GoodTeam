@@ -6,13 +6,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="Find_Id.css" >
-<link rel="stylesheet" href="assets/css/reset.css">  
-<link rel="stylesheet" href="assets/css/bar2.css">
 
 </head>
 <body>
   <div class="c">
-   <img src="seoul2.jpg">
       <!-- 상단바 -->
       <div class="bar_home">
          <!-- 1. 홈  -->
@@ -33,7 +30,7 @@
             <div class="search">
                <!-- 3-2. 돋보기 -->
                <div class="icon">
-                  <img class="iconimg" src="sample.jpg">
+                  <img class="iconimg" src="#<%--searchicon.png --%>">
                </div>
                <!-- 돋보기 -->
 
@@ -83,38 +80,44 @@
       <!-- 상단바 -->
 
 
-
-
-
 <!-- 중앙 -->
       <div class="sub1">
          <!-- 4-1.컨텐츠 담을 박스 -->
          <div class="s_left">
-            <img src="#">
+            <img src="asset/image/sample.jpg">
          </div><!-- s_left -->
          
          <div class="s_right">
          <div class="contain">
-	<div class="welcom">
-		<div class="header">
-			<h1>Find ID</h1>
-			
-		</div>
-		<div class="find">
-				<p>YOUR ID IS..</p>
-				<%-- 주석풀고 여기로 id 가 출력되도록 해주세요~ --%>
-				<%-- <span><%= %></span> --%>
-		</div> 
-		<div class="bottom">
-			<input type="submit" value="Login" >
-		</div> 
-					
-	</div>
-
-
-
+   <div class="welcom">
+      <div class="header">
+         <h1>Find ID</h1>
          
-            
+      </div>
+      <div class="find">
+            <p>YOUR ID IS..</p>
+            <%-- 주석풀고 여기로 id 가 출력되도록 해주세요~ --%>
+            <%-- <p><%= %></p> --%>
+      </div> 
+      <div class="bottom">
+         
+         
+         <%-- botton 기능 --%>
+        
+
+<div class="light-button button-wrapper">
+  <div class="button">
+  
+      <input type="submit" name="bt_name" value="LOGIN" >
+    
+  </div>  
+</div>
+
+
+      </div> 
+               
+   </div>
+
          </div><!-- s_right -->
       <!-- 컨텐츠 담을 박스 -->
       </div>
