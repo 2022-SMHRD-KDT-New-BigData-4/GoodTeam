@@ -1,50 +1,466 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+.c{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+}
 .contain{
-	display:flex;
-	width:100%;
-	height: 100%;
-	min-width: 400px;
-	min-height: 600px;
+   display:flex;
+   width:100%;
+   height: 90%;
+   min-width: 400px;
+   min-height: 540px;
 }
 .welcom{
-	display:flex;
-	width:100%;
-	height: 100hv;
-	justify-content: center;
-	align-items: center;
-	background-color: pink;
-	flex-direction: column;
-	
+   display:flex;
+   width:100%;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   
 }
 .header{
-	display:flex;
-	width: 100%;
-	height: 40%;
-	justify-content: center;
-	align-items: center;
-	background-color: skyblue;
-	
+   display:flex;
+   width: 100%;
+   height: 40%;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.header>h1{
+   font-size: xxx-large;
+    font-weight: bold;
+    font-family: 'Cafe24아네보네에어',sans-serif;
+    text-shadow: 8px 6px 3px salmon;
 }
 
 .find{
-	display:flex;
-	width:100%;
-	height:60%;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	font-family:"Cafe24아네보네에어",sans-serif;
-	font-size:16px;
-	flex-direction: column;
-	
+   display:flex;
+   width:100%;
+   height:55%;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   font-family:"Cafe24아네보네에어",sans-serif;
+   font-size:16px;
+   flex-direction: column;
+   
 }
+
+.bottom{
+   display:flex;
+   width: 100%;
+   height: 25%;
+   justify-content: center;
+   align-items: center;
+   
+}
+/* 버튼 디자인*/
+.button-wrapper {
+    display: inline-block;
+    margin: 20px 5px;
+    padding: 40px;
+  }
+
+  .button {
+    background: #fff;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: all .35s ease-in-out .35s;
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+  }
+ 
+
+  .button:after {
+    bottom: -100%;
+    right: -100%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #F79792;
+    transition: all .35s ease-in-out .5s;
+  }
+  .button:hover:after {
+    right: 0;
+    bottom: 0;
+    transition: all ease-in-out .35s;
+  }
+  .button:before {
+  
+    top: -100%;
+    left: -100%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #F79792;
+    transition: all .35s ease-in-out .5s;
+  }
+  .button:hover:before {
+    left: 0;
+    top: 0;
+    transition: all ease-in-out .35s;
+  }
 input[type="submit"]{
-	display:flex;
-	margin-top:10px;
-	margin-bottom:10px;	
-	padding:10px 25px;
-	border-radius:12px;
-	background-color:#F79792;
-	font-size: 16px;
+   display:flex;
+   padding:10px 25px;
+   font-size: 16px;
+   border: 0px;
+   cursor: pointer;
+   background-color: #fff;
+    padding: 15px 30px;
+    background: #fff;
+    z-index: 100;
+    position: relative;
+    transition: all .35s ease-in-out .35s;
+}
+
+.button:hover input[type="submit"] {
+    background: #F79792;
+    color: #fff;
+    font-size:16px;
+    font-weight:bord;
+    transition: all .35s ease-in-out .35s;
+    text-align:center;
+  }
+ /* 버튼디자인 end */
+
+body{
+   /*margin : 0px;
+   display: inline-flex;
+   flex-direction: column;
+    align-items: center;*/
+    /*justify-content: center;*/
+   font-family :'Cafe24아네보네에어',sans-serif;
+   display: contents;
+   
+}
+img{
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    margin: 0 auto;
+    padding: 2%;
+    overflow: hidden;
+    position: relative;
+}
+
+p{
+   
+}
+
+.bar_home{/*HOW ABOUT SEOUL*/
+   
+   width: 100%;
+   height: 100px;
+   position: fixed;
+   top: 0;
+   
+}
+/* 상단바 & 바디 구분선*/
+.sub1{
+   box-shadow: -7px -7px 5px #f79792 inset;
+    position: absolute;
+    top: 130px;
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    justify-items: center;
+    flex-direction: column;
+}
+.s_left{
+   position: absolute;
+   left: 3%;
+   width: 47%;
+   height: 90%;
+   background-color: gray;
+   top:5%;
+}
+.s_right{
+   position: absolute;
+   right: 3%;
+   width: 47%;
+   height: 90%;
+   top:5%;
+}
+.home{
+   position: absolute;
+   margin-left: 1%;
+   top: 12%;
+   margin-top: 10px;
+   width: 25%;
+   height: 50px;
+}
+.has{
+   font-size: 30px;
+   color: white;
+   font-weight: bold;
+}
+.page{
+   position: absolute;
+   margin-left: 1%;
+   top: 40%;
+   margin-top: 10px;
+   width: 20%;
+   height: 30px;
+   
+}
+h3{
+   color: white;
+   font-size: 19px;
+   font-weight: inherit;
+}
+.a{
+   color: white;
+   font-weight: inherit;
+   
+}
+.searchicon{
+   position: relative;
+   margin-left: 30%;
+   top: 0;
+   margin-top: 0;
+   width: 40%;
+   height: 100px;
+   
+}
+.search{
+   position: relative;
+   top: 28%;
+   margin-top: 0;
+   height: 40px;
+   background-color: white;
+   border-radius: 50px;
+}
+.icon{
+   position: relative;
+   margin-left: 92%;
+   top: 14%;
+   margin-top: 0;
+   width: 6%;
+   justify-content: center;
+}
+.iconimg{
+   width: 70%;
+   height: 70%;
+   top: inherit;
+   left: 15%;
+}
+.right1{
+   position: inherit;
+   margin-left: 77%;
+   top: inherit;
+   width: 100%;
+   height: 100px;
+}
+.log{
+   color: white; 
+   text-align: center;
+   top: 6%;
+   margin-left: 5%;
+   position: inherit;
+   width: 3%;
+   height: 22px;
+}
+.dropdown{
+   color: white; 
+   text-align: center;
+   top: 6%;
+   position: inherit;
+   width: 3%;
+   height: 22px;
+}
+.dropbtn{
+	
+  border : transparent;
+  background-color: transparent;
+  color : white;
+  cursor : pointer;
+  font-size : 14px;
+}
+.dropbtn_icon{
+  font-family : 'Material Icons';
+  font-size: 14px;
+}
+.dropbtn_icon a{
+  font-family : 'Material Icons';
+  font-size: 14px;
+  top: inherit;
+}
+.dropdown-content{/*usd box*/
+  display : none;
+  position : absolute;
+  z-index : 1; /*다른 요소들보다 앞에 배치*/
+  font-weight: 400;
+  background-color: white;
+  min-width : 160px;
+  border-radius: 5%;
+  font-size: 14px;
+}
+
+.dropdown-content a{
+  display : block;
+  text-decoration : none;
+  color : rgb(37, 37, 37);
+  font-size: 12px;
+  padding : 12px 20px;
+}
+
+.dropdown-content a:hover{
+  background-color : #7891b0;
+  
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.qna{
+   color: white; 
+   margin-left: 10%;
+   text-align: center;
+   top: 6%;
+   position: inherit;
+   height: 22px;
+}
+.profilebox{
+   margin-left: 17%;
+   top: 3%;
+   position: inherit;
+   width: 2.5%;
+   height: 40px;
+   background-color: none;
+}
+  .head{
+   top: 4.5%;
+   position: sticky;
+   width: 8%;
+   height: 2px;
+    margin: 0 auto;
+    border: 4.5px solid white;
+    border-radius: 50%;
+    background-color: white;
+  }
+  .p_body{
+   top: 6%;
+   position: sticky;
+   width: 20%;
+   height: 12%;
+    margin: 0 auto;
+    border: 7px solid white;
+    background-color: white;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+  }
+.profilebox1{
+   position: inherit;
+   top: 6%;
+   width: 50px;
+   height: 50px;
+}
+  .head1{
+   top: 24.5%;
+   position: sticky;
+   width: 10%;
+   height: 5px;
+    margin: 0 auto;
+    border: 4.5px solid black;
+    border-radius: 50%;
+    background-color: black;
+  }
+  .p_body1{
+   top: 32%;
+   position: sticky;
+   width: 20%;
+   height: 14%;
+    margin: 0 auto;
+    border: 7px solid black;
+    background-color: black;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+  }
+.nametag{
+   position: inherit;
+   top: 11.5%;
+   left: 18%;
+   width: 100px;
+   height: 20px;
+
+}
+div > h4{
+   color: black;
+   font-size: 19px;
+   font-weight: bolder;
+}
+div > a{
+   color: black;
+   font-weight: bolder;
+}
+.text{
+   position: inherit;
+   top: 23%;
+   left: 4%;
+   width: 260px;
+   height: 30px;
+   font-size: larger;
+
+}
+.text1{
+   position: inherit;
+   top: 35%;
+   left: 4%;
+   width: 260px;
+   height: 30px;
+   font-size: larger;
+}
+.text2{
+   position: inherit;
+   top: 48%;
+   left: 4%;
+   width: 260px;
+   height: 30px;
+   font-size: larger;
+
+}
+.text3{
+   position: inherit;
+   top: 61%;
+   left: 4%;
+   width: 260px;
+   height: 30px;
+   font-size: larger;
+
+}
+.text4{
+   position: inherit;
+   top: 75%;
+   left: 4%;
+   width: 260px;
+   height: 30px;
+   font-size: larger;
+
+}
+.text5{
+   position: inherit;
+   top: 88%;
+   left: 4%;
+   width: 260px;
+   height: 30px;
+   font-size: larger;
+
 }
