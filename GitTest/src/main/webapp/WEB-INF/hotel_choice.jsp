@@ -22,6 +22,20 @@
 <link rel="stylesheet" href="assets/css/bar2.css">
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <!--  -->
+<style>
+.img111 {
+    height: -webkit-fill-available;
+    width: 10000px !important;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+.hoho{
+	font-size: x-large;
+    position: absolute;
+}
+</style>
 </head>
 <body>
 	<%
@@ -40,7 +54,7 @@
 	session.setAttribute("room_seq", roopri.getRoom_seq());
 	%>
 	<div class="main">
-		<img src="seoul2.jpg">
+		<img class="img111" src="seoul2.jpg">
 		<!-- 상단바 -->
 		<div class="bar_home">
 			<!-- 1. 홈  -->
@@ -87,31 +101,26 @@
 							href="#" id="eur">EUR - Euro</a>
 					</div>
 				</div>
-				<!-- login -->
-
+				
 				<!-- 메뉴1 login-->
-				<div class="log">
-					<a class="a" href="Recommand.do">Recommand</a>
-				</div>
-				<!-- login -->
+					<div class="log">
+						<a class="a" href="Recommand.do">Recommand</a>
+					</div><!-- login -->
+				
 
-
-				<!-- 메뉴2 qna-->
-				<div class="qna">
-					<a class="a">Contact Us</a>
-				</div>
-				<!-- qna -->
-
-				<!-- 메뉴3 profile-->
-				<div class="profilebox">
-					<a href="MyInfo.do"> </a>
-					<div class="head"></div>
-					<div class="p_body"></div>
-				</div>
-				<!-- profile -->
-
-			</div>
-			<!-- 오른쪽 박스 -->
+					<!-- 메뉴2 qna-->
+					<div class="qna">
+						<a class="a" href="QnaTotal.do" >Contact Us</a>
+					</div>
+					<!-- qna -->
+					
+					<!-- 메뉴3 profile-->
+					<div class="profilebox">
+						<a href="MyInfo.do" class="non1"></a>
+			            	<div class="head"></div>
+			            	<div class="p_body"></div>
+					</div><!-- profile -->
+				</div><!-- 오른쪽 박스 -->
 		</div>
 		<!-- 상단바 -->
 
@@ -119,7 +128,7 @@
 		<div class="sub11">
 			<!-- 4-1.컨텐츠 담을 박스 -->
 			<div class="room_name">
-				<h1><%=room.getAc_name()%></h1>
+				<h1 class="hoho"><%=room.getAc_name()%></h1>
 				<!-- 객실명 -->
 			</div>
 			<div id="scroll_area">

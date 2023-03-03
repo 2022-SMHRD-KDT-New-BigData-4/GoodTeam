@@ -87,7 +87,7 @@
 		<!-- 상단바 -->
 
 		<!-- 중앙 -->
-		<div class="sub11">
+		<div class="sub13">
 			<!-- 4-1.컨텐츠 담을 박스 -->
 			<div class="s_left">
 				<!-- 서울 지도 부분 -->
@@ -108,13 +108,13 @@
 						<!-- 첫째 줄 -->
 						<div class="local">
 							<div class="localmap">
-								<a id="seochogu" href="LocalMap.do">서초구</a>
+								<a class="aa" id="seochogu" href="LocalMap.do">서초구</a>
 								<div>
 									<img src="assets/images/서울지도/서초구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="gangnamgu" href="LocalMap.do">강남구</a>
+								<a class="aa" id="gangnamgu" href="LocalMap.do">강남구</a>
 								<div>
 									<img src="assets/images/서울지도/강남구.png" alt="" class="localmapimg">
 								</div>
@@ -123,19 +123,19 @@
 						<!-- 둘째 줄 -->
 						<div class="local">
 							<div class="localmap">
-								<a id="mapogu" href="LocalMap.do">마포구</a>
+								<a class="aa" id="mapogu" href="LocalMap.do">마포구</a>
 								<div>
 									<img src="assets/images/서울지도/마포구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="seodaemoongu" href="LocalMap.do">서대문구</a>
+								<a class="aa" id="seodaemoongu" href="LocalMap.do">서대문구</a>
 								<div>
 									<img src="assets/images/서울지도/서대문구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="unpyeonggu" href="LocalMap.do">은평구</a>
+								<a class="aa" id="unpyeonggu" href="LocalMap.do">은평구</a>
 								<div>
 									<img src="assets/images/서울지도/은평구.png" alt="" class="localmapimg">
 								</div>
@@ -144,19 +144,19 @@
 						<!-- 셋째 줄 -->
 						<div class="local">
 							<div class="localmap">
-								<a id="jongrogu" href="LocalMap.do">종로구</a>
+								<a class="aa" id="jongrogu" href="LocalMap.do">종로구</a>
 								<div>
 									<img src="assets/images/서울지도/종로구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="junggu" href="LocalMap.do">중구</a>
+								<a class="aa" id="junggu" href="LocalMap.do">중구</a>
 								<div>
 									<img src="assets/images/서울지도/중구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="younsangu" href="LocalMap.do">용산구</a>
+								<a class="aa" id="younsangu" href="LocalMap.do">용산구</a>
 								<div>
 									<img src="assets/images/서울지도/용산구.png" alt="" class="localmapimg">
 								</div>
@@ -165,25 +165,25 @@
 						<!-- 넷째 줄 -->
 						<div class="local">
 							<div class="localmap">
-								<a id="sungdonggu" href="LocalMap.do">성동구</a>
+								<a class="aa" id="sungdonggu" href="LocalMap.do">성동구</a>
 								<div>
 									<img src="assets/images/서울지도/성동구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="dongdaemoon" href="LocalMap.do">동대문구</a>
+								<a class="aa" id="dongdaemoon" href="LocalMap.do">동대문구</a>
 								<div>
 									<img src="assets/images/서울지도/동대문구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="joongranggu" href="LocalMap.do">중랑구</a>
+								<a class="aa" id="joongranggu" href="LocalMap.do">중랑구</a>
 								<div>
 									<img src="assets/images/서울지도/중랑구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="gwanjingu" href="LocalMap.do">광진구</a>
+								<a class="aa" id="gwanjingu" href="LocalMap.do">광진구</a>
 								<div>
 									<img src="assets/images/서울지도/광진구.png" alt="" class="localmapimg">
 								</div>
@@ -192,25 +192,25 @@
 						<!-- 다섯째 줄 -->
 						<div class="local">
 							<div class="localmap">
-								<a id="seongbukgu" href="LocalMap.do">성북구</a>
+								<a class="aa" id="seongbukgu" href="LocalMap.do">성북구</a>
 								<div>
 									<img src="assets/images/서울지도/성북구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="gangbukgu" href="LocalMap.do">강북구</a>
+								<a class="aa" id="gangbukgu" href="LocalMap.do">강북구</a>
 								<div>
 									<img src="assets/images/서울지도/강북구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="dobonggu" href="LocalMap.do">도봉구</a>
+								<a class="aa" id="dobonggu" href="LocalMap.do">도봉구</a>
 								<div>
 									<img src="assets/images/서울지도/도봉구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="nowongu" href="LocalMap.do">노원구</a>
+								<a class="aa" id="nowongu" href="LocalMap.do">노원구</a>
 								<div>
 									<img src="assets/images/서울지도/노원구.png" alt="" class="localmapimg">
 								</div>
@@ -219,13 +219,13 @@
 						<!-- 여섯째 줄 -->
 						<div class="local">
 							<div class="localmap">
-								<a id="gangdonggu" href="LocalMap.do">강동구</a>
+								<a class="aa" id="gangdonggu" href="LocalMap.do">강동구</a>
 								<div>
 									<img src="assets/images/서울지도/강동구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="songpagu" href="LocalMap.do">송파구</a>
+								<a class="aa" id="songpagu" href="LocalMap.do">송파구</a>
 								<div>
 									<img src="assets/images/서울지도/송파구.png" alt="" class="localmapimg">
 								</div>
@@ -234,25 +234,25 @@
 						<!-- 일곱째 줄 -->
 						<div class="local">
 							<div class="localmap">
-								<a id="gangseogu" href="LocalMap.do">강서구</a>
+								<a class="aa" id="gangseogu" href="LocalMap.do">강서구</a>
 								<div>
 									<img src="assets/images/서울지도/강서구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="yangcheongu" href="LocalMap.do">양천구</a>
+								<a class="aa" id="yangcheongu" href="LocalMap.do">양천구</a>
 								<div>
 									<img src="assets/images/서울지도/양천구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="gurogu" href="LocalMap.do">구로구</a>
+								<a class="aa" id="gurogu" href="LocalMap.do">구로구</a>
 								<div>
 									<img src="assets/images/서울지도/구로구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="yeongdeongpugu" href="LocalMap.do">영등포구</a>
+								<a class="aa" id="yeongdeongpugu" href="LocalMap.do">영등포구</a>
 								<div>
 									<img src="assets/images/서울지도/영등포구.png" alt="" class="localmapimg">
 								</div>
@@ -261,19 +261,19 @@
 						<!-- 여덟째 줄 -->
 						<div class="local">
 							<div class="localmap">
-								<a id="dongjakgu" href="LocalMap.do">동작구</a>
+								<a class="aa" id="dongjakgu" href="LocalMap.do">동작구</a>
 								<div>
 									<img src="assets/images/서울지도/동작구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="gwanakgu" href="LocalMap.do">관악구</a>
+								<a class="aa" id="gwanakgu" href="LocalMap.do">관악구</a>
 								<div>
 									<img src="assets/images/서울지도/관악구.png" alt="" class="localmapimg">
 								</div>
 							</div>
 							<div class="localmap">
-								<a id="gumcheongu" href="LocalMap.do">금천구</a>
+								<a class="aa" id="gumcheongu" href="LocalMap.do">금천구</a>
 								<div>
 									<img src="assets/images/서울지도/금천구.png" alt="" class="localmapimg">
 								</div>
@@ -285,8 +285,7 @@
 			<!-- s_left -->
 		</div>
 		<!-- 컨텐츠 담을 박스 -->
-	</div>
-	<!-- 가운데 -->
+	
 
 
 

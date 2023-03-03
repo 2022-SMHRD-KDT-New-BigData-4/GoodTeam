@@ -80,7 +80,7 @@
 	align-items: center;
 }
 
-a {
+.aa {
 	/* 밑줄 없애는 코드 */
 	text-decoration: none;
 	font-size: 20px;
@@ -117,7 +117,7 @@ a {
 	position: relative;
 }
 
-.sub11{
+.sub13{
 	position: absolute;
 	top: 130px;
 	width: 1000px;

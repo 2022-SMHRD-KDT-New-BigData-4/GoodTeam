@@ -7,11 +7,12 @@
 <meta charset="UTF-8">
 <title>서울 로컬</title>
 <link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/mypage.css">
+<link rel="stylesheet" href="assets/css/bar2.css">
 </head>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>   <div class="c">
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>  
 <!-- 상단바 a태그연결 & has 위치 & 연결 -->
 <body>
+ <div class="c">
    <img src="assets/images/seoul2.jpg">
       <!-- 상단바 -->
       <div class="bar_home">
@@ -69,18 +70,17 @@
             
 
                <!-- 메뉴2 qna-->
-               <div class="qna">
-                  <a class="a">Contact Us</a>
-               </div>
-               <!-- qna -->
-               
-               <!-- 메뉴3 profile-->
-               <div class="profilebox">
-                  <a href="MyInfo.do">
-                     </a>
-                        <div class="head"></div>
-                        <div class="p_body"></div>
-               </div><!-- profile -->
+					<div class="qna">
+						<a class="a" href="QnaTotal.do" >Contact Us</a>
+					</div>
+					<!-- qna -->
+					
+					<!-- 메뉴3 profile-->
+					<div class="profilebox">
+						<a href="MyInfo.do" class="non1"></a>
+			            	<div class="head"></div>
+			            	<div class="p_body"></div>
+					</div><!-- profile -->
                
             </div><!-- 오른쪽 박스 -->
       </div>
@@ -100,22 +100,22 @@
                <h4><%= memberinfo.getCust_name()%></h4>
             </div>
             <div class="text">
-               <a href="ReservationSelectAll.do">My reservation</a>
+               <a class="aaa" href="ReservationSelectAll.do">My reservation</a>
             </div>
             <div class="text1">
-               <a href="WishSelectAll.do">WishList</a>
+               <a class="aaa" href="WishSelectAll.do">WishList</a>
             </div>
             <div class="text2">
-               <a href="ReviewCustSelect.do">Review</a>
+               <a class="aaa" href="ReviewCustSelect.do">Review</a>
             </div>
             <div class="text3">
-               <a>Contact Us</a>
+               <a class="aaa" >Contact Us</a>
             </div>
             <div class="text4">
-               <a href="CustUpdate.do">My Info</a>
+               <a class="aaa" href="CustUpdate.do">My Info</a>
             </div>
             <div class="text5">
-               <a href="Logout.do">Logout</a>
+               <a class="aaa" href="Logout.do">Logout</a>
             </div>
             
          </div>

@@ -260,9 +260,10 @@ div > h4{
    font-size: 19px;
    font-weight: bolder;
 }
-div > a{
+.aaa{
    color: black;
    font-weight: bolder;
+   text-decoration: none;
 }
 .text{
    position: inherit;
