@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/*  --------------------------------------------전체 구도 잡아놓은 곳--------------------------------------------------- */
+/* Seoul의 컨테이더 부분 */
+.main{
+	/* 글자가 깨지는 것을 방지하는 코드 */
+	/* 텍스트가 한줄에 표시되어야 하는 코드 */
+	white-space: nowrap;
+	/* 공간을 벗어나면 그 부분이 가려지는 코드 */
+	overflow: hidden;
+	/* 공간을 벗어났을 때 끝에 ..이 표시되는 코드 */
+	text-overflow: ellipsis;
+	/* background-color: gray;
+        border: 1px solid black; */
+	/* flex선언*/
+	display: flex;
+	/* 아이템을 가운데로 옮김 */
+	justify-content: center;
+	/* 아이템을 정 한가운데로 옮김 */
+	align-items: center;
+}
+
+/* main의 아이템 부분 */
+.Seoul {
+	/* background-color: lightblue; */
+	width: 500px;
+	height: 500px;
+	/* border: 1px solid red; */
+}
+
+/* ----------------------------------------왼쪽 큰지도 구도 잡아놓은 곳---------------------------------------------------- */
+
+/* 서울지도이미지 관련 */
+.Seoulmap {
+	top : 10%;
+	background-color : red;
+	width: 500px;
+	height: 500px;
+}
+
+/* ---------------------------------------오른쪽 컨텐츠 부분 구도 잡아놓은 곳------------------------------------------------ */
+/*----------------------------------------- 헤드라인 부분------------------------------------------- */
+/* headline의 컨테이너 부분 */
+/*  SeoulTrip관련 부분 */
+.headline {
+	text-decoration: none;
+	/* 부모(main) 영역의 세로길이 100%를 쓰겠다는 코드 */
+	font-size: 40px;
+	color: black;
+	width: 100%;
+	/* 500px중 100px을 할당 */
+	height: 100px;
+	/* background-color: yellow; */
+	
+}
+
+/* 삐져 나오는 현상 때문에 마진값을 줌 */
+.headline>h1 {
+	margin: 0px;
+}
+
+/* h1태그의 컨테이더 */
+.headline {
+	/* flex선언*/
+	display: flex;
+	/*  축정렬 바꿔주기 */
+	flex-direction: column;
+	/* 아이템을 가운데로 옮김 */
+	justify-content: center;
+	/* 아이템을 정 한가운데로 옮김 */
+	align-items: center;
+	/*------------------------------------------컨텐츠 부분----------------------------------------------------  */
+}
+
+.contents {
+	/* 부모(main) 영역의 세로길이 100%를 쓰겠다는 코드 */
+	width: 100%;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	/* 밑줄 없애는 코드 */
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.local {
+	/* 할줄 몰라서 패딩으로 밀어버림. 나중에 수정할 수 있으면 수정하세용. */
+	padding-top: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.localmap {
+	margin: 3px;
+}
+
+.localmapimg {
+	
+	width: 500px;
+	height: 500px;
+	display: none;
+	position: absolute;
+	top: 10%;
+	right: 94%;
+}
+
+.localmap:hover .localmapimg {
+	display: block;
+}
+
+#content {
+	position: relative;
+}
+
+.sub11{
+	position: absolute;
+	top: 130px;
+	width: 1000px;
+	height: 600px;
+	left:17.1%;
+	background-color: white;
+	justify-items: center;
+	flex-direction: column;
+}

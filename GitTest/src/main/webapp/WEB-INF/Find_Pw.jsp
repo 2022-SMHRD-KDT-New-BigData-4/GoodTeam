@@ -5,10 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="Find_Pw.css" >  
+<link rel="stylesheet" href="assets/css/Find_Pw.css" >  
 
 </head>
 <body>
+<%
+ String pw = (String) request.getAttribute("pw");
+
+%>
 <div class="contain">
 	<div class="welcom">
 		<div class="header">
@@ -16,10 +20,12 @@
 		</div>
 		<div class="find">
 				<p>YOUR PW IS..</p>
-				<span>PW:</span>
+				<span>PW:<%= pw %></span>
 		</div> 
 		<div class="bottom">
+		<form action="Login.do">
 			<input type="submit" value="Login" >
+			</form>
 		</div> 
 					
 	</div>
