@@ -49,6 +49,6 @@ public class ReservationCancel implements Command {
 //
 //		// 넘어가는건 중요하지 않고 해당 url로 이동
 	
-		return "myinfo";
+		return "mypage";
 	}
 }
