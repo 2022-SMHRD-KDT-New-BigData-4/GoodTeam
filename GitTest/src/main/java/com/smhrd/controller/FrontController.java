@@ -45,7 +45,9 @@ public class FrontController extends HttpServlet {
 		// findID
 		map.put("FindID.do", new FindIDService());
 		// findPW
-		map.put("FindPW.do", new FindPWService());		
+		map.put("FindPW.do", new FindPWService());
+		// 추천숙소
+		map.put("Recommand.do", new Recommand());
 		// SeoulTrip 누르면 전체 서비스 보여주는 AllroomSelect.jsp넘어가기
 		map.put("SearchAllRoom.do", new SearchAllRoom());
 		// 내가 선택한 숙소 들어가는 서비스

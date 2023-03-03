@@ -11,7 +11,7 @@
 <!-- ★★a태그 똑바로 달기 & 상단바 수정 후 모든 페이지 복붙  -->
 </head>
 <body>
-	<div class="c">
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>	<div class="c">
 		<img src="assets/images/seoul2.jpg">
 		<!-- 상단바 -->
 		<div class="bar_home">
@@ -63,7 +63,7 @@
 					
 					<!-- 메뉴1 login-->
 					<div class="log">
-						<a class="a" href="LonginService.do">log in</a>
+						<a class="a" href="Recommand.do">Recommand</a>
 					</div><!-- login -->
 				
 

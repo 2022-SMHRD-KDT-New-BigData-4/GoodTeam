@@ -9,10 +9,10 @@
 <link rel="stylesheet" href="assets/css/reset.css">
 <link rel="stylesheet" href="assets/css/SeoulLocal.css">
 <link rel="stylesheet" href="assets/css/bar2.css">
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>	<div class="main">
 <!--  -->
 </head>
 <body>
-	<div class="main">
 		<img src="assets/images/seoul2.jpg">
 		<!-- 상단바 -->
 		<div class="bar_home">
@@ -63,7 +63,7 @@
 
 				<!-- 메뉴1 login-->
 				<div class="log">
-					<a class="a" href="Login.do">log in</a>
+					<a class="a" href="Recommand.do">Recommand</a>
 				</div>
 				<!-- login -->
 

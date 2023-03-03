@@ -77,9 +77,9 @@ h3 {
 	margin-bottom: 0px;
 }
 </style>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>	<h1>예약 페이지</h1>
 </head>
 <body>
-	<h1>예약 페이지</h1>
 	<%
 	List<JoinVO> reservations = (List<JoinVO>) request.getAttribute("ReservationSelectAll");
 	for (JoinVO vo : reservations) {
