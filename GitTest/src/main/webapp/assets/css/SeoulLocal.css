@@ -31,10 +31,8 @@
 
 /* 서울지도이미지 관련 */
 .Seoulmap {
-	top : 10%;
-	background-color : red;
-	width: 500px;
-	height: 500px;
+	width: 470px;
+	height: 540px;
 }
 
 /* ---------------------------------------오른쪽 컨텐츠 부분 구도 잡아놓은 곳------------------------------------------------ */
@@ -101,13 +99,12 @@ a {
 }
 
 .localmapimg {
-	
 	width: 500px;
 	height: 500px;
 	display: none;
 	position: absolute;
-	top: 10%;
-	right: 94%;
+	top: 0%;
+	right: 100%
 }
 
 .localmap:hover .localmapimg {
