@@ -34,10 +34,7 @@ public class ReservationsDAO {
 			
 			return result;
 		}
-	
-	
-
-	
+		
 	// 예약 하기
 	public int reservation(ReservationsVO vo) {
 

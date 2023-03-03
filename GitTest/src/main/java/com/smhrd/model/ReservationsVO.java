@@ -28,6 +28,16 @@ public class ReservationsVO {
 		this.reg_date = reg_date;
 		this.total_amount = total_amount;
 	}
+	
+	public ReservationsVO(String cust_id, int room_seq, String check_in, String check_out,
+			 int total_amount) {
+		this.cust_id = cust_id;
+		this.room_seq = room_seq;
+		this.check_in = check_in;
+		this.check_out = check_out;
+		this.total_amount = total_amount;
+	}
+	
 
 	// 총 금액
 	private int total_amount;

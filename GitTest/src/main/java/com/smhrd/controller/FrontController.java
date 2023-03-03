@@ -100,6 +100,8 @@ public class FrontController extends HttpServlet {
 		map.put("FindId.do", new FindId());
 		// PW를 찾는 기능
 		map.put("FindPw.do", new FindPWService());
+		// 예약 기능
+		map.put("Reservation.do", new Reservation());
 
 	}
 

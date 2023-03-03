@@ -145,7 +145,7 @@
 									class="wish btn">Wish</div></a></td>
 					</tr>
 					<tr>
-						<td height="40px" align="center"><a href="#"><div
+						<td height="40px" align="center"><a href="Reservation.do?total_amount=<%=roopri.getRoom_price_l()%>&checkin=${param.checkIn}&checkout=${param.checkOut}&room_seq=<%=roopri.getRoom_seq() %>"><div
 									class="res btn">Book</div></a></td>
 					</tr>
 				</table>
