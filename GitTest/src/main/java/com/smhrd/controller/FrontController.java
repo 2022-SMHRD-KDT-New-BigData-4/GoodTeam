@@ -56,6 +56,8 @@ public class FrontController extends HttpServlet {
 		map.put("LonginService.do", new LoginService());	
 		// my info 
 		map.put("MyInfo.do", new MyInfo());	
+		// 내정보 페이지 들어가기
+		map.put("CustUpdate.do", new CustUpdate());
 		// 내정보 수정 할 수 있는 기능
 		map.put("CustSelect.do", new CustSelect());
 		// Q&a 페이지
