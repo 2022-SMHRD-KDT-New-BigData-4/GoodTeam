@@ -10,10 +10,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="assets/css/Allwishlist.css">
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
 </head>
 <body>
-
 	<!-- wishlist list 불러와서 for문 돌리기 + import 되어있는지 확인-->
 	<div class="total">
 		<div class="main">

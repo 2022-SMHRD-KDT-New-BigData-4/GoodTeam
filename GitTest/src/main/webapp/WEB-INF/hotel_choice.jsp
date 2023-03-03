@@ -91,7 +91,7 @@
 
 				<!-- 메뉴1 login-->
 				<div class="log">
-					<a class="a" href="Login.do">log in</a>
+					<a class="a" href="Recommand.do">Recommand</a>
 				</div>
 				<!-- login -->
 

@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="assets/css/bar2.css">
 <link rel="stylesheet" href="assets/css/Create_Account.css">
 <!-- 예쁘게 수정 & 상단바 & 연결확인하기  -->
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </head>
 <body>
-
    <div class="c">
    <img  src="seoul2.jpg">
       <!-- 상단바 -->
@@ -65,7 +65,7 @@
                
                <!-- 메뉴1 login-->
 				<div class="log">
-					<a class="a" href="Login.do">log in</a>
+					<a class="a" href="Recommand.do">Recommand</a>
 				</div>
 				<!-- login -->
             

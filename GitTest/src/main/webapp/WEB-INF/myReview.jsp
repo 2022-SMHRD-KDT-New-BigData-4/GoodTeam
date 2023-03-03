@@ -17,12 +17,11 @@
 }
 
 body{
-	background-image: url("assets/images/서울샘플이미지.png");
-	background-repeat: no-repeat; background-size : cover;
+	background-color:lavender;
 	
 }
 
-.img {
+.imgsss {
 	display: flex;
 	width: 216px;
 	height: 144px;
@@ -30,7 +29,7 @@ body{
 	margin-right: 10px;
 }
 
-img {
+#imgsss {
 	width: 216px;
 	height: 144px;
 }
@@ -81,14 +80,6 @@ textarea {
 }
 
 
-#bg_img {
-	display: flex;
-	position: absolute;
-	z-index: -800;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-}
 
 #bottom_area{
 	display: flex;
@@ -141,8 +132,7 @@ textarea {
 
 </style>
 <body>
-	<%@ include file="bar.jsp"%>
-	<div id="bg_img"></div>
+	
 	<div class="Create_or_update"></div>
 	<%
 	List<ReviewsVO> rv = (List<ReviewsVO>) request.getAttribute("reviewLst");
@@ -159,8 +149,8 @@ textarea {
 				for (AccommodationsVO k : lstlst.get(j)) {
 			%>
 			<div class="acc">
-				<div class="img">
-					<img src="assets\images\숙소\<%=j + 1%>.jpg">
+				<div class="imgsss">
+					<img src="assets\images\숙소\<%=j + 1%>.jpg" id="imgsss">
 				</div>
 				<a href="ChoiceRoom.do?ac_seq=<%=k.getAc_seq()%>"><%=k.getAc_name()%>
 				</a>

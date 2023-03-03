@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="assets/css/reset.css">
 <link rel="stylesheet" href="assets/css/custUpdate.css">
 <link rel="stylesheet" href="assets/css/bar2.css">
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <!-- ★★a태그 똑바로 달기 & 상단바 수정 후 모든 페이지 복붙  -->
 </head>
 <body>
@@ -64,7 +65,7 @@
 					
 					<!-- 메뉴1 login-->
 				<div class="log">
-					<a class="a" href="Login.do">log in</a>
+					<a class="a" href="Recommand.do">Recommand</a>
 				</div>
 				<!-- login -->
 				

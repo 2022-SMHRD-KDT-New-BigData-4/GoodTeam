@@ -7,10 +7,9 @@
 <title>Contact Us</title>
 <link rel="stylesheet" href="assets/css/reset.css">
 <link rel="stylesheet" href="assets/css/mypage.css">
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>   <div class="c">
 </head>
 <!-- 상단바 a태그연결 & has 위치 & 연결 & 파파고 돌리기 -->
-<body>
-   <div class="c">
    <img src="assets/images/seoul2.jpg">
       <!-- 상단바 -->
       <div class="bar_home">
@@ -67,7 +66,8 @@
                
                <!-- 메뉴1 login-->
 				<div class="log">
-					<a class="a" href="Login.do">log in</a>
+					<a class="a" href="Recommand.do">Recommend</a>
+					
 				</div>
 				<!-- login -->
             
