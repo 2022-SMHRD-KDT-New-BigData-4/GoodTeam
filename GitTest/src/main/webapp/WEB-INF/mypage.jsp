@@ -111,7 +111,7 @@
                <a class="aaa" href="ReviewCustSelect.do">Review</a>
             </div>
             <div class="text3">
-               <a class="aaa" >Contact Us</a>
+               <a class="aaa" href="QnaTotal.do">Contact Us</a>
             </div>
             <div class="text4">
                <a class="aaa" href="CustUpdate.do">My Info</a>

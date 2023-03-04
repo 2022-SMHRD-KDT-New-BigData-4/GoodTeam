@@ -9,7 +9,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+</head>
+<title>myReservation</title>
 <style>
 body {
 	/* flex선언*/
@@ -20,6 +21,8 @@ body {
 	align-items: center;
 	/* background-color: aqua; */
 	flex-direction: column;
+	background-image: url("assets/images/seoul2.jpg");
+	background-position: center;
 }
 
 img {
@@ -30,7 +33,7 @@ img {
 .class {
 	height: 500px;
 	width: 55%;
-	background-color: #F79792;
+	background-color: white;
 	/* flex선언*/
 	display: flex;
 	/* 아이템을 가운데로 옮김 */
@@ -53,7 +56,7 @@ img {
 	height: 33%;
 	width: 95%;
 	background-color: rgb(255, 255, 255);
-	border: 1px solid rgb(187, 255, 0);
+	border: 1px solid black;
 	overflow: hidden; /* 추가 */
 	display: flex;
 	flex-direction: column;
@@ -71,15 +74,17 @@ a {
 p {
 	margin: 0px;
 	padding: 5px;
+	font-size: 20px;
 }
 
 h3 {
 	margin-bottom: 0px;
 }
 </style>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>	<h1>예약 페이지</h1>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>	
 </head>
 <body>
+<h1 style="color:white">예약 페이지</h1>
 	<%
 	List<JoinVO> reservations = (List<JoinVO>) request.getAttribute("ReservationSelectAll");
 	for (JoinVO vo : reservations) {

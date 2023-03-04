@@ -14,7 +14,7 @@ public class Recommand implements Command {
 		
 
 		
-		return "recommand";
+		return "barab";
 	}
 
 }

@@ -5,19 +5,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Forgot Access</title>
+<title></title>
 <script src="assets/js/jquery-3.6.3.min.js"></script>
-<link rel="stylesheet" href="assets/css/aa.css">
+<link rel="stylesheet" href="assets/css/barab.css">
 <link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/recommand.css" >
 </head>
-
 <body>
-<div class="container">
 	<header>
         <!--상단바-->
         
         <div class = "bar">
+			<img class="img111" src="assets/images/seoul2.jpg">
           <div class="bar_home">
 			<!-- 1. 홈  -->
 			<div class="home">
@@ -27,7 +25,7 @@
 
 			<!-- 2. 페이지 -->
 			<div class="page">
-				<h3 class="pagetext"> > Forgot Access</h3>
+				<h3 class="pagetext"> > main</h3>
 				</div>
 			<!-- 페이지 -->
 
@@ -89,26 +87,25 @@
 				</div><!-- 오른쪽 박스 -->	
         </div><!--상단바-->
     </header>
-    
-
-	<form class="formm" action ="#" method ="post" name="find_fr">
-		<div class="main1">
-        <div class ="sub1">
-            <h1 class="h1">HOT PLACE</h1>      
+    <div class="box">
+    <div class="dd">
+    <div class="main1">
+	    <div class ="sub1">
+	    	<h1 class="h1">HOT PLACE</h1>      
         </div>
         <div class ="sub2">
             <div class="contents">
-                <a href=""><img class="tr" src="../images/img/추천핫플레이스1.png" alt=""></a>
+                <a href=""><img class="tr" src="assets/images/img/추천핫플레이스1.png" alt=""></a>
             </div>
         </div>
         <div class ="sub2">
             <div class="contents">
-                <a href=""><img class="tr" src="../images/img/추천핫플레이스2.png" alt=""></a>
+                <a href=""><img class="tr" src="assets/images/img/추천핫플레이스2.png" alt=""></a>
             </div>
         </div>
         <div class ="sub2">
             <div class="contents">
-                <a href=""><img class="tr" src="../images/img/추천핫플레이스3.png" alt=""></a>
+                <a href=""><img class="tr" src="assets/images/img/추천핫플레이스3.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -118,17 +115,17 @@
         </div>
         <div class ="sub2">
             <div class="contents">
-                <a href=""><img class="tr" src="../images/img/추천맛집1.png" alt=""></a>
+                <a href=""><img class="tr" src="assets/images/img/추천맛집1.png" alt=""></a>
             </div>
         </div>
         <div class ="sub2">
             <div class="contents">
-                <a href=""><img class="tr" src="../images/img/추천맛집2.png" alt=""></a>
+                <a href=""><img class="tr" src="assets/images/img/추천맛집2.png" alt=""></a>
             </div>
         </div>
         <div class ="sub2">
             <div class="contents">
-                <a href=""><img class="tr" src="../images/img/추천맛집3.png" alt=""></a>
+                <a href=""><img class="tr" src="assets/images/img/추천맛집3.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -143,18 +140,92 @@
         </div>
         <div class ="sub2">
             <div class="contents">
-                <a href=""><img class="tr" src="../images/img/타임여행.png" alt=""></a>
+                <a href=""><img class="tr" src="assets/images/img/타임여행.png" alt=""></a>
             </div>
         </div>
         <div class ="sub2">
             <div class="contents">
-                <a href=""><img class="tr" src="../images/img/한류여행.png" alt=""></a>
-            </div>
-        </div>
-    </div>
+                <a href=""><img class="tr" src="assets/images/img/한류여행.png" alt=""></a>
+            </div>	
+	    </div><!-- sub1 -->
+    </div><!-- main1 -->
+   </div><!-- dd -->
+  </div><!-- box -->
+    <%  
+		 	Crawling_Currency servlet = new Crawling_Currency();
+	    	servlet.service(request, response);
+    
+			double usd = (double) session.getAttribute("usd"); 
+			double jpy = (double) session.getAttribute("jpy"); 
+			double eur = (double) session.getAttribute("eur"); 
+			double gbp = (double) session.getAttribute("gbp");
 		
-	</form>		
+	%>		
+	
+	<script>
+	
+	var initialValues = [];
 
-</div>
+	// 각 요소의 초기값을 배열에 저장
+	$(window).on('load', function() {
+	  $('.price').each(function() {
+	    var currentValue = $(this).text();
+	    initialValues.push(currentValue);
+	  });
+	  console.log(initialValues);
+	});
+
+	
+	$('#usd').on('click',()=>{
+		$('.dropbtn_icon').text('USD');
+		 $('.price').each(function(index, element) {
+		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
+		        var calculatedValue = currentValue / <%=usd%>; // 계산된 값을 저장함
+		        $(this).text("$ " + calculatedValue.toFixed(2)); // 계산된 값을 다시 요소의 값으로 설정
+		    });
+	});
+	$('#jpy').on('click',()=>{
+		$('.dropbtn_icon').text('JPY');
+		 $('.price').each(function(index, element) {
+		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
+			  var calculatedValue = currentValue / <%=jpy%>; // 계산된 값을 저장함
+			
+
+			  
+			  // 계산된 값을 다시 요소의 값으로 설정
+			  $(this).text("￥ " + calculatedValue.toFixed(2));
+			});
+	})
+	$('#eur').on('click',()=>{
+		$('.dropbtn_icon').text('EUR');
+		$('.price').each(function() {
+			  // 현재 요소의 값을 가져와서 계산
+			  var cnt = 0;
+			  var currentValue = initialValues[cnt]; // 요소의 텍스트 값을 가져옴
+			  var calculatedValue = currentValue / <%=eur%>; // 계산된 값을 저장함
+			
+
+			  // 계산된 값을 다시 요소의 값으로 설정
+			  $(this).text("€ " + calculatedValue.toFixed(2));
+			});
+		
+	})
+	$('#gbp').on('click',()=>{
+		$('.dropbtn_icon').text('GBP');
+		$('.price').each(function() {
+			  // 현재 요소의 값을 가져와서 계산
+			  var cnt = 0;
+			  var currentValue = initialValues[cnt]; // 요소의 텍스트 값을 가져옴
+			  var calculatedValue = currentValue / <%=gbp%>; // 계산된 값을 저장함
+			  // 계산된 값을 다시 요소의 값으로 설정
+			  
+			  $(this).text("￡ " + calculatedValue.toFixed(2));
+			});
+
+	})
+
+
+	
+	</script>
 </body>
 </html>

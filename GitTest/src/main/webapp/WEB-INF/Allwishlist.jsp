@@ -8,10 +8,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>WishList</title>
 <link rel="stylesheet" href="assets/css/Allwishlist.css">
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-
+<style>
+body{
+	background-image: url("assets/images/seoul2.jpg");
+	background-position: center;
+}
+.book{
+	text-decoration: none;
+	font-size: 20px;
+	color: hotpink;
+}
+</style>
 </head>
 <body>
 	<!-- wishlist list 불러와서 for문 돌리기 + import 되어있는지 확인-->
@@ -80,7 +90,7 @@
 									날짜 :
 									<%=vo.getReg_date()%></p>
 
-								<a href="WishlistDel.do?wish_seq=<%=vo.getWish_seq()%>&ac_seq=<%= vo.getAc_seq()%>">book</a>
+								<a class="book" class="book" href="WishlistDel.do?wish_seq=<%=vo.getWish_seq()%>&ac_seq=<%= vo.getAc_seq()%>">book</a>
 
 							</div>
 						</div>

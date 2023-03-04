@@ -1,12 +1,14 @@
 @charset "UTF-8";
-
+body{
+	justify-content: center;
+}
 .bar{
     position: absolute;
-    width: 100%;
+    width: 1540px;
     margin: 0;
     padding: 0;
     height: 90px;
-   
+    background: pink;
 }
 .seoul{
 	position: absolute;
@@ -33,7 +35,7 @@
     color: black;
 	text-decoration: none;
 	/* 글자가 깨졌으니 밑의 display 추가하자 */
-	display: inline-flex; /* 인라인모드/블럭모드 이해 필요  */
+	display: inline-block; /* 인라인모드/블럭모드 이해 필요  */
 	text-align: center;
 }
 non1:hover{/* a태그에 마우스가 올라갈 때 라는 의미*/
@@ -43,7 +45,7 @@ non1:hover{/* a태그에 마우스가 올라갈 때 라는 의미*/
 	}
 	.bar_home{/*HOW ABOUT SEOUL*/
 	
-	width: 100%;
+	width: 1930px;
 	height: 90px;
 	position: absolute;
 	top: 0;
@@ -97,8 +99,7 @@ non1:hover{/* a태그에 마우스가 올라갈 때 라는 의미*/
 }
 .search{
 	position: relative;
-	left:10%;
-	width:80%;
+	top: 28%;
 	margin-top: 0;
 	height: 40px;
 	background-color: white;
@@ -170,7 +171,7 @@ non1:hover{/* a태그에 마우스가 올라갈 때 라는 의미*/
 }
 
 .dropdown-content a{
-  display : flex;
+  display : block;
   text-decoration : none;
   color : rgb(37, 37, 37);
   font-size: 12px;
@@ -203,8 +204,7 @@ non1:hover{/* a태그에 마우스가 올라갈 때 라는 의미*/
 	background-color: none;
 }
   .head{
-  	left:31%;
-  	top: 3%;
+  	left:37%;
 	position: absolute;
 	width: 8%;
 	height: 2px;
@@ -214,9 +214,8 @@ non1:hover{/* a태그에 마우스가 올라갈 때 라는 의미*/
     background-color: white;
   }
   .p_body{
-	top: 35%;
-	position: absolute;
-	left: 20%;
+	top: 5%;
+	position: sticky;
 	width: 20%;
 	height: 7%;
     margin: 0 auto;
@@ -229,7 +228,7 @@ non1:hover{/* a태그에 마우스가 올라갈 때 라는 의미*/
   }
   .a {
     color: white;
-    font-weight: inherit !important;
+    font-weight: inherit;
     text-decoration: none;
 }
 .profilebox1{
@@ -238,15 +237,17 @@ non1:hover{/* a태그에 마우스가 올라갈 때 라는 의미*/
 	width: 50px;
 	height: 50px;
 }
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-body{		background-color: antiquewhite;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        
-
-
-        }
+/*---------------------------------*/
+.box{
+	display: flex;
+	background-color: aqua; 
+}
+.dd{
+	position: absolute;
+    top: 17%;
+    left: 19%;
+    width: 100%;
+}
         .main1{
             box-sizing: border-box;
             border-top-left-radius: 50px;
@@ -255,13 +256,18 @@ body{		background-color: antiquewhite;
             align-items: center;
             justify-content: center;
             background-color: #F79792;
-            height : 300px;
-            width  : 70%;
-            /* margin-top: 10px; */
+            height : 250px;
+            width  : 60%;
+            margin-top: 10px;
             padding: 10px;
             padding-top: 15px;
 
         }
+        .img111{
+
+	display: flex;
+	position: center;
+}
         .main2{
             box-sizing: border-box;
             
@@ -269,8 +275,8 @@ body{		background-color: antiquewhite;
             align-items: center;
             justify-content: center;
             background-color: #F79792;
-            height : 300px;
-            width  : 70%;
+            height : 250px;
+            width  : 60%;
             /* margin-top: 10px; */
             padding: 10px;
 
@@ -283,8 +289,8 @@ body{		background-color: antiquewhite;
             align-items: center;
             justify-content: center;
             background-color: #F79792;
-            height : 300px;
-            width  : 70%;
+            height : 250px;
+            width  : 60%;
             /* margin-top: 10px; */
             padding: 10px;
             padding-bottom: 15px;
@@ -304,9 +310,11 @@ body{		background-color: antiquewhite;
         }
        
         .contents{
-       
+       		left: 5%;
+   			top: 5%;
             height: 100%;
             width: 100%;
+            position: relative;
    
          
         }
@@ -318,18 +326,19 @@ body{		background-color: antiquewhite;
             justify-content: center; */
             box-sizing: border-box;
             margin: 5px;
-           
+           	display: inline-flex;
             height : 102%;
             width  : 95%;
         }
-    
-        a{  
+        .aaaa{  
            
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100%;
             width: 100%;
+            position: absolute;
+            bottom: 5%;
         }
         .tr{
         	object-fit: cover;
@@ -337,8 +346,3 @@ body{		background-color: antiquewhite;
             height: 90%;
             width: 90%;
         }
-        
-        img{
-
-        }
-

@@ -75,18 +75,16 @@
 
 					<!-- 메뉴2 qna-->
 					<div class="qna">
-						<a class="a">Contact Us</a>
+						<a class="a" href="QnaTotal.do" >Contact Us</a>
 					</div>
 					<!-- qna -->
 					
 					<!-- 메뉴3 profile-->
 					<div class="profilebox">
-						<a href="MyInfo.do">
-			            </a>
+						<a href="MyInfo.do" class="non1"></a>
 			            	<div class="head"></div>
 			            	<div class="p_body"></div>
 					</div><!-- profile -->
-					
 				</div><!-- 오른쪽 박스 -->
 		</div>
 		<!-- 상단바 -->

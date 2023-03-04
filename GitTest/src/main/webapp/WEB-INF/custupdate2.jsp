@@ -13,9 +13,6 @@
 <!-- ★★a태그 똑바로 달기 & 상단바 수정 후 모든 페이지 복붙  -->
 </head>
 <body>
-<%
-				CustomersVO memberinfo = (CustomersVO) session.getAttribute("memberinfo");
-				%>
 	<div class="c">
 	<img  src="assets/images/seoul2.jpg">
 		<!-- 상단바 -->
@@ -28,7 +25,7 @@
 
 			<!-- 2. 페이지 -->
 			<div class="page">
-				<h3> > Update</h3>
+				<h3> > Login</h3>
 				</div>
 			<!-- 페이지 -->
 
@@ -89,42 +86,79 @@
 		</div>
 		<!-- 상단바 -->
 
+		<!-- 중앙 -->
 		<div class="sub1">
-         <!-- 4-1.컨텐츠 담을 박수 -->
-         <div class="sub2">
-            <div class="profilebox12">
-               <div class="head12"></div>
-                 <div class="p_body1"></div>
-            </div>
-            <div class="nametag">
-               <h4><%=memberinfo.getCust_name()%></h4>
-            </div>
-            <div class="text10">
-               <input type="text" value='<%=memberinfo.getCust_name()%>' name= "name">
-            </div>
-            <div class="text11">
-               <input type="password" value='<%=memberinfo.getCust_pw()%>' name="pw">
-            </div>
-            <div class="text12">
-               <input type="text" value='<%=memberinfo.getCust_phone()%>' name="phone">
-            </div>
-            <div class="text13">
-               <input type="text" value='<%=memberinfo.getCust_email()%>' name="email">
-            </div>
-            <div class="text14">
-               <input type="text" readonly value='<%=memberinfo.getCust_joindate()%>' name="joindate">
-            </div>
-            <div class="text15">
-               <input type="text" readonly value='<%=memberinfo.getCust_point()%>' name="point">
-            </div>
-            <div class="text16">
-				<input type="submit" value="개인정보 수정">
-            </div>
-            
-         </div>
-         <!-- 컨텐츠 담을 박스 -->
-      </div>
-      <!-- 가운데 -->
+			<!-- 4-1.컨텐츠 담을 박스 -->
+			<div class="s_center">
+				<%
+				CustomersVO memberinfo = (CustomersVO) session.getAttribute("memberinfo");
+				%>
+				<form class="table" action="CustSelect.do" method='post'>
+					<table>
+						<th>
+						<input id="custID" type="text" readonly value='<%=memberinfo.getCust_id()%>' name="id"><br>
+						</th>
+						
+						<tr>
+							<td>사용자 이름 : </td>
+							<td>
+								사용자<input type="text" value='<%=memberinfo.getCust_name()%>' name= "name"><br>
+							</td>
+						</tr>
+						<tr>
+							<td>사용자 비밀번호 : </td>
+							<td>
+								<input type="password" value='<%=memberinfo.getCust_pw()%>' name="pw"><br>
+							</td>
+						</tr>
+						<tr>
+							<td>사용자 전화번호 : </td>
+							<td>
+								<input type="text" value='<%=memberinfo.getCust_phone()%>' name="phone"><br>
+						</tr>
+						<tr>
+							<td>사용자 이메일	: </td>
+							<td>
+								<input type="text" value='<%=memberinfo.getCust_email()%>' name="email"><br>
+						</tr>
+						<tr>
+							<td>사용자 가입일자 : </td>
+							<td>
+								<input type="text" readonly value='<%=memberinfo.getCust_joindate()%>' name="joindate"><br>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>사용자 포인트 번호 : </td>
+							<td>
+								<input type="text" readonly value='<%=memberinfo.getCust_point()%>' name="point"><br>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="submit" value="개인정보 수정">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div><!-- s_center -->
+		<!-- 컨텐츠 담을 박스 -->
+		</div>
+		<!-- 가운데 -->
+
+		</div>
+
+	<form action="CustSelect.do" method='post'>
+		<input type="text" readonly value='<%=memberinfo.getCust_id()%>' name="id"><br>
+		사용자 이름 : <input type="text" value='<%=memberinfo.getCust_name()%>' name= "name"><br>
+		사용자 비밀번호 : <input type="password" value='<%=memberinfo.getCust_pw()%>' name="pw"><br>
+		 사용자 전화번호 : <input type="text" value='<%=memberinfo.getCust_phone()%>' name="phone"><br>
+		 사용자 이메일	: <input type="text" value='<%=memberinfo.getCust_email()%>' name="email"><br>
+		사용자 가입일자 : <input type="text" readonly value='<%=memberinfo.getCust_joindate()%>' name="joindate"><br>
+		 사용자 포인트 번호 : <input type="text" readonly value='<%=memberinfo.getCust_point()%>' name="point"><br> 
+		<input type="submit" value="개인정보 수정">
+		
+	</form>
 
 
 
