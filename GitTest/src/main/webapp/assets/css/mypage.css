@@ -206,8 +206,9 @@ h3{
     background-color: white;
   }
   .p_body{
-   top: 6%;
-   position: sticky;
+   top: 23%;
+   left: 25%;
+   position: absolute;
    width: 20%;
    height: 12%;
     margin: 0 auto;
@@ -218,15 +219,16 @@ h3{
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
   }
-.profilebox1{
+.profilebox12{
    position: inherit;
    top: 6%;
    width: 50px;
    height: 50px;
 }
   .head1{
-   top: 24.5%;
-   position: sticky;
+   top: 23%;
+  
+   position: absolute;
    width: 10%;
    height: 5px;
     margin: 0 auto;

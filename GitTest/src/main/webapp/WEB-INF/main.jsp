@@ -18,11 +18,10 @@
                 
                 <!-- 배경 동영상 -->
                
-                   <!--   <video muted autoplay loop>
+                	<video muted autoplay loop>
                         <!--<img src="https://cdn.dailyhotel.com/ux/nav-search-ic@2x.png" alt="">-->
-                       <!--  <source  src="assets/images/file.mp4"  >
-                    <!-- </video> -->                 
-                  <img  src="assets/images/seoul2.jpg">
+                      <source  src="assets/images/file.mp4"  >
+                    </video>                  
                
                 
                 <!-- HOW ABOUT SEOUL? -->
@@ -67,10 +66,13 @@
 						Date nowTime = new Date();
 					%>
 					<div class="data_text">
-						<p ><%=nowTime%> 
-							<br/>
+						<p > 
+							
+							Now Seoul, 
 							<%=temp%>°C
-							<%=weather%></p>
+							<br/>
+							<%=nowTime%>
+							</p>
 						
 						
 					</div> <!-- data_text -->

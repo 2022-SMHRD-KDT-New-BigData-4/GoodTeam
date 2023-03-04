@@ -1,8 +1,12 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
+body{
+	display: flex;
+	background-image: url("../images/seoul2.jpg");
+	background-position: center;
+}
 .container{
-	display:flex;
+	position: absolute;
 	justify-content: center;
 	align-items:center;
 	width:100%;
@@ -10,7 +14,7 @@
 	object-fit:contain;
 }
 
-a{
+a.ma{
 	/* text-decoration 텍스트 장식을 지정하는 css 
 		밑줄, 취소선, 위장선 등 효과 -> none 은 밑줄삭제  */
 	font-weight: bold;
@@ -21,8 +25,11 @@ a{
     font-family: "Cafe24아네보네에어", sans-serif;
 
 }
-form{
+.formm{
 	display:flex;
+	position: absolute;
+	top: 25%;
+	left:29%;
 	justify-content: center;
 	width: 800px;
 	height: 500px;
@@ -71,14 +78,14 @@ form{
 	
 }
 
-input[type="email"], input[type="text"]{
+input[type="email"].ee, input[type="text"].nn{
 	width: 100%;
     height: 35px;
     border: 0px;
     margin-bottom:10px;
     background-color: white;
     font-family: "Cafe24아네보네에어", sans-serif;
-    /* border-radius: 12px; */
+    border-radius: 12px;
     font-size: 16px;
     margin-left: 5%;
     margin-right: 5%;

@@ -59,13 +59,13 @@
 		<div class="bar_home">
 			<!-- 1. 홈  -->
 			<div class="home">
-				<h1 class="has">HOW ABOUT SEOUL ?</h1>
-			</div>
+				<a class="has" href="GoMain.do">HOW ABOUT SEOUL ?</a>
+				</div>
 			<!-- 홈  -->
 
 			<!-- 2. 페이지 -->
 			<div class="page">
-				<h3>> main</h3>
+				<h3>> Reservation</h3>
 			</div>
 			<!-- 페이지 -->
 
@@ -153,8 +153,8 @@
 					<tr></tr>
 					<tr></tr>
 					<tr>
-						<td height="40px" align="center"><a href="WishlistAdd.do"><div
-									class="wish btn">Wish</div></a></td>
+						<td height="40px" align="center"><a class="ii" href="WishlistAdd.do">
+						<div class="wish btn">Wish</div></a></td>
 					</tr>
 					<tr>
 						<td height="40px" align="center"><a href="Reservation.do?total_amount=<%=roopri.getRoom_price_l()%>&checkin=${param.checkIn}&checkout=${param.checkOut}&room_seq=<%=roopri.getRoom_seq() %>"><div

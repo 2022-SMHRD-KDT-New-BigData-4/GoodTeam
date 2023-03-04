@@ -25,7 +25,7 @@
 
          <!-- 2. 페이지 -->
          <div class="page">
-            <h3> > main</h3>
+            <h3> > Create Account</h3>
             </div>
          <!-- 페이지 -->
 
@@ -61,7 +61,7 @@
                         <a href="#">JPY - Japanese Yen</a>
                         <a href="#">EUR - Euro</a>
                       </div>
-               </div><!-- login -->
+               </div><!-- dropdown -->
                
                <!-- 메뉴1 login-->
 				<div class="log">
@@ -128,11 +128,14 @@
 								required>
 						</div>
 						<div class="user_email">
-							<input id="phone" type="submit" name="phone" placeholder="phone"
-								value="회원가입">
+							<input id="phone" type="submit"
+								value="회원가입" style="cursor:pointer">
 						</div>
 					</form>
 	         	</div><!-- create_form -->
+	         	<div class="img_form">
+	         		<img class="cc" src="assets/images/img1.png">
+	         	</div>
 	         </div><!-- container -->
             
       <!-- 컨텐츠 담을 박스 -->

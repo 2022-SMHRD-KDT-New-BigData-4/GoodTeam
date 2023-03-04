@@ -24,12 +24,13 @@ img{
     display:inline - block; /*a태그 범위 넓히기*/
     height: 100%;
     padding: 0;
+    font-weight: 549;
     margin-top: 200px;
     margin-bottom: -200px;
     text-align: center;
     color: #ffffff;
-    top: 0%;
-    font-size: 90px;
+    top: 5%;
+    font-size: 75px;
     
 }
 .data_text{

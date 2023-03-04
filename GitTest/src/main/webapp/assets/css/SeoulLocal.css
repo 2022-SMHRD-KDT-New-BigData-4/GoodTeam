@@ -119,10 +119,10 @@
 
 .sub13{
 	position: absolute;
-	top: 130px;
+	top: 160px;
 	width: 1000px;
 	height: 600px;
-	left:17.1%;
+	left: 25%;
 	background-color: white;
 	justify-items: center;
 	flex-direction: column;

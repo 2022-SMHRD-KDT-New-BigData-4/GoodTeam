@@ -11,8 +11,8 @@
 <body>
 		<div class="bar">
 		<!-- 상단바 -->
+		<img src="assets/images/seoul2.jpg">
 		<div class="bar_home">
-			<img src="assets/images/seoul2.jpg">
 			<!-- 1. 홈  -->
 			<div class="home">
 				<a class="has" href="GoMain.do">HOW ABOUT SEOUL ?</a>

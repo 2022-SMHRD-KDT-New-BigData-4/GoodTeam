@@ -7,7 +7,9 @@
 <meta charset="UTF-8">
 <title>서울 로컬</title>
 <link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/mypage.css">
 <link rel="stylesheet" href="assets/css/bar2.css">
+
 </head>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>  
 <!-- 상단바 a태그연결 & has 위치 & 연결 -->
@@ -92,7 +94,7 @@
       <div class="sub1">
          <!-- 4-1.컨텐츠 담을 박수 -->
          <div class="sub2">
-            <div class="profilebox1">
+            <div class="profilebox12">
                <div class="head1"></div>
                  <div class="p_body1"></div>
             </div>

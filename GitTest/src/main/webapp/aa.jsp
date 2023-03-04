@@ -1,17 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="com.smhrd.controller.Crawling_Currency"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="assets/css/Forgot_Id.css" > 
-<link rel="stylesheet" href="assets/css/aa.css" > 
-
+<title>Forgot Access</title>
+<script src="assets/js/jquery-3.6.3.min.js"></script>
+<link rel="stylesheet" href="assets/css/aa.css">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/Forgot_Id.css" >
 </head>
+
 <body>
-<%-- 큰 틀 action 은 "FindPW.do" 로 연결 --%>
-<div class="container">
 	<header>
         <!--상단바-->
         
@@ -32,7 +33,7 @@
 			<!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<form class="formm" action="Search.do" method="post" id="searchBox">
+				<form action="Search.do" method="post" id="searchBox">
 					<div class="search">
 						<input type="text" class="non" name="ac_addr">
 						<!-- 3-2. 돋보기 -->
@@ -82,36 +83,17 @@
 							
 			               <div class="head"></div>
 			               <div class="p_body"></div>
-		               <a class="aaaa" href="#"></a>
+		               <a class="aaaa" href="MyInfo.do"></a>
 	               </div><!-- profile -->
 				</div><!-- 오른쪽 박스 -->	
         </div><!--상단바-->
     </header>
-	<form action ="FindId.do" method ="post" name="find_fr">
+    
+
+	<form class="formm" action ="#" method ="post" name="find_fr">
 	
-		<div class="forgot"> 
 		
-			<div class="forgot_fr"> 
-				<div class="forgot_btn" id="id"> 
-					<a class="qqa" href="#" >Find ID</a>
-				</div>
-				<div class ="forgot_btn" id="pw">
-					<a class="qqa" href="Goforgot_pw.do" >Find PW</a>
-				</div>
-			</div>
-			<div class ="fr" >
-			<!-- email 입력 시, 회원정보 비교하여 아이디 찾기 -->
-				<div class="input_fr">
-					<input type ="email" placeholder="Email" id = "email" name="email" required>
-				</div> <%-- input_fr 닫는 div --%>
-				<div class="submit_fr" >
-					<input type = "submit" value = "Find" id="submit" >
-				</div> <%-- submit_fr 닫는 div --%>
-			</div> <%-- fr class 닫는 div --%>
-		</div>	<%-- forgot class 닫는 div --%>
-			
 	</form>		
-</div>		
 
 
 </body>

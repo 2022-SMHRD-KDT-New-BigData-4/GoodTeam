@@ -12,7 +12,6 @@
 </head>
 <body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>	<div class="c">
-		<img src="assets/images/seoul2.jpg">
 		<!-- 상단바 -->
 		<div class="bar_home">
 			<!-- 1. 홈  -->

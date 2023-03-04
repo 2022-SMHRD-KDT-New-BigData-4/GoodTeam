@@ -48,7 +48,7 @@ public class Reservation implements Command {
 		ReservationsDAO dao = new ReservationsDAO();
 		int result = dao.reservation(vo);
 
-		String url = null;
+		String url = "recommand";
 
 		url = "mypage";
 
