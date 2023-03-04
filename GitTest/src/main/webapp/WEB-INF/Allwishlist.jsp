@@ -112,5 +112,7 @@ body{
 	    $("#hotel").text("호텔명");
 	});
 	</script>
+	
+	
 </body>
 </html>

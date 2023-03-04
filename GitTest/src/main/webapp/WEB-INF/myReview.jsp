@@ -162,7 +162,7 @@ textarea {
 				<%=room.get(j).get(0).getRoom_nm()%>
 				<br>
 				<br>
-				<%=room.get(j).get(0).getRoom_price_h()%><br>
+				<%=room.get(j).get(0).getRoom_price_h()%> won<br>
 				<br>
 				<br>
 			</div>
