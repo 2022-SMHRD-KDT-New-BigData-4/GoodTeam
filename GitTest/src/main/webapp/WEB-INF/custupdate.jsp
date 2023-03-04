@@ -91,25 +91,35 @@
 
 		<div class="sub1">
          <!-- 4-1.컨텐츠 담을 박수 -->
-         <div class="sub2">
+         <div class="sub4">
             <div class="profilebox12">
                <div class="head12"></div>
-                 <div class="p_body1"></div>
+                 <div class="p_body15"></div>
+	            <div class="nametag">
+	               <h5><%=memberinfo.getCust_name()%></h5>
+	         </div>
+	         <div class="tre">
+	            <div class="nm1">Name</div>
+	            <div class="pw1">Password</div>
+	            <div class="ph1">Phone</div>
+	            <div class="e1">Email</div>
+	            <div class="date">Join Date</div>
+	            <div class="po1">Point</div>
+	         </div>
             </div>
-            <div class="nametag">
-               <h4><%=memberinfo.getCust_name()%></h4>
-            </div>
+           
+           <div class="sub2">
             <div class="text10">
                <input type="text" value='<%=memberinfo.getCust_name()%>' name= "name">
             </div>
             <div class="text11">
-               <input type="password" value='<%=memberinfo.getCust_pw()%>' name="pw">
+              <input type="password" value='<%=memberinfo.getCust_pw()%>' name="pw">
             </div>
             <div class="text12">
-               <input type="text" value='<%=memberinfo.getCust_phone()%>' name="phone">
+              <input type="text" value='<%=memberinfo.getCust_phone()%>' name="phone">
             </div>
             <div class="text13">
-               <input type="text" value='<%=memberinfo.getCust_email()%>' name="email">
+              <input type="text" value='<%=memberinfo.getCust_email()%>' name="email">
             </div>
             <div class="text14">
                <input type="text" readonly value='<%=memberinfo.getCust_joindate()%>' name="joindate">
@@ -120,7 +130,7 @@
             <div class="text16">
 				<input type="submit" value="개인정보 수정">
             </div>
-            
+           </div><!-- sub2 --> 
          </div>
          <!-- 컨텐츠 담을 박스 -->
       </div>
