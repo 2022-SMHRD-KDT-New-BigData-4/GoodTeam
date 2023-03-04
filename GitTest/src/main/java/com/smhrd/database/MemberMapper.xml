@@ -145,7 +145,7 @@
 	<!-- 검색기능 -->
 	<select id="Search" parameterType="com.smhrd.model.JoinVO"
 		resultType="com.smhrd.model.JoinVO">
-		SELECT * FROM ACCOMMODATIONS a , rooms b WHERE a.ac_seq = b.ac_seq and ac_addr LIKE '%${ac_addr}%' OR ac_name LIKE '%${ac_name}%'
+		SELECT distinct * FROM ACCOMMODATIONS a inner join rooms b ON a.ac_seq = b.ac_seq where ac_addr LIKE '%${ac_addr}%' OR ac_name LIKE '%${ac_name}%'
 	</select>
 	
 
