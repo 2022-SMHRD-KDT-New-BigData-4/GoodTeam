@@ -141,7 +141,7 @@
 						<!-- 룸 타입 -->
 					</tr>
 					<tr>
-						<td><span class="won">₩ </span><span id="price" class="price"><%=roopri.getRoom_price_l()%></span> won
+						<td><span class="won">₩ </span><span id="price" class="price"><%=roopri.getRoom_price_l()%></span>
 						</td>
 					</tr>
 					<tr>
