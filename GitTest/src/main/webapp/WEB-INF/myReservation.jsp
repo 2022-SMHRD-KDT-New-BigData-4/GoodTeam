@@ -110,7 +110,7 @@ h3 {
 			</div>
 			<div>
 				<p>
-					가격 :<%=vo.getTotal_amount()%></p>
+					가격 :<span class="won">₩ </span><%=vo.getTotal_amount()%></p>
 			</div>
 			<div>
 				<%=vo.getReserv_seq()%>

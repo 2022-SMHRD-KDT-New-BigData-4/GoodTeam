@@ -79,10 +79,10 @@ body{
 									<%=vo.getRoom_nm()%></p>
 								<p>
 									성수기 가격 :
-									<%=vo.getRoom_price_h()%></p>
+									<span class="won">₩ </span> <%=vo.getRoom_price_h()%></p>
 								<p>
 									비성수기 가격 :
-									<%=vo.getRoom_price_l()%></p>
+									<span class="won">₩ </span> <%=vo.getRoom_price_l()%></p>
 								<p>
 									예약가능여부 :
 									<%=vo.getReserv_yn()%></p>
@@ -112,5 +112,7 @@ body{
 	    $("#hotel").text("호텔명");
 	});
 	</script>
+	
+	
 </body>
 </html>

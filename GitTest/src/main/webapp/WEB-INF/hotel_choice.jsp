@@ -72,7 +72,7 @@
 			<!-- 3. 검색놈들 -->
 			<div class="searchicon">
 				<!-- 3-1. 검색바 -->
-				<form action="Search.do" method="post" id="searchBox" >
+				<form action="Search.do" id="searchBox" >
 					<div class="search">
 						<input type="text" class="non" name="ac_addr">
 						<!-- 3-2. 돋보기 -->
@@ -141,11 +141,11 @@
 						<!-- 룸 타입 -->
 					</tr>
 					<tr>
-						<td><span id="price" class="price"><%=roopri.getRoom_price_l()%></span> won
+						<td><span class="won">₩ </span><span id="price" class="price"><%=roopri.getRoom_price_l()%></span> won
 						</td>
 					</tr>
 					<tr>
-						<td>(<span id="ppd" class="price"><%=roopri.getRoom_price_l()%></span>)
+						<td>(<span class="won">₩ </span><span id="ppd" class="price"><%=roopri.getRoom_price_l()%></span>)
 							per day
 						</td>
 					</tr>
@@ -398,10 +398,6 @@
 	<script type="text/javascript">
 	
 	var initialValues = [];
-	let usdclick = false;
-	let jpyclick = false;
-	let gbpclick = false;
-	let eurclick = false;
 	// 각 요소의 초기값을 배열에 저장
 	$(window).on('load', function() {
 	  $('.price').each(function() {
@@ -418,6 +414,7 @@
 		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
 		        var calculatedValue = currentValue / <%=usd%>; // 계산된 값을 저장함
 		        $(this).text("$ " + calculatedValue.toFixed(2)); // 계산된 값을 다시 요소의 값으로 설정
+		        $('.won').remove();
 		    });
 	});
 	$('#jpy').on('click',()=>{
@@ -425,7 +422,7 @@
 		 $('.price').each(function(index, element) {
 		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
 			  var calculatedValue = currentValue / <%=jpy%>; // 계산된 값을 저장함
-			
+			  $('.won').remove();
 
 			  
 			  // 계산된 값을 다시 요소의 값으로 설정
@@ -437,7 +434,7 @@
 		 $('.price').each(function(index, element) {
 		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
 			  var calculatedValue = currentValue / <%=eur%>; // 계산된 값을 저장함
-			
+			  $('.won').remove();
 
 			  // 계산된 값을 다시 요소의 값으로 설정
 			  $(this).text("€ " + calculatedValue.toFixed(2));
@@ -451,11 +448,8 @@
 			  var calculatedValue = currentValue / <%=gbp%>; // 계산된 값을 저장함
 			  // 계산된 값을 다시 요소의 값으로 설정
 			  
-			  	usdclick = false;
-			 	jpyclick = false;
-				gbpclick = true;
-				eurclick = false;
-			  
+
+			  $('.won').remove();
 			  $(this).text("￡ " + calculatedValue.toFixed(2));
 			});
 
