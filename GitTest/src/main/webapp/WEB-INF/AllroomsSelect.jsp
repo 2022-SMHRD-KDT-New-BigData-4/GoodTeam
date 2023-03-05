@@ -114,7 +114,7 @@
 				        </div>
 				       
 				        <div class="price">
-				           <div class="pink">쿠폰적용가><</div><br/><span class="price2"><%=vo.getRoom_price_l()%></span>
+				           <div class="pink">쿠폰적용가><</div><br/><span class="won">₩ </span><span class="price2"><%=vo.getRoom_price_l()%></span>
 				        </div>
 				        <div>
 				         <a class="reserv" href="ChoiceRoom.do?ac_seq=<%=vo.getAc_seq() %>">Book</a>
@@ -184,6 +184,7 @@
 		 $('.price2').each(function(index, element) {
 		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
 		        var calculatedValue = currentValue / <%=usd%>; // 계산된 값을 저장함
+		        $('.won').remove();
 		        $(this).text("$ " + calculatedValue.toFixed(2)); // 계산된 값을 다시 요소의 값으로 설정
 		    });
 	});
@@ -192,7 +193,7 @@
 		 $('.price2').each(function(index, element) {
 		        var currentValue = initialValues[index]; // 요소의 텍스트 값을 가져옴
 			  var calculatedValue = currentValue / <%=jpy%>; // 계산된 값을 저장함
-			
+			  $('.won').remove();
 
 			  
 			  // 계산된 값을 다시 요소의 값으로 설정
@@ -206,8 +207,8 @@
 			  var cnt = 0;
 			  var currentValue = initialValues[cnt]; // 요소의 텍스트 값을 가져옴
 			  var calculatedValue = currentValue / <%=eur%>; // 계산된 값을 저장함
-			
-
+			  $('.won').remove();
+	
 			  // 계산된 값을 다시 요소의 값으로 설정
 			  $(this).text("€ " + calculatedValue.toFixed(2));
 			});
@@ -221,6 +222,7 @@
 			  var currentValue = initialValues[cnt]; // 요소의 텍스트 값을 가져옴
 			  var calculatedValue = currentValue / <%=gbp%>; // 계산된 값을 저장함
 			  // 계산된 값을 다시 요소의 값으로 설정
+			  $('.won').remove();
 			  
 			  $(this).text("￡ " + calculatedValue.toFixed(2));
 			});
