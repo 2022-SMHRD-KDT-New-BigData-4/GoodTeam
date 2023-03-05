@@ -179,7 +179,7 @@
 	<select id="reviewAcSelect"
 		parameterType="Integer"
 		resultType="com.smhrd.model.ReviewsVO">
-		select * from reviews where ac_seq = #{ac_seq}
+		select * from reviews where ac_seq = #{ac_seq} and review_ratings is not null order by review_ratings desc
 	</select>
 
 	<!-- 전체 객실 조회 -->
