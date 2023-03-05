@@ -7,12 +7,12 @@ const calendarDays = document.querySelectorAll(".calendar_days"),
 
 let stays = ''
 
-$('#stay').on('keyup',()=>{
-	stays = parseInt($('#stay').val())	
-	})
-		
-	console.log(stays)
-	
+$('#stay').on('keyup', () => {
+	stays = parseInt($('#stay').val())
+})
+
+console.log(stays)
+
 let price = parseInt($('#ppd').text())
 
 
@@ -26,7 +26,7 @@ class Calendar {
 	}
 
 
-	
+
 
 	getFirstDay() {
 		const firstDate = new Date(this.year, this.month);
@@ -161,8 +161,8 @@ class Calendar {
 			}
 
 			const selectedDay = Number(selectedDayButtons[0].innerText);
-			
-		
+
+
 			// 년, 월, 일 데이터 입력 받고 입력받은 데이터를 date로 뭉침
 			let reservYear = calendarTitle.innerHTML.split('년')[0]
 			let reservMonth = calendarTitle.innerHTML.split('년')[1].replace('월', '')
@@ -171,19 +171,18 @@ class Calendar {
 			// queryString 형식으로 보내기 위해 데이터를 다시 입력받는작업
 			let dateString = reservDate.toISOString().substring(0, 10);
 			let checkOut = new Date(reservYear, reservMonth - 1, selectedDay + 1 + stays)
-				
-			let checkOutString = checkOut.toISOString().substring(0,10);
+
+			let checkOutString = checkOut.toISOString().substring(0, 10);
 			$.ajax({
 				url: "#",
 				method: "POST",
 				data: {
 					date: dateString,
-					checkOut : checkOutString
+					checkOut: checkOutString
 				},
 				success: function(result) {
-					
 					let urlParam = new URLSearchParams(window.location.search);
-					window.location.href = "ChoiceRoom.do?" + "ac_seq=" + urlParam.get('ac_seq') + "&" + "checkIn=" + dateString + "&" + "checkOut=" + checkOutString;
+					window.location.href = "ChoiceRoom.do?" + "ac_seq=" + urlParam.get('ac_seq') + "&room_seq=" + urlParam.get('room_seq') + "&checkIn=" + dateString + "&checkOut=" + checkOutString;
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
 					console.error("There was a problem with the ajax operation:", errorThrown);
@@ -213,7 +212,7 @@ $(document).ready(function() {
 	// "date" 매개 변수를 날짜 형식으로 변환
 	let date = new Date(dateParam);
 	let date2 = new Date(dateParam2)
-	
+
 	// 변환된 날짜 출력
 
 	let formattedDate = date.toLocaleDateString("en-US", {
@@ -221,7 +220,7 @@ $(document).ready(function() {
 		day: "2-digit",
 		year: "numeric"
 	});
-	
+
 	let formattedDate2 = date2.toLocaleDateString("en-US", {
 		month: "short",
 		day: "2-digit",
@@ -232,7 +231,7 @@ $(document).ready(function() {
 		month: "2-digit",
 		day: "2-digit"
 	}).replace(/\//g, '/');
-	
+
 	let formattedDate4 = date2.toLocaleDateString("en-US", {
 		month: "2-digit",
 		day: "2-digit"
@@ -258,14 +257,14 @@ $(document).ready(function() {
 const calendarButton = document.getElementById("calendarButton")
 const calendarContainer = document.getElementsByClassName('calendar_container')[0]
 const closeButton = document.getElementById("close");
-  calendarButton.addEventListener('click', () => {
-    document.body.style.backgroundColor = 'lightgray';
-    calendarContainer.classList.remove('hide');
-    $('#re_scroll').css('background-color', 'lightgray');
-  });
-  closeButton.addEventListener('click', () => {
-	 calendarContainer.classList.add('hide'); 
-	 document.body.style.backgroundColor = '';
-	 $('#re_scroll').css('background-color', '');
-  });
+calendarButton.addEventListener('click', () => {
+	document.body.style.backgroundColor = 'lightgray';
+	calendarContainer.classList.remove('hide');
+	$('#re_scroll').css('background-color', 'lightgray');
+});
+closeButton.addEventListener('click', () => {
+	calendarContainer.classList.add('hide');
+	document.body.style.backgroundColor = '';
+	$('#re_scroll').css('background-color', '');
+});
 

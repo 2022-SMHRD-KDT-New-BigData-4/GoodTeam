@@ -94,7 +94,14 @@
 		resultType="com.smhrd.model.AmentiesVO">
 		select * from AMENTIES where ac_seq = #{ac_seq}
 	</select>
-
+	
+	<select id="choiceRoom" parameterType="com.smhrd.model.JoinVO" resultType="com.smhrd.model.JoinVO">
+	select *from accommodations a, amenties b, rooms c
+	where a.ac_seq = b.ac_seq
+	and  a.ac_seq = c.ac_seq
+ 	and  c.room_seq = #{room_seq}
+ 	and  a.ac_seq = #{ac_seq}
+	</select>
 
 
 

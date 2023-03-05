@@ -117,7 +117,7 @@
 				           <div class="pink">쿠폰적용가><</div><br/><span class="won">₩ </span><span class="price2"><%=vo.getRoom_price_l()%></span>
 				        </div>
 				        <div>
-				         <a class="reserv" href="ChoiceRoom.do?ac_seq=<%=vo.getAc_seq() %>">Book</a>
+				         <a class="reserv" href="ChoiceRoom.do?ac_seq=<%=vo.getAc_seq() %>&room_seq=<%=vo.getRoom_seq()%>">Book</a>
 				        </div>
 				    </div>
 				</div>
