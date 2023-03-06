@@ -31,6 +31,7 @@
                         <br/>
                         <br/>
                         
+                        
                      <!-- 온도 날씨 시간 -->
 					<%
 					// org.jsoup.select.Elements elements = ...
@@ -65,6 +66,8 @@
 						//시간
 						Date nowTime = new Date();
 					%>
+					
+					
 					<div class="data_text">
 						<p > 
 							
