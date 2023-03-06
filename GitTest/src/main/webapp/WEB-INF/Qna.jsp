@@ -136,9 +136,9 @@
 			<%
 				CustomersVO memberinfo = (CustomersVO) session.getAttribute("memberinfo");
 				%>
-      <!-- 중앙 -->
-      <div class="">
+      <div class="wrapper-list">
          <!-- 4-1.컨텐츠 담을 박수 -->
+  
          <div class="myinfo">
             <div class="profilebox1">
                <div class="head1"></div>
