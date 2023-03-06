@@ -264,15 +264,7 @@ div > a{
    color: black;
    font-weight: bolder;
 }
-.text{
-   position: inherit;
-   top: 23%;
-   left: 4%;
-   width: 260px;
-   height: 30px;
-   font-size: larger;
 
-}
 .text1{
    position: inherit;
    top: 35%;
@@ -280,42 +272,6 @@ div > a{
    width: 260px;
    height: 30px;
    font-size: larger;
-}
-.text2{
-   position: inherit;
-   top: 48%;
-   left: 4%;
-   width: 260px;
-   height: 30px;
-   font-size: larger;
-
-}
-.text3{
-   position: inherit;
-   top: 61%;
-   left: 4%;
-   width: 260px;
-   height: 30px;
-   font-size: larger;
-
-}
-.text4{
-   position: inherit;
-   top: 75%;
-   left: 4%;
-   width: 260px;
-   height: 30px;
-   font-size: larger;
-
-}
-.text5{
-   position: inherit;
-   top: 88%;
-   left: 4%;
-   width: 260px;
-   height: 30px;
-   font-size: larger;
-
 }
 
 
