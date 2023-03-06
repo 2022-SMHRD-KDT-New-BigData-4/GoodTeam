@@ -136,40 +136,39 @@
 			<%
 				CustomersVO memberinfo = (CustomersVO) session.getAttribute("memberinfo");
 				%>
-      <!-- 중앙 -->
-      <div class="sub1">
+      <div class="wrapper-list">
          <!-- 4-1.컨텐츠 담을 박수 -->
-         <div class="sub2">
+  
+         <div class="myinfo">
             <div class="profilebox1">
                <div class="head1"></div>
-                 <div class="p_body1"></div>
+               <div class="p_body1"></div>
             </div>
-            <div class="nametag">
+            <div class="">
                <h4><%= memberinfo.getCust_name()%></h4>
             </div>
-            <div class="text">
-               <a class="aaa" href="ReservationSelectAll.do">전체 조회 기능</a>
+         </div>
+            
+            
+            <div class="">
+               <a class="" href="ReservationSelectAll.do">전체 조회 기능</a>
             </div>
-            <div class="text1">
-               <a class="aaa" href="WishSelectAll.do">질문 기능</a>
+            <div class="">
+               <a class="" href="WishSelectAll.do">질문 기능</a>
             </div>
-            <div class="text2">
-               <a class="aaa" href="ReviewCustSelect.do">내가 쓴 QNA 조회 기능</a>
+            <div class="">
+               <a class="" href="ReviewCustSelect.do">내가 쓴 QNA 조회 기능</a>
             </div>
-            <div class="text3">
-               <a class="aaa" >QNA 답변 기능</a>
+            <div class="">
+               <a class="" >QNA 답변 기능</a>
             </div>
            
-            
-         </div>
+   
          <!-- 컨텐츠 담을 박스 -->
       </div>
       <!-- 가운데 -->
 
       </div>
-
-
-
 
 
 </body>
