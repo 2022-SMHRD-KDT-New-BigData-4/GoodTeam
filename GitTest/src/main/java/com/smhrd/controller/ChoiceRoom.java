@@ -11,6 +11,8 @@ import com.smhrd.model.AccommodationsDAO;
 import com.smhrd.model.AccommodationsVO;
 import com.smhrd.model.AmentiesDAO;
 import com.smhrd.model.AmentiesVO;
+import com.smhrd.model.JoinDAO;
+import com.smhrd.model.JoinVO;
 import com.smhrd.model.ReviewsDAO;
 import com.smhrd.model.ReviewsVO;
 import com.smhrd.model.RoomsDAO;
@@ -23,17 +25,27 @@ public class ChoiceRoom implements Command {
 			throws UnsupportedEncodingException {
 
 		// 가져온 파라미터 꺼내기
-		String ac_seq = request.getParameter("ac_seq");
-		System.out.println("ajax로 받아온 데이터 >>" + ac_seq);
-		int ac_seq_int = 0;
-		if (ac_seq != null) {
-			System.out.print(ac_seq);
-			ac_seq_int = Integer.parseInt(ac_seq);
-			// 변환된 값을 사용하는 코드
-		}
+		String acSeqParam = request.getParameter("ac_seq");
+		System.out.println("ac_seq=	"+acSeqParam);
+		int ac_seq = Integer.parseInt(acSeqParam);
+		
+		
+		String roomSeqParam = request.getParameter("room_seq");
+		System.out.println("room_seq="+roomSeqParam);
+		
+		int room_seq = Integer.parseInt(roomSeqParam);
+
+		
+		JoinVO vo = new JoinVO(ac_seq,room_seq);
+		JoinDAO dao = new JoinDAO();
+		
+		JoinVO ChoiceRoom = dao.choiceRoom(vo);
+		
+		request.setAttribute("ChoiceRoom", ChoiceRoom);
+		
 		// accommodations
 		// 객체 생성
-		AccommodationsVO ac_vo = new AccommodationsVO(ac_seq_int);
+		AccommodationsVO ac_vo = new AccommodationsVO(ac_seq);
 		// 1. 객실명 , 2. 객실사진 3. 주소
 		AccommodationsDAO ac_dao = new AccommodationsDAO();
 		List<AccommodationsVO> roominfo = ac_dao.ChoiceRoom(ac_vo);
@@ -42,7 +54,7 @@ public class ChoiceRoom implements Command {
 
 		// Amenties
 		// 객체 생성
-		AmentiesVO am_vo = new AmentiesVO(ac_seq_int);
+		AmentiesVO am_vo = new AmentiesVO(ac_seq);
 		// 1. 편의 시설
 		AmentiesDAO am_dao = new AmentiesDAO();
 		List<AmentiesVO> roomamen = am_dao.ChoiceRoom(am_vo);
@@ -50,17 +62,19 @@ public class ChoiceRoom implements Command {
 		request.setAttribute("roomamen", roomamen);
 
 		// Rooms 호텔 가격 가져오기
-		RoomsVO roomvo = new RoomsVO(ac_seq_int);
+		RoomsVO roomvo = new RoomsVO(ac_seq);
 		RoomsDAO roomdao = new RoomsDAO();
 
 		List<RoomsVO> roomprice = roomdao.RoomPrice(roomvo);
 		request.setAttribute("roomprice", roomprice);
 		
 		ReviewsDAO rvdao = new ReviewsDAO();
-		List<ReviewsVO> rv = rvdao.reviewAcSelect(ac_seq_int);
+		List<ReviewsVO> rv = rvdao.reviewAcSelect(ac_seq);
 		request.setAttribute("reviews", rv);
-
+		
 		return "hotel_choice"; 
+
+		
 	}
 
 }

@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.JoinVO"%>
 <%@page import="com.smhrd.controller.Crawling_Currency"%>
 <%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -42,16 +43,21 @@
 	CustomersVO memberinfo = (CustomersVO) session.getAttribute("memberinfo");
 	%>
 	<%
+	JoinVO ChoiceRoom = (JoinVO) request.getAttribute("ChoiceRoom");
+	
+
+	
+	
 	List<AccommodationsVO> roominfo = (List<AccommodationsVO>) request.getAttribute("roominfo");
 	AccommodationsVO room = roominfo.get(0);
 	List<AmentiesVO> roomamen = (List<AmentiesVO>) request.getAttribute("roomamen");
 	AmentiesVO rooma = roomamen.get(0);
 	List<RoomsVO> roomprice = (List<RoomsVO>) request.getAttribute("roomprice");
-	RoomsVO roopri = roomprice.get(0);
+	RoomsVO roompri = roomprice.get(0);
 	List<ReviewsVO> rv = (List<ReviewsVO>) request.getAttribute("reviews");
 	%>
 	<%
-	session.setAttribute("room_seq", roopri.getRoom_seq());
+	session.setAttribute("room_seq", ChoiceRoom.getRoom_seq());
 	%>
 	<div class="main">
 		<img class="img111" src="seoul2.jpg">
@@ -141,11 +147,11 @@
 						<!-- 룸 타입 -->
 					</tr>
 					<tr>
-						<td><span class="won">₩ </span><span id="price" class="price"><%=roopri.getRoom_price_l()%></span> won
+						<td><span class="won">₩ </span><span id="price" class="price"><%=ChoiceRoom.getRoom_price_l()%></span>
 						</td>
 					</tr>
 					<tr>
-						<td>(<span class="won">₩ </span><span id="ppd" class="price"><%=roopri.getRoom_price_l()%></span>)
+						<td>(<span class="won">₩ </span><span id="ppd" class="price"><%=ChoiceRoom.getRoom_price_l()%></span>)
 							per day
 						</td>
 					</tr>
@@ -157,7 +163,7 @@
 						<div class="wish btn">Wish</div></a></td>
 					</tr>
 					<tr>
-						<td height="40px" align="center"><a href="Reservation.do?total_amount=<%=roopri.getRoom_price_l()%>&checkin=${param.checkIn}&checkout=${param.checkOut}&room_seq=<%=roopri.getRoom_seq() %>"><div
+						<td height="40px" align="center"><a href="Reservation.do?total_amount=<%=ChoiceRoom.getRoom_price_l()%>&checkin=${param.checkIn}&checkout=${param.checkOut}&room_seq=<%=ChoiceRoom.getRoom_seq() %>"><div
 									class="res btn">Book</div></a></td>
 					</tr>
 				</table>

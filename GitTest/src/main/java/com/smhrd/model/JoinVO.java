@@ -11,6 +11,11 @@ public class JoinVO {
 	private String ac_addr;
 	// 숙소 이미지들
 	private String ac_img1;
+
+	public int getRoom_seq() {
+		return room_seq;
+	}
+
 	private String ac_img2;
 	private String ac_img3;
 	// 숙소 전화번호
@@ -86,9 +91,72 @@ public class JoinVO {
 	// 예약가능 여부
 	private char reserv_yn;
 
+	public JoinVO(int ac_seq, String ac_name, String ac_addr, String ac_img1, String ac_img2, String ac_img3,
+			String ac_tel, int lat, int lng, char parking, char breakfast, char cvs, char wifie, char fitness, char etc,
+			String cust_id, String cust_pw, String cust_name, String cust_email, String cust_phone, int cust_point,
+			char cust_type, LocalDate cust_joindate, int wish_seq, int room_seq, String reg_date, String reserv_seq,
+			String check_in, String check_out, int total_amount, int review_seq, String review_count,
+			int review_ratings, String review_dt, String room_nm, char room_type, int room_price_h, int room_price_l,
+			int room_cnt, String room_img1, String room_img2, String room_img3, char reserv_yn) {
+		super();
+		this.ac_seq = ac_seq;
+		this.ac_name = ac_name;
+		this.ac_addr = ac_addr;
+		this.ac_img1 = ac_img1;
+		this.ac_img2 = ac_img2;
+		this.ac_img3 = ac_img3;
+		this.ac_tel = ac_tel;
+		this.lat = lat;
+		this.lng = lng;
+		this.parking = parking;
+		this.breakfast = breakfast;
+		this.cvs = cvs;
+		this.wifie = wifie;
+		this.fitness = fitness;
+		this.etc = etc;
+		this.cust_id = cust_id;
+		this.cust_pw = cust_pw;
+		this.cust_name = cust_name;
+		this.cust_email = cust_email;
+		this.cust_phone = cust_phone;
+		this.cust_point = cust_point;
+		this.cust_type = cust_type;
+		this.cust_joindate = cust_joindate;
+		this.wish_seq = wish_seq;
+		this.room_seq = room_seq;
+		this.reg_date = reg_date;
+		this.reserv_seq = reserv_seq;
+		this.check_in = check_in;
+		this.check_out = check_out;
+		this.total_amount = total_amount;
+		this.review_seq = review_seq;
+		this.review_count = review_count;
+		this.review_ratings = review_ratings;
+		this.review_dt = review_dt;
+		this.room_nm = room_nm;
+		this.room_type = room_type;
+		this.room_price_h = room_price_h;
+		this.room_price_l = room_price_l;
+		this.room_cnt = room_cnt;
+		this.room_img1 = room_img1;
+		this.room_img2 = room_img2;
+		this.room_img3 = room_img3;
+		this.reserv_yn = reserv_yn;
+	}
+	
+	public JoinVO() {
+		
+	}
+
 	public JoinVO(String ac_addr, String ac_name) {
-		this.ac_addr=ac_addr;
-		this.ac_name=ac_name;
+		this.ac_addr = ac_addr;
+		this.ac_name = ac_name;
+	}
+
+	public JoinVO(int ac_seq, int room_seq) {
+		this.ac_seq = ac_seq;
+		this.room_seq = room_seq;
+
 	}
 
 	public int getAc_seq() {

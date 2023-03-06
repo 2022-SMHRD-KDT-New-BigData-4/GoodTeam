@@ -56,7 +56,7 @@ public class WishlistAdd implements Command {
 		
 		
 		
-		return "myinfo";
+		return "mypage";
 	}
 
 }

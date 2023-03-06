@@ -86,5 +86,18 @@ public class JoinDAO {
 		return roomlist;
 
 	}
+	public JoinVO choiceRoom(JoinVO vo) {
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		JoinVO result = null;
+		try {
+			result = sqlSession.selectOne("choiceRoom", vo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return result;
+	}
 
 }
